@@ -1,0 +1,201 @@
+@tailwind base; /* Charge les styles de base de Tailwind CSS, incluant le reset CSS et les styles par défaut */
+@tailwind components; /* Charge les composants prédéfinis de Tailwind, comme les boutons ou les formulaires */
+@tailwind utilities; /* Charge les utilitaires de Tailwind, comme les classes de marges, tailles, etc. */
+
+/* Applique les styles généraux pour la nav mobile */
+.mnav {
+  @apply fixed left-[-100%] top-0 h-full w-full bg-white shadow-lg transition-all duration-700 ease-in-out;
+}
+
+.mnav--open {
+  @apply left-0;
+}
+
+.mnav__close-btn {
+  @apply fixed right-4 top-4 flex h-8 w-8 cursor-pointer items-center justify-center rounded-br-lg transition-all duration-300;
+}
+
+.mnav__close-btn-icon {
+  @apply text-2xl text-black transition-transform duration-300;
+}
+
+.mnav--open .mnav__close-btn-icon {
+  @apply rotate-90; /* Fait pivoter l'icône lors de l'ouverture */
+}
+
+/* Applique les styles généraux pour le corps du document */
+body {
+  @apply font-primary text-[17px] leading-8 text-secondary;
+  /* font-primary : Définit la police principale utilisée sur l'ensemble du site */
+  /* text-[17px] : Définit une taille de texte personnalisée de 17px */
+  /* leading-8 : Applique un espacement vertical entre les lignes, utile pour la lisibilité */
+  /* text-secondary : Utilise la couleur secondaire pour le texte, définie dans le thème Tailwind */
+}
+
+.test01 {
+  backdrop-filter: blur(15px);
+}
+
+/* Styles pour tous les titres de H1 à H6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply leading-120 text-primary;
+  /* leading-120 : Ajoute un interligne spécifique pour espacer les lignes des titres */
+  /* text-primary : Définit la couleur principale pour les titres */
+}
+
+/* Styles spécifiques pour le titre de classe .h1 */
+.h1 {
+  @apply text-[36px] font-semibold xl:text-[64px];
+  /* text-[36px] : Taille de texte de 36px en mode par défaut */
+  /* font-semibold : Utilise une police en gras moyen pour plus de contraste */
+  /* xl:text-[64px] : Augmente la taille à 64px sur les écrans extra-larges */
+}
+
+/* Styles pour le titre de classe .h2 */
+.h2 {
+  @apply text-[30px] font-semibold uppercase tracking-[0.44px] xl:text-[44px];
+  /* text-[30px] : Taille de texte de 30px par défaut */
+  /* font-semibold : Applique un gras moyen pour mettre en valeur le titre */
+  /* capitalize : Transforme la première lettre de chaque mot en majuscule */
+  /* tracking-[0.44px] : Ajuste l'espacement des lettres pour améliorer la lisibilité */
+  /* xl:text-[44px] : Taille de texte de 44px sur les grands écrans */
+}
+
+/* Styles pour le titre de classe .h3 */
+.h3 {
+  @apply text-[20px] font-semibold xl:text-[26px];
+  /* text-[20px] : Définit une taille de 20px par défaut */
+  /* font-semibold : Gras moyen pour une visibilité accrue */
+  /* xl:text-[26px] : Augmente la taille à 26px sur les grands écrans */
+}
+
+/* Styles pour le titre de classe .h4 */
+.h4 {
+  @apply text-[20px] font-semibold capitalize xl:text-[26px];
+  /* text-[20px] : Taille de texte de 20px par défaut */
+  /* font-semibold : Applique un gras moyen */
+  /* capitalize : Capitalise la première lettre de chaque mot */
+  /* xl:text-[26px] : Taille agrandie à 26px pour les écrans larges */
+}
+
+/* Style général pour les boutons */
+.btn {
+  @apply flex items-center justify-center rounded-full uppercase tracking--[1.02px];
+  /* flex : Utilise flexbox pour la structure du bouton */
+  /* items-center : Centre le contenu verticalement */
+  /* justify-center : Centre le contenu horizontalement */
+  /* rounded-full : Bord arrondi pour un effet de bouton arrondi */
+  /* uppercase : Transforme le texte en majuscules */
+  /* tracking--[1.02px] : Réduit légèrement l'espacement des lettres */
+}
+
+/* Style pour les petits boutons (classe .btn-sm) */
+.btn-sm {
+  @apply h-14 px-10;
+  /* h-14 : Hauteur de 14 unités Tailwind (généralement 56px) */
+  /* px-10 : Espacement horizontal de 10 unités (environ 40px) */
+}
+
+/* Style pour les grands boutons (classe .btn-lg) */
+.btn-lg {
+  @apply h-16 px-[50px];
+  /* h-16 : Hauteur de 16 unités (généralement 64px) */
+  /* px-[50px] : Padding horizontal personnalisé de 50px */
+}
+
+/* Style pour le bouton avec accent coloré (classe .btn-accent) */
+.btn-accent {
+  @apply bg-accent text-white hover:border-2 hover:border-accent hover:bg-accent-secondary hover:text-accent;
+  /* bg-accent : Couleur d'arrière-plan principale du bouton */
+  /* text-white : Texte en blanc pour un bon contraste */
+  /* hover:bg-accent-secondary : Changement de couleur au survol pour accentuer l'interaction */
+}
+
+/* Style pour le bouton blanc (classe .btn-white) */
+.btn-white {
+  @apply bg-white text-secondary hover:bg-white/90;
+  /* bg-white : Arrière-plan blanc */
+  /* text-secondary : Texte de couleur secondaire */
+  /* hover:bg-white/90 : Légère transparence au survol */
+}
+
+/* Style pour le bouton avec bordure (classe .btn-outline) */
+.btn-outline {
+  @apply border-2 border-accent bg-transparent text-secondary hover:border-transparent hover:bg-accent hover:text-white;
+  /* border-2 : Bordure de 2px d'épaisseur */
+  /* border-accent : Bordure de couleur accentuée */
+  /* bg-transparent : Arrière-plan transparent par défaut */
+  /* text-secondary : Texte de couleur secondaire */
+  /* hover:border-transparent : La bordure devient transparente au survol */
+  /* hover:bg-accent : Arrière-plan change pour la couleur accentuée au survol */
+  /* hover:text-white : Le texte devient blanc au survol */
+}
+
+/* Styles partagés pour les champs de saisie (input) et les menus déroulants (select) */
+.input,
+.select {
+  @apply h-[66px] w-full rounded-[10px] border border-[#dbdfdf] font-light text-secondary outline-none placeholder:font-light placeholder:text-secondary;
+  /* h-[66px] : Hauteur de 66px */
+  /* w-full : Largeur de 100%, pour s'adapter au conteneur parent */
+  /* rounded-[10px] : Coins arrondis de 10px */
+  /* border : Ajoute une bordure */
+  /* border-[#dbdfdf] : Bordure d'une couleur gris clair personnalisée */
+  /* font-light : Police légère pour un style épuré */
+  /* text-secondary : Texte de couleur secondaire */
+  /* outline-none : Supprime le contour par défaut */
+  /* placeholder:font-light : Texte de l'espace réservé en police légère */
+  /* placeholder:text-secondary : Couleur secondaire pour le texte de l'espace réservé */
+}
+
+/* Ajuste le padding horizontal pour les champs de saisie (input) */
+.input {
+  @apply px-4;
+  /* px-4 : Padding horizontal de 4 unités (généralement 16px) */
+}
+
+/* Style général pour les sections du site (classe .section) */
+.section {
+  @apply py-12 xl:py-[150px];
+  /* py-12 : Padding vertical de 12 unités (environ 48px) */
+  /* xl:py-[150px] : Padding vertical plus grand (150px) pour les écrans extra-larges */
+}
+
+/* Style pour les puces de pagination des carrousels Swiper */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullet {
+  @apply bg-accent;
+}
+
+/* Styles pour les flèches de navigation */
+.swiper-button-prev {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+.swiper-button-next {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%234c71ae'%2F%3E%3C%2Fsvg%3E") !important;
+}
+
+/* Styles pour les éléments de la FAQ (classe .faq__item) lorsqu'il est ouvert */
+.faq__item.open .faq__answer {
+  @apply h-full;
+  /* h-full : Hauteur maximale pour afficher complètement la réponse de la FAQ */
+}
+
+/* Style de superposition pour les éléments de design (classe .design-overlay) */
+.design-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* position: absolute : Positionne la superposition de manière absolue */
+  /* inset: 0 : Étend la superposition sur tout le conteneur parent */
+  /* z-index: 1 : Place la superposition au-dessus du contenu de base */
+}
+.design-overlay:hover {
+  opacity: 0.2;
+  /* opacity: 0.2 : Réduit l'opacité au survol pour créer un effet visuel */
+}

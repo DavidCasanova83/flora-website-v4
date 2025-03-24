@@ -1,0 +1,441 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+---
+
+<Layout>
+		<!-- header -->
+		<header class="p-2">
+			<div
+				class="container mx-auto lg:relative flex flex-col items-center lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
+				<!-- Logo à gauche -->
+				<div class="flex justify-start w-fit">
+					<a href="./index.html">
+						<img src="./assets/img/header/logo.png" alt="logo du site de flora architecte d'intérieur Toulon"
+							class="w-[200px] h-auto">
+					</a>
+				</div>
+				<!-- Menu à droite -->
+				<div class="flex justify-center lg:justify-normal font-primary items-center">
+					<nav class="hidden lg:flex lg:items-center lg:justify-center lg:px-[50px]">
+						<!-- List Nav -->
+						<ul class="flex gap-x-4 whitespace-nowrap">
+							<li>
+								<a href="./about.html"
+									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Qui suis-je</a>
+							</li>
+							<li>
+								<a href="./prestations.html"
+									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Prestations</a>
+							</li>
+							<li>
+								<a href="./realisations.html"
+									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Réalisations</a>
+							</li>
+							<li>
+								<a href="./avis.html"
+									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Avis & actualité</a>
+							</li>
+							<li>
+								<a href="./contact.html"
+									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Contact</a>
+							</li>
+						</ul>
+					</nav>
+					<!-- mobile nav -->
+					<nav
+						class="mnav fixed top-0 left-[-100%] w-64 h-full bg-white shadow-lg transition-all duration-300 ease-in-out z-30">
+						<!-- nav trigger -->
+						<div
+							class="mnav__close-btn w-8 h-8 fixed top-4 right-4 flex justify-center items-center rounded-br-lg cursor-pointer transition-all md:hidden">
+							<i class="mnav__close-btn-icon ri-menu-line text-2xl text-black transition-transform duration-300"></i>
+						</div>
+						<div class="px-12 my-24 flex flex-col items-center text-center gap-y-12 h-full">
+							<ul>
+								<li><a href="index.html" class="text-secondary hover:text-accent transition-all duration-300">Accueil</a>
+								</li>
+								<li><a href="about.html" class="text-secondary hover:text-accent transition-all duration-300">Qui
+										suis-je</a></li>
+								<li><a href="prestations.html"
+										class="text-secondary hover:text-accent transition-all duration-300">Prestations</a></li>
+								<li><a href="realisations.html"
+										class="text-secondary hover:text-accent transition-all duration-300">Réalisations</a></li>
+								<li><a href="avis.html" class="text-secondary hover:text-accent transition-all duration-300">Avis &
+										actualité</a></li>
+								<li><a href="contact.html"
+										class="text-secondary hover:text-accent transition-all duration-300">Contact</a></li>
+							</ul>
+						</div>
+					</nav>
+					<a href="tel:+123456789"
+						class="lg:hidden flex justify-center items-center border-2 px-4 py-2 border-accent rounded-xl transition-all duration-300 text-accent hover:text-white hover:border-accent hover:bg-accent focus:outline-none">
+						<i class="ri-phone-fill text-2xl"></i>
+					</a>
+				</div>
+			</div>
+		</header>
+		<!-- header end -->
+	
+	
+		<!-- Section Hero avec slider en fond et texte fixe -->
+		<section class="relative h-screen overflow-hidden">
+			<!-- Slider en fond (positionné en absolu pour occuper tout le container) -->
+			<div class="absolute inset-0 z-0">
+				<div class="swiper slider-bg">
+					<div class="swiper-wrapper">
+						<!-- Slide 1 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide01.png.avif" alt="Photo 1" class="w-full h-screen object-cover">
+						</div>
+						<!-- Slide 2 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide02.png.avif" alt="Photo 2" class="w-full h-screen object-cover">
+						</div>
+						<!-- Slide 3 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide03.avif" alt="Photo 3" class="w-full h-screen object-cover">
+						</div>
+						<!-- Ajoute autant de slides que nécessaire -->
+					</div>
+					<!-- Pagination du slider -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+	
+			<!-- Texte Hero en overlay (positionné en relatif pour se placer au-dessus du slider) -->
+			<div class="relative z-10 flex items-center justify-start h-full p-8">
+				<!-- Ajout d'une marge à gauche et alignement du texte à gauche -->
+				<div class="bg-secondary bg-opacity-50 rounded-md text-left text-white p-12 ml-8">
+					<!-- Reste du contenu textuel -->
+					<div class="inline-flex items-center bg-white py-2 px-4 gap-2 mb-6 rounded-full">
+						<div class="uppercase text-base font-medium tracking-wider text-gray-900">Flora Leicarrague</div>
+					</div>
+					<h1 class="text-4xl text-white font-bold mb-4">Architecte d'intérieur sur TOULON</h1>
+					<p class="mb-6 max-w-xl">
+						Installée à Toulon, dans le Var, je mets à votre disposition mon expertise en tant qu'Architecte d'intérieur,
+						Maître d'œuvre et Décoratrice, principalement sur le bassin toulonnais. J'accompagne aussi bien les
+						particuliers que les professionnels. Je conçois avec vous des projets sur mesure, de la conception 2D & 3D
+						jusqu’à la réalisation, grâce à une prestation clé en main.
+					</p>
+					<div class="flex-1">
+						<div class="flex flex-col md:flex-row relative gap-y-4">
+							<a href="./contact.html" class="btn btn-lg btn-white md:absolute left-0">Contactez-moi</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section Hero avec slider en fond et texte fixe -->
+	
+	
+	
+		<!-- services -->
+		<section class="services my-7">
+			<!-- bg description -->
+			<div
+				class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px] px-6 xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10">
+				<div class="container mx-auto">
+					<div class="services__top flex items-center flex-col xl:flex-row xl:mb-[60px]">
+						<h2 class="h2 text-white flex-1 mb-4 xl:mb-0 texte-center xl:text-left">Flor'A - un m2 bien pensé en vaut
+							2 !
+						</h2>
+						<p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none">Diminutif de
+							FlorArchitecte, Flor'A est un cabinet où l'humain et l'environnement sont au cœur de chaque projet.
+						</p>
+					</div>
+	
+				</div>
+			</div>
+			<div class="container mx-auto mt-8 xl:-mt-[144px]">
+				<div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
+					<!-- bloque 1 -->
+					<div
+						class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+						<!-- <div class="mb-[15px]">
+							<img src="assets/icons/services/icon-1.svg" alt="">
+						</div> -->
+						<h3 class="h3 mb-[10px]">Visite conseil à domicile</h3>
+						<p class="font-light leading-normal max-w-[300px]">
+							RDV à votre domicile pour vous conseiller et vous guider sur vos projets durant 1h</p>
+						<a class="text-accent underline" href="./index.html">En savoir plus</a>
+					</div>
+					<!-- bloque 2 -->
+					<div
+						class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+						<!-- <div class="mb-[15px]">
+							<img src="assets/icons/services/icon-2.svg" alt="">
+						</div> -->
+						<h3 class="h3 mb-[10px]">Prestation clé en main</h3>
+						<p class="font-light leading-normal max-w-[300px]">
+							Prise en charge complète de votre projet d'aménagement intérieur avec une réception clé en main</p>
+						<a class="text-accent underline" href="./index.html">En savoir plus</a>
+	
+					</div>
+					<!-- bloque 3 -->
+					<div
+						class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+						<!-- <div class="mb-[15px]">
+							<img src="assets/icons/services/icon-3.svg" alt="">
+						</div> -->
+						<h3 class="h3 mb-[10px]">Décoration</h3>
+						<p class="font-light leading-normal max-w-[300px]">
+							Conception d'espaces en fonctions de vos désirs en jouant avec les matériaux, le mobilier, la lumière, ...
+						</p>
+						<a class="text-accent underline" href="./index.html">En savoir plus</a>
+	
+					</div>
+					<!-- bloque 4 -->
+					<div
+						class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+						<!-- <div class="mb-[15px]">
+							<img src="assets/icons/services/icon-4.svg" alt="">
+						</div> -->
+						<h3 class="h3 mb-[10px]">Proposition d'aménagement</h3>
+						<p class="font-light leading-normal max-w-[300px]">
+							Remise d'un dossier d'étude complet préparatoire avant travaux
+						</p>
+						<a class="text-accent underline" href="./index.html">En savoir plus</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- services end -->
+	
+	
+		<!-- slide photo -->
+		<section class="photo-slider testimonial pb-[150px] xl:min-h-[800px] xl:py-0 mt-7">
+			<div class="mx-auto xl:container">
+				<!-- slider -->
+				<div class="photo-slider swiper min-h-[650px]">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper slider__photo">
+						<!-- Slide 1 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide01.png.avif" alt="Photo 1" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 2 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide02.png.avif" alt="Photo 2" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 3 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide03.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 4 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide04.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 5 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide05.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 6 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide06.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 7 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide07.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 8 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide08.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						</div>
+						<!-- Slide 9 -->
+						<div class="swiper-slide">
+							<img src="./assets/img/sliderphoto/slide09.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						</div>
+					</div>
+					<!-- Swiper pagination -->
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<!-- slide photo end -->
+	
+	
+		<!-- testimonials -->
+		<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-12 xl:min-h-[595px] mb-12">
+			<div class="testimonial__container container mx-auto">
+				<div class="flex flex-col items-center gap-x-14 xl:flex-row">
+					<!-- img -->
+					<div class="hidden xl:flex">
+						<img src="./assets/img/testimonials/img.png" alt="#">
+					</div>
+					<!-- slider -->
+					<div class="max-w-[98%] xl:max-w-[710px]">
+						<!-- Slider main container -->
+						<div class="swiper h-[400px]">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slide 1 -->
+								<div class="swiper-slide">
+									<div class="h-full flex flex-col justify-center items-start">
+										<div class="max-w-[680px] mx-auto text-center xl:text-left">
+											<!-- Message 1 -->
+											<p
+												class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
+												<span class="mx-2">Toujours de bonnes idées pour aménager au mieux les espaces de vie, elle sait
+													optimiser le moindre espace avec goût
+												</span>
+											</p>
+											<!-- Name -->
+											<div class="tet-[26px] text-[#4c5354] font-semibold">
+												Romain Reynaud
+											</div>
+											<div class="text-white font-medium uppercase tracking-[2.24px]">Client</div>
+										</div>
+									</div>
+								</div>
+								<!-- Slide 2 -->
+								<div class="swiper-slide">
+									<div class="h-full flex flex-col justify-center items-start">
+										<div class="max-w-[680px] mx-auto text-center xl:text-left">
+											<!-- Message 1 -->
+											<p
+												class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
+												<span class="mx-2">En qualité d'architecte d'intérieur Flora a eu en charge la rénovation complète
+													de notre maison familiale, un maison ancienne de 100 m2 dans la région toulonnaise.
+												</span>
+											</p>
+											<!-- Name -->
+											<div class="tet-[26px] text-[#4c5354] font-semibold">
+												Instant Shiatsu
+											</div>
+											<div class="text-white font-medium uppercase tracking-[2.24px]">Entreprise</div>
+										</div>
+									</div>
+								</div>
+								<!-- Slide 3-->
+								<div class="swiper-slide">
+									<div class="h-full flex flex-col justify-center items-start">
+										<div class="max-w-[680px] mx-auto text-center xl:text-left">
+											<!-- Message 1 -->
+											<p
+												class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
+												<span class="mx-2">Nous ne regrettons pas d’avoir fait appel à cette jeune designeuse pour la
+													rénovation de notre appartement.
+													Par son écoute et sa créativité, elle a su répondre à nos attentes tout en respectant le budget
+													que nous avions fixé.</span>
+											</p>
+											<!-- Name -->
+											<div class="tet-[26px] text-[#4c5354] font-semibold">
+												Marjorie Martinez
+											</div>
+											<div class="text-white font-medium uppercase tracking-[2.24px]">Cliente</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- Swipper pagination -->
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- testimonials end -->
+	
+		<!-- mes réalisations -->
+		<section class="blog">
+			<div class="container mx-auto">
+				<h2 class="blog__title h2 mb-[50px] text-center xl:text-left">Mes dernières réalisations</h2>
+				<!-- blog post  -->
+				<div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
+					<!-- post 1 -->
+					<a href="construction.html" class="block">
+						<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+							<div class="relative overflow-hidden">
+								<img class="group-hover:scale-110 transition-all duration-500"
+									src="./assets/img/REALISATIONS/archi01.avif" alt="">
+								<div
+									class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+									ARCHITECTURE D'INTÉRIEUR
+								</div>
+							</div>
+							<div class="px-5 py-6">
+								<h4 class="h4 mb-[10px]">ESCLANGON</h4>
+								<p class="font-light">Rénovation intérieure et extérieure d'une villa
+									<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
+								</p>
+							</div>
+						</div>
+					</a>
+					<!-- post 2 -->
+					<a href="construction.html" class="block">
+						<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+							<div class="relative overflow-hidden">
+								<img class="group-hover:scale-110 transition-all duration-500"
+									src="./assets/img/REALISATIONS/archi02.avif" alt="">
+								<div
+									class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+									ARCHITECTURE D'INTÉRIEUR
+								</div>
+							</div>
+							<div class="px-5 py-6">
+								<h4 class="h4 mb-[10px]">Liberté (Toulon 83)
+								</h4>
+								<p class="font-light">Rénovation d'un Cabinet d'expert comptable
+									<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
+								</p>
+							</div>
+						</div>
+					</a>
+					<!-- post 3 -->
+					<a href="construction.html" class="block">
+						<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+							<div class="relative overflow-hidden">
+								<img class="group-hover:scale-110 transition-all duration-500"
+									src="./assets/img/REALISATIONS/archi03.avif" alt="">
+								<div
+									class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+									ARCHITECTURE D'INTÉRIEUR
+								</div>
+							</div>
+							<div class="px-5 py-6">
+								<h4 class="h4 mb-[10px]">RELAIS (Pau 64)
+								</h4>
+								<p class="font-light">Rénovation d'une maison d'habitation à Pau
+									<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
+								</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- mes réalisations end-->
+	
+	
+		<!-- contact panel -->
+		<section class="newsletter bg-accent md:h-[444px] py-12 flex items-center relative overflow-hidden">
+			<!-- container -->
+			<div class="newsletter__container container mx-auto">
+				<!-- wrapper -->
+				<div class="flex flex-col lg:flex-row lg:items-center lg:gap-x-[58px]">
+					<!-- text -->
+					<div class="flex-1 z-10 text-center md:text-left">
+						<div class="text-base uppercase text-white tracking-[2.24px] font-medium">Une question, un projet ? </div>
+						<h2 class="h2 mb-4 text-white">Je serai ravie de pouvoir vous rencontrer et de répondre à vos envies.
+						</h2>
+					</div>
+					<!-- form -->
+					<div class="flex-1">
+						<div class="flex flex-col md:flex-row relative gap-y-4">
+							<a href="./contact.html" class="btn btn-lg btn-white md:absolute left-0">Contactez-moi</a>
+						</div>
+					</div>
+	
+	
+				</div>
+			</div>
+		</section>
+		<!-- contact panel end-->
+	
+	
+
+</Layout>
