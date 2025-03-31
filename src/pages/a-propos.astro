@@ -1,0 +1,147 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+---
+
+<Layout title="À propos" description="Flora Leicarrague, architecte d'intérieur à Toulon. Découvrez mon parcours et mes réalisations.">
+  <!-- hero -->
+  <section class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+    <div class="container mx-auto h-full xl:px-24">
+      <div class="flex flex-col xl:flex-row items-center justify-between h-full">
+        <div class="hero__text xl:w-4/5 text-center xl:text-left p-12">
+          <div
+            class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0">
+            <div class="uppercase text-base font-medium tracking-[2.24px]">À propos de moi</div>
+          </div>
+          <h1 class="h1 mb-6">Flora LEICARRAGUE</h1>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            Architecte d'Intérieur, Maître d'oeuvre et Décoratrice sur Toulon et alentours
+            Diplômée avec mention de la prestigieuse école Camondo et reconnue
+            par le CFAI (Conseil Français des Architectes d'intérieur), je décide de créer mon entreprise d'Architecture
+            d'Intérieur et de Décoration sur Toulon.
+          </p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            Flor'A qui est le diminutif de FlorArchitecte est une agence pour qui l'humain et l'environnement sont les
+            préoccupations principales.
+          </p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            Je vous propose mes services en tant qu'Architecte d'intérieur et Maître d'œuvre sur Toulon et ses
+            alentours. J'interviens aussi bien auprès de particuliers (résidence principale, investissements locatifs)
+            qu'auprès de professionnels (bar/restaurants, magasins, hôtels, bureaux etc).</p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            L’architecture d’intérieur, au delà du simple fait de repenser un intérieur et/ou un extérieur, est avant
+            tout la connaissance des futurs occupants du lieu, de leur manière de vivre, leurs habitudes, leurs
+            attentes, leurs besoins et les usages qu’ils pourront faire du bâti.</p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            Le facteur environnemental est tout aussi important. Les recherches que j’ai pu effectuer pour mon mémoire
+            de fin d’études, portant sur la transformation de l’existant et l’emploi de matériaux bio-sourcés et
+            écologiques, n’ont fait qu’accentuer mon désir de créer une agence soucieuse de ces enjeux environnementaux.
+          </p>
+
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            En tant qu'architecte d'intérieur et maître d'œuvre, il est de mon devoir de participer à la construction du
+            monde de demain en prenant en compte ces problématiques. Je suis persuadée qu'il est réellement possible
+            d'envisager une architecture responsable qui cohabiterait en symbiose avec l'existant, que ce soit à travers
+            de nouvelles techniques de réalisation ou des matériaux plus responsables et écologiques.
+          </p>
+        </div>
+        <div class="hero__img hidden xl:flex flex-col self-start pt-52">
+          <img src="assets/img/hero/photo-profil-flora.avif" alt="">
+          <button><a href="./contact" class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Me contacter</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- hero end -->
+
+
+  <!-- design infos -->
+  <section class="relative w-full h-full overflow-hidden">
+    <div class="section mx-auto">
+
+      <div class="relative grid grid-cols-1 md:grid-cols-2 gap-6 m-12">
+        <!-- Première colonne -->
+        <div class="relative z-10 hidden xl:block">
+          <div class="bg-white shadow-md">
+            <div class="relative">
+              <img
+                src="https://static.wixstatic.com/media/89463731f8724becabb6b7da44101399.jpg/v1/fill/w_944,h_362,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/89463731f8724becabb6b7da44101399.jpg"
+                alt="Papier recyclé" class="w-full h-auto object-cover">
+              <img src="./assets/img/design/logo-design.avif" alt="logo-design"
+                class="absolute top-4 left-36 w-[300px] h-[300px] transform ">
+            </div>
+          </div>
+        </div>
+        <!-- Deuxième colonne -->
+        <div class="absolute left-54 md:relative md:top-12 md:left-12 z-20 md:transform md:-translate-x-1/4">
+          <div class="bg-white p-4 shadow-md min-h-[200px]">
+            <div class="relative z-10 xl:hidden">
+              <div class="bg-white shadow-md">
+                <div class="relative">
+                  <img src="./assets/img/design/logo-design.avif" alt="logo-design"
+                    class="absolute -top-28 left-44 w-[150px] h-[150px] transform ">
+                </div>
+              </div>
+            </div>
+            <h1 class="text-4xl font-bold mb-4">MÉMOIRE</h1>
+            <p class="text-center text-lg">
+              "Un pas en arrière, deux pas en avant"
+            </p>
+            <p class="text-center text-sm">
+              Mémoire de fin d'études<br>
+              Ecole CAMONDO Méditerranée - 2021<br>
+              Toulon
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="container mx-auto text-justify mt-52 px-6 xl:mt-6">Intervenir sur l’existant, construire dans le
+        construit,
+        reprendre
+        la
+        ville sur
+        elle-même
+        relèvent de décisions
+        telles que transformer, de renouveler, d’adapter, de détruire ou de conserver un espace déjà aménagé, déjà ouvré
+        et déjà instrument d’une activité sociale. «Un pas en arrière, deux pas en avant» désigne le fait d’avancer tout
+        en prenant en compte l’existant comme base de départ en excluant la possibilité de le détruire et de construire
+        du
+        neuf. Cette démarche d’éco-responsabilité nous amène à repenser l’architecture sous une perspective d’économie
+        circulaire. <br>
+        <button><a href="./assets/img/documents/memoire-flora-architecte-fin-etude.pdf"
+            class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Télécharger -
+            mémoire.pdf</a></button>
+      </p>
+    </div>
+  </section>
+  <!-- design infos end -->
+
+  <!-- slide photo -->
+  <section class="photo-slider testimonial pb-[150px] xl:min-h-[800px] xl:py-0">
+    <div class="mx-auto xl:container">
+      <!-- slider -->
+      <div class="photo-slider swiper min-h-[650px]">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slide 1 -->
+          <div class="swiper-slide relative">
+            <div class="relative w-full h-[600px] bg-cover bg-center"
+              style="background-image: url('./assets/img/sliderphoto/about-flora.avif');">
+              <div class="absolute inset-0 bg-black bg-opacity-50 blur-sm"></div>
+              <h4 class="h4 text-white absolute inset-0 flex items-center justify-center p-8 text-center">
+                "L’espace habité, l’espace conçu par l’homme est construit selon des images vivantes mêlant réalité et
+                rêve, sensations et émotions, objectivité et subjectivité."
+              </h4>
+            </div>
+          </div>
+
+        </div>
+        <!-- Swiper pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </section>
+  <!-- slide photo end -->
+
+</Layout>

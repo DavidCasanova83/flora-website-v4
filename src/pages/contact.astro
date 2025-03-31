@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+---
+
+<Layout title="Contact" description="Contactez-moi pour discuter de votre projet d'architecture d'intérieur. Je suis à votre écoute pour répondre à vos besoins.">
+
+
+
+  <!-- Contact form -->
+  <section class="appointment section">
+    <div class="container mx-auto">
+      <h2 class="appointment__title h2 mb-5 xl:mb-[50px] text-center xl:text-left">M'envoyer un mail ou m'appeler :
+        <br class="xl:hidden"> <span class="text-accent-tertiary">
+          <span class="text-accent-tertiary">06 95 58 46 39</span>
+      </h2>
+      <!-- form -->
+      <form action="#" class="appointment__form flex flex-col gap-y-5">
+        <!-- select wrapper -->
+        <div class="flex flex-col xl:flex-row gap-5">
+          <!-- select 2 -->
+          <div class="select relative flex items-center">
+            <div class="absolute right-4">
+              <i class="ri-arrow-down-s-line text-[26px] text-primary"></i>
+            </div>
+            <!-- select  -->
+            <select name="#" id="#" class="appearance-none outline-none w-full bg-transparent px-4">
+              <option value="1">Visite conseil à domicile </option>
+              <option value="2">Proposition d'aménagement</option>
+              <option value="3">Prestation clé en main</option>
+              <option value="4">Décoration</option>
+            </select>
+          </div>
+        </div>
+        <!-- input wrapper-->
+        <div class="flex flex-col xl:flex-row gap-5">
+          <input type="text" class="input" placeholder="Nom">
+          <input type="text" class="input" placeholder="Numéro de téléphone">
+        </div>
+        <!-- input message-->
+        <div class="flex flex-col xl:flex-row gap-5">
+          <textarea placeholder="Votre message" class="w-full p-2 border rounded h-[150px]"></textarea>
+        </div>
+        <!-- button -->
+        <button class="btn btn-lg btn-accent self-start"
+          onclick="window.location.href='mailto:leicarragueflora@gmail.com'">Envoyer</button>
+      </form>
+    </div>
+  </section>
+  <!-- Contact form -->
+
+
+
+
+
+
+
+</Layout>
