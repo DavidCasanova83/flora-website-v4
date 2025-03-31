@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+---
+
+<Layout title="404" description="Ce contenu n'est pas encore disponible.">
+
+
+  <!-- hero -->
+  <section class="heropy-12 mb-12 xl:pt-12 xl:pb-0 overflow-hidden">
+    <div class="container mx-auto h-full flex flex-col justify-center items-center xl:px-24">
+      <h1 class="h1 mb-6">En Construction</h1>
+      <p class="mb-[16px] md:max-w-xl text-justify">
+        🚧 Désolé cette parti du site est encore en construction. 🚧
+      </p>
+      <p class="mb-[16px] md:max-w-xl text-justify">
+        Bientot disponible, n'hesitez pas à revenir me rendre visite.
+      </p>
+    </div>
+  </section>
+  <!-- hero end -->
+
+
+  <!-- contact panel -->
+  <section class="newsletter bg-accent md:h-[444px] py-12 flex items-center relative overflow-hidden">
+    <!-- pattern -->
+    <div class="absolute left-0 bottom-0">
+      <img src="./assets/img/newsletter/pattern.svg" alt="">
+    </div>
+    <!-- container -->
+    <div class="newsletter__container container mx-auto">
+      <!-- wrapper -->
+      <div class="flex flex-col lg:flex-row lg:items-center lg:gap-x-[58px]">
+        <!-- text -->
+        <div class="flex-1 z-10 text-center md:text-left">
+          <div class="text-base uppercase text-white tracking-[2.24px] font-medium">Une question, un projet ? </div>
+          <h2 class="h2 mb-4 text-white">Je serai ravie de pouvoir vous rencontrer et de répondre à vos envies.
+          </h2>
+        </div>
+        <!-- form -->
+        <div class="flex-1">
+          <div class="flex flex-col md:flex-row relative gap-y-4">
+            <a href="./contact.html" class="btn btn-lg btn-white md:absolute left-0">Contactez-moi</a>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- contact panel end-->
+
+
+</Layout>

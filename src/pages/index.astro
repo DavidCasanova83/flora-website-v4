@@ -4,80 +4,7 @@ import "../styles/global.css";
 
 ---
 
-<Layout>
-		<!-- header -->
-		<header class="p-2">
-			<div
-				class="container mx-auto lg:relative flex flex-col items-center lg:flex-row lg:justify-between gap-y-4 lg:gap-y-0">
-				<!-- Logo à gauche -->
-				<div class="flex justify-start w-fit">
-					<a href="./index.html">
-						<img src="./assets/img/header/logo.png" alt="logo du site de flora architecte d'intérieur Toulon"
-							class="w-[200px] h-auto">
-					</a>
-				</div>
-				<!-- Menu à droite -->
-				<div class="flex justify-center lg:justify-normal font-primary items-center">
-					<nav class="hidden lg:flex lg:items-center lg:justify-center lg:px-[50px]">
-						<!-- List Nav -->
-						<ul class="flex gap-x-4 whitespace-nowrap">
-							<li>
-								<a href="./about.html"
-									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Qui suis-je</a>
-							</li>
-							<li>
-								<a href="./prestations.html"
-									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Prestations</a>
-							</li>
-							<li>
-								<a href="./realisations.html"
-									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Réalisations</a>
-							</li>
-							<li>
-								<a href="./avis.html"
-									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Avis & actualité</a>
-							</li>
-							<li>
-								<a href="./contact.html"
-									class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Contact</a>
-							</li>
-						</ul>
-					</nav>
-					<!-- mobile nav -->
-					<nav
-						class="mnav fixed top-0 left-[-100%] w-64 h-full bg-white shadow-lg transition-all duration-300 ease-in-out z-30">
-						<!-- nav trigger -->
-						<div
-							class="mnav__close-btn w-8 h-8 fixed top-4 right-4 flex justify-center items-center rounded-br-lg cursor-pointer transition-all md:hidden">
-							<i class="mnav__close-btn-icon ri-menu-line text-2xl text-black transition-transform duration-300"></i>
-						</div>
-						<div class="px-12 my-24 flex flex-col items-center text-center gap-y-12 h-full">
-							<ul>
-								<li><a href="index.html" class="text-secondary hover:text-accent transition-all duration-300">Accueil</a>
-								</li>
-								<li><a href="about.html" class="text-secondary hover:text-accent transition-all duration-300">Qui
-										suis-je</a></li>
-								<li><a href="prestations.html"
-										class="text-secondary hover:text-accent transition-all duration-300">Prestations</a></li>
-								<li><a href="realisations.html"
-										class="text-secondary hover:text-accent transition-all duration-300">Réalisations</a></li>
-								<li><a href="avis.html" class="text-secondary hover:text-accent transition-all duration-300">Avis &
-										actualité</a></li>
-								<li><a href="contact.html"
-										class="text-secondary hover:text-accent transition-all duration-300">Contact</a></li>
-							</ul>
-						</div>
-					</nav>
-					<a href="tel:+123456789"
-						class="lg:hidden flex justify-center items-center border-2 px-4 py-2 border-accent rounded-xl transition-all duration-300 text-accent hover:text-white hover:border-accent hover:bg-accent focus:outline-none">
-						<i class="ri-phone-fill text-2xl"></i>
-					</a>
-				</div>
-			</div>
-		</header>
-		<!-- header end -->
-	
-	
+<Layout title="Accueil">
 		<!-- Section Hero avec slider en fond et texte fixe -->
 		<section class="relative h-screen overflow-hidden">
 			<!-- Slider en fond (positionné en absolu pour occuper tout le container) -->
@@ -104,27 +31,26 @@ import "../styles/global.css";
 			</div>
 	
 			<!-- Texte Hero en overlay (positionné en relatif pour se placer au-dessus du slider) -->
-			<div class="relative z-10 flex items-center justify-start h-full p-8">
-				<!-- Ajout d'une marge à gauche et alignement du texte à gauche -->
-				<div class="bg-secondary bg-opacity-50 rounded-md text-left text-white p-12 ml-8">
-					<!-- Reste du contenu textuel -->
+			<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 md:px-8 py-12">
+				<div class="bg-secondary bg-opacity-50 rounded-md text-left text-white p-6 md:p-12 max-w-2xl w-full">
 					<div class="inline-flex items-center bg-white py-2 px-4 gap-2 mb-6 rounded-full">
 						<div class="uppercase text-base font-medium tracking-wider text-gray-900">Flora Leicarrague</div>
 					</div>
-					<h1 class="text-4xl text-white font-bold mb-4">Architecte d'intérieur sur TOULON</h1>
-					<p class="mb-6 max-w-xl">
+					<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">
+						Architecte d'intérieur sur TOULON
+					</h1>
+					<p class="mb-6 text-sm sm:text-base max-w-xl">
 						Installée à Toulon, dans le Var, je mets à votre disposition mon expertise en tant qu'Architecte d'intérieur,
 						Maître d'œuvre et Décoratrice, principalement sur le bassin toulonnais. J'accompagne aussi bien les
 						particuliers que les professionnels. Je conçois avec vous des projets sur mesure, de la conception 2D & 3D
 						jusqu’à la réalisation, grâce à une prestation clé en main.
 					</p>
-					<div class="flex-1">
-						<div class="flex flex-col md:flex-row relative gap-y-4">
-							<a href="./contact.html" class="btn btn-lg btn-white md:absolute left-0">Contactez-moi</a>
-						</div>
+					<div class="flex flex-col sm:flex-row gap-4">
+						<a href="./contact.html" class="btn btn-lg btn-white w-full sm:w-auto text-center">Contactez-moi</a>
 					</div>
 				</div>
 			</div>
+			
 		</section>
 		<!-- Section Hero avec slider en fond et texte fixe -->
 	
