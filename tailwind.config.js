@@ -33,7 +33,7 @@ module.exports = {
         grey: '#EEEAE6',
       },
       fontFamily: {
-        primary: 'Poppins',
+        primary: 'Raleway',
       },
       boxShadow: {
         custom1: '0 2px 40px 0 rgba(8, 70, 78, 0.08)',

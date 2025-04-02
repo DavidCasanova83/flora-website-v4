@@ -44,6 +44,8 @@ h4,
 h5,
 h6 {
   @apply leading-120 text-primary;
+  letter-spacing: 2px;
+  font-weight: 300;
   /* leading-120 : Ajoute un interligne spécifique pour espacer les lignes des titres */
   /* text-primary : Définit la couleur principale pour les titres */
 }
@@ -58,7 +60,7 @@ h6 {
 
 /* Styles pour le titre de classe .h2 */
 .h2 {
-  @apply text-[30px] font-semibold uppercase tracking-[0.44px] xl:text-[44px];
+  @apply text-[30px] font-light uppercase tracking-[0.44px] xl:text-[44px];
   /* text-[30px] : Taille de texte de 30px par défaut */
   /* font-semibold : Applique un gras moyen pour mettre en valeur le titre */
   /* capitalize : Transforme la première lettre de chaque mot en majuscule */
@@ -110,10 +112,9 @@ h6 {
 
 /* Style pour le bouton avec accent coloré (classe .btn-accent) */
 .btn-accent {
-  @apply bg-accent text-white hover:border-2 hover:border-accent hover:bg-accent-secondary hover:text-accent;
-  /* bg-accent : Couleur d'arrière-plan principale du bouton */
-  /* text-white : Texte en blanc pour un bon contraste */
-  /* hover:bg-accent-secondary : Changement de couleur au survol pour accentuer l'interaction */
+  @apply bg-accent text-white hover:border-accent 
+         hover:bg-accent-secondary hover:text-primary 
+         transition-all duration-300 ease-in-out;
 }
 
 /* Style pour le bouton blanc (classe .btn-white) */
