@@ -13,15 +13,7 @@ import "../styles/global.css";
 					<div class="swiper-wrapper">
 						<!-- Slide 1 -->
 						<div class="swiper-slide">
-							<img src="./assets/img/sliderphoto/slide01.png.avif" alt="Photo 1" class="w-full h-screen object-cover">
-						</div>
-						<!-- Slide 2 -->
-						<div class="swiper-slide">
-							<img src="./assets/img/sliderphoto/slide02.png.avif" alt="Photo 2" class="w-full h-screen object-cover">
-						</div>
-						<!-- Slide 3 -->
-						<div class="swiper-slide">
-							<img src="./assets/img/sliderphoto/slide03.avif" alt="Photo 3" class="w-full h-screen object-cover">
+							<img src="./assets/img/sliderphoto/header-web-site-flora-opti.jpg" alt="image-deco-header-website" class="w-full h-screen object-cover">
 						</div>
 						<!-- Ajoute autant de slides que nécessaire -->
 					</div>
@@ -31,22 +23,25 @@ import "../styles/global.css";
 			</div>
 	
 			<!-- Texte Hero en overlay (positionné en relatif pour se placer au-dessus du slider) -->
-			<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 md:px-8 py-12">
-				<div class="bg-secondary bg-opacity-50 rounded-md text-left text-white p-6 md:p-12 max-w-2xl w-full">
-					<div class="inline-flex items-center bg-white py-2 px-4 gap-2 mb-6 rounded-full">
-						<div class="uppercase text-base font-medium tracking-wider text-gray-900">Flora Leicarrague</div>
-					</div>
-					<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">
-						Architecte d'intérieur sur TOULON
+			<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 lg:mx-24 md:px-8 py-12">
+				<div class="bg-white bg-opacity-60 rounded-md text-left text-primary p-6 md:p-12 max-w-2xl w-full">
+					<!-- logo  -->
+					<div class="max-w-[300px] flex flex-col justify-end items-end mb-[30px]">
+						<a href="./index.html">
+							<img class="mb-[30px]" src="./assets/img/header/logo-transparent.png" alt="">
+						</a>
+					</div>					
+					<h1 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 text-primary">
+						Architecte d'intérieur <br/>sur TOULON
 					</h1>
-					<p class="mb-6 text-sm sm:text-base max-w-xl">
+					<p class="mb-6 text-sm sm:text-base font-light max-w-xl">
 						Installée à Toulon, dans le Var, je mets à votre disposition mon expertise en tant qu'Architecte d'intérieur,
 						Maître d'œuvre et Décoratrice, principalement sur le bassin toulonnais. J'accompagne aussi bien les
 						particuliers que les professionnels. Je conçois avec vous des projets sur mesure, de la conception 2D & 3D
 						jusqu’à la réalisation, grâce à une prestation clé en main.
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4">
-						<a href="./contact.html" class="btn btn-lg btn-white w-full sm:w-auto text-center">Contactez-moi</a>
+						<a href="./contact.html" class="btn btn-lg btn-accent w-full sm:w-auto text-center">Contactez-moi</a>
 					</div>
 				</div>
 			</div>
@@ -60,7 +55,7 @@ import "../styles/global.css";
 		<section class="services my-7">
 			<!-- bg description -->
 			<div
-				class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[20px] xl:pt-[70px] px-6 xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10">
+				class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[10px] xl:pt-[70px] px-6 xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10">
 				<div class="container mx-auto">
 					<div class="services__top flex items-center flex-col xl:flex-row xl:mb-[60px]">
 						<h2 class="h2 text-white flex-1 mb-4 xl:mb-0 texte-center xl:text-left">Flor'A - un m2 bien pensé en vaut
@@ -180,17 +175,83 @@ import "../styles/global.css";
 		</section>
 		<!-- slide photo end -->
 	
+
+				<!-- mes réalisations -->
+				<section class="blog">
+					<div class="container mx-auto">
+						<h2 class="blog__title h2 mb-[50px] text-center font-light xl:text-left">Mes dernières réalisations</h2>
+						<!-- blog post  -->
+						<div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
+							<!-- post 1 -->
+							<a href="construction.html" class="block">
+								<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+									<div class="relative overflow-hidden">
+										<img class="group-hover:scale-110 transition-all duration-500"
+											src="./assets/img/REALISATIONS/archi01.avif" alt="">
+										<div
+											class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+											ARCHITECTURE D'INTÉRIEUR
+										</div>
+									</div>
+									<div class="px-5 py-6">
+										<h4 class="h4 mb-[10px]">ESCLANGON</h4>
+										<p class="font-light">Rénovation intérieure et extérieure d'une villa
+											<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
+										</p>
+									</div>
+								</div>
+							</a>
+							<!-- post 2 -->
+							<a href="construction.html" class="block">
+								<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+									<div class="relative overflow-hidden">
+										<img class="group-hover:scale-110 transition-all duration-500"
+											src="./assets/img/REALISATIONS/archi02.avif" alt="">
+										<div
+											class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+											ARCHITECTURE D'INTÉRIEUR
+										</div>
+									</div>
+									<div class="px-5 py-6">
+										<h4 class="h4 mb-[10px]">Liberté (Toulon 83)
+										</h4>
+										<p class="font-light">Rénovation d'un Cabinet d'expert comptable
+											<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
+										</p>
+									</div>
+								</div>
+							</a>
+							<!-- post 3 -->
+							<a href="construction.html" class="block">
+								<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+									<div class="relative overflow-hidden">
+										<img class="group-hover:scale-110 transition-all duration-500"
+											src="./assets/img/REALISATIONS/archi03.avif" alt="">
+										<div
+											class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+											ARCHITECTURE D'INTÉRIEUR
+										</div>
+									</div>
+									<div class="px-5 py-6">
+										<h4 class="h4 mb-[10px]">RELAIS (Pau 64)
+										</h4>
+										<p class="font-light">Rénovation d'une maison d'habitation à Pau
+											<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
+										</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</section>
+				<!-- mes réalisations end-->
 	
 		<!-- testimonials -->
-		<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-12 xl:min-h-[595px] mb-12">
-			<div class="testimonial__container container mx-auto">
-				<div class="flex flex-col items-center gap-x-14 xl:flex-row">
-					<!-- img -->
-					<div class="hidden xl:flex">
-						<img src="./assets/img/testimonials/img.png" alt="#">
-					</div>
+		<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-6 mb-12">
+			<div class="testimonial__container container mx-auto flex justify-center">
+				<div class="flex flex-col gap-x-14 xl:flex-row">
 					<!-- slider -->
-					<div class="max-w-[98%] xl:max-w-[710px]">
+					<div class="max-w-[100%] xl:max-w-[710px]">
 						<!-- Slider main container -->
 						<div class="swiper h-[400px]">
 							<!-- Additional required wrapper -->
@@ -266,79 +327,11 @@ import "../styles/global.css";
 		</section>
 		<!-- testimonials end -->
 	
-		<!-- mes réalisations -->
-		<section class="blog">
-			<div class="container mx-auto">
-				<h2 class="blog__title h2 mb-[50px] text-center xl:text-left">Mes dernières réalisations</h2>
-				<!-- blog post  -->
-				<div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
-					<!-- post 1 -->
-					<a href="construction.html" class="block">
-						<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-							<div class="relative overflow-hidden">
-								<img class="group-hover:scale-110 transition-all duration-500"
-									src="./assets/img/REALISATIONS/archi01.avif" alt="">
-								<div
-									class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-									ARCHITECTURE D'INTÉRIEUR
-								</div>
-							</div>
-							<div class="px-5 py-6">
-								<h4 class="h4 mb-[10px]">ESCLANGON</h4>
-								<p class="font-light">Rénovation intérieure et extérieure d'une villa
-									<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
-								</p>
-							</div>
-						</div>
-					</a>
-					<!-- post 2 -->
-					<a href="construction.html" class="block">
-						<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-							<div class="relative overflow-hidden">
-								<img class="group-hover:scale-110 transition-all duration-500"
-									src="./assets/img/REALISATIONS/archi02.avif" alt="">
-								<div
-									class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-									ARCHITECTURE D'INTÉRIEUR
-								</div>
-							</div>
-							<div class="px-5 py-6">
-								<h4 class="h4 mb-[10px]">Liberté (Toulon 83)
-								</h4>
-								<p class="font-light">Rénovation d'un Cabinet d'expert comptable
-									<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
-								</p>
-							</div>
-						</div>
-					</a>
-					<!-- post 3 -->
-					<a href="construction.html" class="block">
-						<div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-							<div class="relative overflow-hidden">
-								<img class="group-hover:scale-110 transition-all duration-500"
-									src="./assets/img/REALISATIONS/archi03.avif" alt="">
-								<div
-									class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-									ARCHITECTURE D'INTÉRIEUR
-								</div>
-							</div>
-							<div class="px-5 py-6">
-								<h4 class="h4 mb-[10px]">RELAIS (Pau 64)
-								</h4>
-								<p class="font-light">Rénovation d'une maison d'habitation à Pau
-									<a href="#" class="italic underline text-[#4c5354]">Voir le projet</a>
-								</p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-		</section>
-		<!-- mes réalisations end-->
+
 	
 	
 		<!-- contact panel -->
-		<section class="newsletter bg-accent md:h-[444px] py-12 flex items-center relative overflow-hidden">
+		<section class="newsletter bg-accent md:h-[444px] py-12 mx-2 lg:mx-24 rounded-[10px] flex items-center relative overflow-hidden">
 			<!-- container -->
 			<div class="newsletter__container container mx-auto">
 				<!-- wrapper -->
