@@ -1,9 +1,9 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { getPages } from '../../lib/notion';
-import { mapPageData } from '../../lib/parseNotion';
-import type { ParsedPage } from '../../types/ParsedPage';
-import "../../styles/global.css";
+import Layout from '../layouts/Layout.astro';
+import { getPages } from '../lib/notion';
+import { mapPageData } from '../lib/parseNotion';
+import type { ParsedPage } from '../types/ParsedPage';
+import "../styles/global.css";
 
 // 🔁 Génération des routes statiques à partir des slugs Notion
 export async function getStaticPaths() {
