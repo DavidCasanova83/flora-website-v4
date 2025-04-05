@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getPages } from '../../lib/notion';
+import { mapPageData } from '../../lib/parseNotion';
+import type { ParsedPage } from '../../types/ParsedPage';
+import "../../styles/global.css";
+
+// 🔁 Génération des routes statiques à partir des slugs Notion
+export async function getStaticPaths() {
+  const rawPages = await getPages();
+  const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
+
+  const paths = parsedPages
+    .filter(page => !!page.slug)
+    .map(page => ({
+      params: { slug: page.slug! }
+    }));
+
+  return paths;
+}
+
+// 🔍 Récupération du slug de l'URL
+const { slug } = Astro.params;
+
+const rawPages = await getPages();
+const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
+
+// 🎯 On cherche la page correspondant au slug
+const page = parsedPages.find(p => p.slug === slug);
+
+if (!page) {
+  throw new Error(`Article introuvable pour le slug : ${slug}`);
+}
+
+// ✅ Extraction des données typées
+const {
+  title,
+  slug: slugText,
+  status,
+  published,
+  btnText,
+  excerpt,
+  content,
+  imagePresentation,
+  images = [],
+  link,
+  date,
+  rank,
+  created,
+  edited
+} = page;
+
+// ✅ Formatage de la date de modification (ex: "23 mars 2025")
+const editedDate = edited
+  ? new Date(edited).toLocaleDateString("fr-FR", {
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    })
+  : null;
+---
+
+<Layout>
+  <article class="max-w-3xl mx-auto p-6 md:p-12">
+    <header class="mb-10">
+      {date && <p class="text-gray-500 text-sm">📅 {date}</p>}
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
+
+      {/* Statut de l'article */}
+      {status && <p class="text-sm mb-2">🟣 Statut : {status}</p>}
+
+      {/* Si marqué comme publié */}
+      {published && <p class="text-sm mb-2">✅ Publié</p>}
+
+      {/* Extrait d'intro */}
+      {excerpt && <p class="text-gray-600 text-base mb-6 italic">{excerpt}</p>}
+
+      {/* Image principale */}
+      {imagePresentation && (
+        <img src={imagePresentation} alt={title} class="rounded-lg w-full object-cover mb-6 shadow-md" />
+      )}
+    </header>
+
+    {/* Contenu principal */}
+    <div class="prose prose-lg max-w-none mb-10">
+      {content}
+    </div>
+
+    {/* Galerie d'images associées */}
+    {images.length > 0 && (
+      <section class="mb-8">
+        <h2 class="text-2xl font-semibold mb-4">Images associées</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {images.map((img, i) => (
+            <img src={img} alt={`Image ${i + 1}`} class="rounded shadow" />
+          ))}
+        </div>
+      </section>
+    )}
+
+    {/* Pied de page avec métadonnées */}
+    <footer class="border-t pt-4 mt-10 text-sm text-gray-500">
+      {slugText && <p>🆔 Slug : {slugText}</p>}
+      {btnText && <p>🔘 Bouton : {btnText}</p>}
+      {link && <p>🔗 Lien : <a href={link} class="text-blue-600 underline">{link}</a></p>}
+      {rank !== null && <p>📊 Rank : {rank}</p>}
+      {created && <p>🕒 Créé le : {created}</p>}
+      {editedDate && <p>✏️ Modifié le {editedDate}</p>}
+    </footer>
+  </article>
+</Layout>

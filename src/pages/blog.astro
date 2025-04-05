@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getPages } from '../lib/notion';
+import { mapPageData } from '../lib/parseNotion';
+import type { ParsedPage } from '../types/ParsedPage';
+import "../styles/global.css";
+
+// 🔁 Récupère et mappe toutes les pages en objets simplifiés
+const rawPages = await getPages();
+const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
+
+// 🎯 Filtre les articles ayant un statut "En ligne" ou "En Cours"
+const articles = parsedPages.filter(p =>
+  ["En ligne", "En Cours"].includes(p.status ?? "")
+);
+---
+
+<Layout>
+  <section class="p-6 md:p-12 bg-gradient-to-b from-gray-50 to-white min-h-screen">
+    <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">
+      📰 Articles disponibles
+    </h1>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        articles.map(article => {
+          const {
+            title,
+            slug,
+            excerpt,
+            date,
+            imagePresentation,
+            status
+          } = article;
+
+          const isEnCours = status === "En Cours";
+
+          const content = (
+            <div class={`group block bg-white rounded-2xl shadow-lg transition overflow-hidden relative 
+              ${isEnCours ? 'opacity-50 pointer-events-none' : 'hover:shadow-xl'}`}>
+
+              {/* Badge En cours */}
+              {isEnCours && (
+                <span class="absolute top-3 left-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shadow">
+                  En cours
+                </span>
+              )}
+
+              {imagePresentation && (
+                <div class="h-48 w-full overflow-hidden">
+                  <img src={imagePresentation} alt={title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                </div>
+              )}
+
+              <div class="p-5">
+                <p class="text-sm text-gray-500 mb-1">{date}</p>
+                <h2 class="text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition">{title}</h2>
+                <p class="mt-2 text-gray-600 text-sm line-clamp-2">{excerpt}</p>
+              </div>
+            </div>
+          );
+
+          // 🔗 Lien cliquable seulement si l'article est en ligne
+          return isEnCours
+            ? <div>{content}</div>
+            : <a href={`/blog/${slug}`}>{content}</a>;
+        })
+      }
+    </div>
+  </section>
+</Layout>
