@@ -10,7 +10,12 @@ const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
 // 🎯 Filtre les réalisations ayant un statut "En ligne" ou "En Cours"
 const projects = parsedPages
   .filter(p => ["En ligne", "En Cours"].includes(p.status ?? ""))
-  .sort((a, b) => (b.rank || 0) - (a.rank || 0))
+  .sort((a, b) => {
+    if (!a.rank && !b.rank) return 0;
+    if (!a.rank) return 1;
+    if (!b.rank) return -1;
+    return a.rank - b.rank;
+  })
   .slice(0, 3); // On ne garde que les 3 dernières
 
 ---
@@ -41,7 +46,7 @@ const projects = parsedPages
                   />
                 )}
                 <div class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-                  ARCHITECTURE D'INTÉRIEUR
+                  {project.label?.toUpperCase()}
                 </div>
                 {isEnCours && (
                   <span class="absolute top-3 left-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shadow">
@@ -66,5 +71,8 @@ const projects = parsedPages
       })}
     </div>
   </div>
+  <div class="container mx-auto flex justify-center mb-12">
+		<a href="/realisations" class="btn btn-lg btn-accent">Voir tous les projets</a>
+	</div>
 </section>
 <!-- mes réalisations end--> 

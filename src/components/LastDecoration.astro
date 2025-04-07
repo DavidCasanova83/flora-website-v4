@@ -13,7 +13,12 @@ const projects = parsedPages
     ["En ligne", "En Cours"].includes(p.status ?? "") &&
     p.label === "décoration"
   )
-  .sort((a, b) => (b.rank || 0) - (a.rank || 0))
+  .sort((a, b) => {
+    if (!a.rank && !b.rank) return 0;
+    if (!a.rank) return 1;
+    if (!b.rank) return -1;
+    return a.rank - b.rank;
+  })
   .slice(0, 3); // On ne garde que les 3 dernières
 ---
 <!-- Décoration -->
@@ -42,7 +47,7 @@ const projects = parsedPages
                   />
                 )}
                 <div class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-                  DÉCORATION
+                  {project.label?.toUpperCase()}
                 </div>
                 {isEnCours && (
                   <span class="absolute top-3 left-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shadow">
