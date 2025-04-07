@@ -1,11 +1,295 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import LastProjects from '../components/LastProjects.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Accueil" description="Flor'A - Architecte d'intérieur à Toulon. Spécialisée en architecture d'intérieur, décoration et aménagement, je vous accompagne dans vos projets de rénovation et d'aménagement avec une prestation clé en main.">
+	<!-- Section Hero avec slider en fond et texte fixe -->
+	<section class="relative h-screen overflow-hidden">
+		<!-- Slider en fond (positionné en absolu pour occuper tout le container) -->
+		<div class="absolute inset-0 z-0">
+			<div class="swiper slider-bg">
+				<div class="swiper-wrapper">
+					<!-- Slide 1 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/header-web-site-flora-opti.jpg" alt="image-deco-header-website" class="w-full h-screen object-cover">
+					</div>
+					<!-- Ajoute autant de slides que nécessaire -->
+				</div>
+				<!-- Pagination du slider -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<!-- Texte Hero en overlay (positionné en relatif pour se placer au-dessus du slider) -->
+		<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 lg:mx-24 md:px-8 py-12">
+			<div class="bg-white bg-opacity-60 rounded-md text-left text-primary p-6 md:p-12 max-w-2xl w-full">
+				<!-- logo  -->
+				<div class="max-w-[300px] flex flex-col justify-end items-end mb-[30px]">
+					<a href="./index.html">
+						<img class="mb-[30px]" src="./assets/img/header/logo-transparent.png" alt="">
+					</a>
+				</div>					
+				<h1 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 text-primary">
+					Architecte d'intérieur <br/>sur TOULON
+				</h1>
+				<p class="mb-6 text-sm sm:text-base font-light max-w-xl">
+					Installée à Toulon, dans le Var, je mets à votre disposition mon expertise en tant qu'Architecte d'intérieur,
+					Maître d'œuvre et Décoratrice, principalement sur le bassin toulonnais. J'accompagne aussi bien les
+					particuliers que les professionnels. Je conçois avec vous des projets sur mesure, de la conception 2D & 3D
+					jusqu'à la réalisation, grâce à une prestation clé en main.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4">
+					<a href="./contact.html" class="btn btn-lg btn-accent w-full sm:w-auto text-center">Contactez-moi</a>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+	<!-- Section Hero avec slider en fond et texte fixe -->
+
+
+
+	<!-- services -->
+	<section class="services my-7">
+		<!-- bg description -->
+		<div
+			class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[10px] xl:pt-[70px] px-6 xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10">
+			<div class="container mx-auto">
+				<div class="services__top flex items-center flex-col xl:flex-row xl:mb-[60px]">
+					<h2 class="h2 text-white flex-1 mb-4 xl:mb-0 texte-center xl:text-left">Flor'A - un m2 bien pensé en vaut
+						2 !
+					</h2>
+					<p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none">Diminutif de
+						FlorArchitecte, Flor'A est un cabinet où l'humain et l'environnement sont au cœur de chaque projet.
+					</p>
+				</div>
+
+			</div>
+		</div>
+		<div class="container mx-auto mt-8 xl:-mt-[144px]">
+			<div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
+				<!-- bloque 1 -->
+				<div
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+					<!-- <div class="mb-[15px]">
+						<img src="assets/icons/services/icon-1.svg" alt="">
+					</div> -->
+					<h3 class="h3 mb-[10px]">Visite conseil à domicile</h3>
+					<p class="font-light leading-normal max-w-[300px]">
+						RDV à votre domicile pour vous conseiller et vous guider sur vos projets durant 1h</p>
+					<a class="text-accent underline" href="./index.html">En savoir plus</a>
+				</div>
+				<!-- bloque 2 -->
+				<div
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+					<!-- <div class="mb-[15px]">
+						<img src="assets/icons/services/icon-2.svg" alt="">
+					</div> -->
+					<h3 class="h3 mb-[10px]">Prestation clé en main</h3>
+					<p class="font-light leading-normal max-w-[300px]">
+						Prise en charge complète de votre projet d'aménagement intérieur avec une réception clé en main</p>
+					<a class="text-accent underline" href="./index.html">En savoir plus</a>
+
+				</div>
+				<!-- bloque 3 -->
+				<div
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+					<!-- <div class="mb-[15px]">
+						<img src="assets/icons/services/icon-3.svg" alt="">
+					</div> -->
+					<h3 class="h3 mb-[10px]">Décoration</h3>
+					<p class="font-light leading-normal max-w-[300px]">
+						Conception d'espaces en fonctions de vos désirs en jouant avec les matériaux, le mobilier, la lumière, ...
+					</p>
+					<a class="text-accent underline" href="./index.html">En savoir plus</a>
+
+				</div>
+				<!-- bloque 4 -->
+				<div
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
+					<!-- <div class="mb-[15px]">
+						<img src="assets/icons/services/icon-4.svg" alt="">
+					</div> -->
+					<h3 class="h3 mb-[10px]">Proposition d'aménagement</h3>
+					<p class="font-light leading-normal max-w-[300px]">
+						Remise d'un dossier d'étude complet préparatoire avant travaux
+					</p>
+					<a class="text-accent underline" href="./index.html">En savoir plus</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- services end -->
+
+
+	<!-- slide photo -->
+	<section class="photo-slider testimonial pb-[150px] xl:min-h-[800px] xl:py-0 mt-7">
+		<div class="mx-auto xl:container">
+			<!-- slider -->
+			<div class="photo-slider swiper min-h-[650px]">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper slider__photo">
+					<!-- Slide 1 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide01.png.avif" alt="Photo 1" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 2 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide02.png.avif" alt="Photo 2" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 3 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide03.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 4 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide04.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 5 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide05.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 6 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide06.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 7 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide07.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 8 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide08.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+					</div>
+					<!-- Slide 9 -->
+					<div class="swiper-slide">
+						<img src="./assets/img/sliderphoto/slide09.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+					</div>
+				</div>
+				<!-- Swiper pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</section>
+	<!-- slide photo end -->
+
+	<LastProjects />
+
+	<div class="container mx-auto flex justify-center mb-12">
+		<a href="/blog" class="btn btn-lg btn-accent">Voir tous les projets</a>
+	</div>
+
+	<!-- testimonials -->
+	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-6 mb-12">
+		<div class="testimonial__container container mx-auto flex justify-center">
+			<div class="flex flex-col gap-x-14 xl:flex-row">
+				<!-- slider -->
+				<div class="max-w-[100%] xl:max-w-[710px]">
+					<!-- Slider main container -->
+					<div class="swiper h-[400px]">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper">
+							<!-- Slide 1 -->
+							<div class="swiper-slide">
+								<div class="h-full flex flex-col justify-center items-start">
+									<div class="max-w-[680px] mx-auto text-center xl:text-left">
+										<!-- Message 1 -->
+										<p
+											class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+												after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
+											<span class="mx-2">Toujours de bonnes idées pour aménager au mieux les espaces de vie, elle sait
+												optimiser le moindre espace avec goût
+											</span>
+										</p>
+										<!-- Name -->
+										<div class="tet-[26px] text-[#4c5354] font-semibold">
+											Romain Reynaud
+										</div>
+										<div class="text-white font-medium uppercase tracking-[2.24px]">Client</div>
+									</div>
+								</div>
+							</div>
+							<!-- Slide 2 -->
+							<div class="swiper-slide">
+								<div class="h-full flex flex-col justify-center items-start">
+									<div class="max-w-[680px] mx-auto text-center xl:text-left">
+										<!-- Message 1 -->
+										<p
+											class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+												after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
+											<span class="mx-2">En qualité d'architecte d'intérieur Flora a eu en charge la rénovation complète
+												de notre maison familiale, un maison ancienne de 100 m2 dans la région toulonnaise.
+											</span>
+										</p>
+										<!-- Name -->
+										<div class="tet-[26px] text-[#4c5354] font-semibold">
+											Instant Shiatsu
+										</div>
+										<div class="text-white font-medium uppercase tracking-[2.24px]">Entreprise</div>
+									</div>
+								</div>
+							</div>
+							<!-- Slide 3-->
+							<div class="swiper-slide">
+								<div class="h-full flex flex-col justify-center items-start">
+									<div class="max-w-[680px] mx-auto text-center xl:text-left">
+										<!-- Message 1 -->
+										<p
+											class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+												after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
+											<span class="mx-2">Nous ne regrettons pas d'avoir fait appel à cette jeune designeuse pour la
+												rénovation de notre appartement.
+												Par son écoute et sa créativité, elle a su répondre à nos attentes tout en respectant le budget
+												que nous avions fixé.</span>
+										</p>
+										<!-- Name -->
+										<div class="tet-[26px] text-[#4c5354] font-semibold">
+											Marjorie Martinez
+										</div>
+										<div class="text-white font-medium uppercase tracking-[2.24px]">Cliente</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Swipper pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- testimonials end -->
+
+
+
+
+	<!-- contact panel -->
+	<section class="newsletter bg-accent md:h-[444px] py-12 mx-2 lg:mx-24 rounded-[10px] flex items-center justify-center relative overflow-hidden">
+		<!-- container -->
+		<div class="newsletter__container container mx-auto">
+			<!-- wrapper -->
+			<div class="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-x-[58px] max-w-4xl mx-auto">
+				<!-- text -->
+				<div class="flex-1 z-10 text-center">
+					<div class="text-base uppercase text-white tracking-[2.24px] font-medium">Une question, un projet ? </div>
+					<h2 class="h2 mb-4 text-white">Je serai ravie de pouvoir vous rencontrer et de répondre à vos envies.
+					</h2>
+				</div>
+				<!-- form -->
+				<div class="flex-1 flex justify-center">
+					<div class="flex flex-col md:flex-row relative gap-y-4">
+						<a href="./contact.html" class="btn btn-lg btn-white">Contactez-moi</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- contact panel end-->
+
+
+
 </Layout>
