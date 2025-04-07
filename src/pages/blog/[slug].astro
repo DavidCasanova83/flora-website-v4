@@ -32,6 +32,14 @@ if (!page) {
   throw new Error(`Article introuvable pour le slug : ${slug}`);
 }
 
+// Affichage des données dans la console
+console.log("=== Données de la page ===");
+console.log("Page complète:", page);
+console.log("\n=== Données brutes de Notion ===");
+console.log("Pages brutes:", rawPages);
+console.log("\n=== Pages parsées ===");
+console.log("Pages parsées:", parsedPages);
+
 // ✅ Extraction des données typées
 const {
   title,
@@ -47,7 +55,9 @@ const {
   date,
   rank,
   created,
-  edited
+  edited,
+  category,
+  label
 } = page;
 
 // ✅ Formatage de la date de modification (ex: "23 mars 2025")
@@ -106,6 +116,7 @@ const editedDate = edited
       {rank !== null && <p>📊 Rank : {rank}</p>}
       {created && <p>🕒 Créé le : {created}</p>}
       {editedDate && <p>✏️ Modifié le {editedDate}</p>}
+      {label && <p>🏷️ Label : {label}</p>}
     </footer>
   </article>
 </Layout>

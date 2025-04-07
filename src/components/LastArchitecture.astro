@@ -1,0 +1,76 @@
+---
+import { getPages } from '../lib/notion';
+import { mapPageData } from '../lib/parseNotion';
+import type { ParsedPage } from '../types/ParsedPage';
+
+// 🔁 Récupère et mappe toutes les pages en objets simplifiés
+const rawPages = await getPages();
+const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
+
+// 🎯 Filtre les articles d'architecture d'intérieur ayant un statut "En ligne" ou "En Cours"
+const projects = parsedPages
+  .filter(p => 
+    ["En ligne", "En Cours"].includes(p.status ?? "") &&
+    p.label === "architecture intérieur"
+  )
+  .sort((a, b) => (b.rank || 0) - (a.rank || 0))
+  .slice(0, 3); // On ne garde que les 3 dernières
+
+---
+
+<!-- Architecture d'intérieur -->
+<section class="blog py-12">
+  <div class="container mx-auto">
+    <h2 class="blog__title h2 mb-[50px] text-center font-light xl:text-left">Architecture d'intérieur</h2>
+    <!-- blog post -->
+    <div class="flex flex-col xl:flex-row gap-8 items-stretch justify-center flex-wrap">
+      {projects.map((project) => {
+        const isEnCours = project.status === "En Cours";
+
+        return (
+          <a
+            href={isEnCours ? undefined : `/architecture-interieur/${project.slug}`}
+            class={`h-full w-full xl:w-[380px] block ${
+              isEnCours ? 'pointer-events-none cursor-default opacity-60' : 'group cursor-pointer'
+            }`}
+          >
+            <div class="blog__post flex flex-col h-full shadow-custom2 rounded-[10px] overflow-hidden min-h-[550px]">
+              <div class="relative overflow-hidden h-[250px]">
+                {project.imagePresentation && (
+                  <img 
+                    class={`w-full h-full object-cover ${!isEnCours ? 'group-hover:scale-110 transition-all duration-500' : ''}`}
+                    src={project.imagePresentation} 
+                    alt={project.title}
+                  />
+                )}
+                <div class="bg-accent-tertiary absolute bottom-0 left-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                  ARCHITECTURE D'INTÉRIEUR
+                </div>
+                {isEnCours && (
+                  <span class="absolute top-3 left-3 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded shadow">
+                    En cours
+                  </span>
+                )}
+              </div>
+              <div class="px-6 py-8 flex-1 flex flex-col">
+                <h4 class="h4 mb-4 line-clamp-1">{project.title}</h4>
+                <p class="font-light line-clamp-2 flex-1 text-[#4c5354]">
+                  {project.excerpt}
+                </p>
+                {!isEnCours && (
+                  <span class="italic underline text-[#4c5354] mt-4 hover:text-accent transition-colors duration-300">
+                    Voir le projet
+                  </span>
+                )}
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+  <div class="container mx-auto flex justify-center mb-12">
+		<a href="/architecture-interieur" class="btn btn-lg btn-accent">Voir tous les projets</a>
+	</div>
+</section>
+<!-- Architecture d'intérieur end--> 

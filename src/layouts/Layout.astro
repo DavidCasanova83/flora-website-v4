@@ -7,7 +7,7 @@ import "../styles/swiper-bundle.min.css";
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon-32x32.svg">
     <title>Flor'architecte - {Astro.props.title}</title>
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css">
@@ -33,23 +33,23 @@ import "../styles/swiper-bundle.min.css";
 										class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Accueil</a>
 								</li>
 								<li>
-									<a href="a-propos"
+									<a href="/a-propos"
 										class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Qui suis-je</a>
 								</li>
 								<li>
-									<a href="prestations"
+									<a href="/prestations"
 										class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Prestations</a>
 								</li>
 								<li>
-									<a href="realisations"
+									<a href="/realisations"
 										class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Réalisations</a>
 								</li>
 								<li>
-									<a href="avis"
+									<a href="/avis"
 										class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Avis & actualité</a>
 								</li>
 								<li>
-									<a href="contact"
+									<a href="/contact"
 										class="pr-4 text-secondary hover:text-accent transition-all duration-300 uppercase">Contact</a>
 								</li>
 							</ul>
@@ -66,15 +66,15 @@ import "../styles/swiper-bundle.min.css";
 								<ul>
 									<li><a href="/" class="text-secondary hover:text-accent transition-all duration-300">Accueil</a>
 									</li>
-									<li><a href="about" class="text-secondary hover:text-accent transition-all duration-300">Qui
+									<li><a href="/about" class="text-secondary hover:text-accent transition-all duration-300">Qui
 											suis-je</a></li>
-									<li><a href="prestations"
+									<li><a href="/prestations"
 											class="text-secondary hover:text-accent transition-all duration-300">Prestations</a></li>
-									<li><a href="realisations"
+									<li><a href="/realisations"
 											class="text-secondary hover:text-accent transition-all duration-300">Réalisations</a></li>
-									<li><a href="avis" class="text-secondary hover:text-accent transition-all duration-300">Avis &
+									<li><a href="/avis" class="text-secondary hover:text-accent transition-all duration-300">Avis &
 											actualité</a></li>
-									<li><a href="contact"
+									<li><a href="/contact"
 											class="text-secondary hover:text-accent transition-all duration-300">Contact</a></li>
 								</ul>
 							</div>
@@ -96,7 +96,7 @@ import "../styles/swiper-bundle.min.css";
 				<!-- logo  -->
 				<div class="max-w-[300px] flex justify-center mx-auto mb-[30px]">
 					<a href="/">
-						<img class="mb-[30px]" src="./assets/img/header/logo.png" alt="">
+						<img class="mb-[30px]" src="/assets/img/header/logo.png" alt="">
 					</a>
 				</div>
 
@@ -188,16 +188,16 @@ import "../styles/swiper-bundle.min.css";
 								<!-- list 1   -->
 								<ul class="flex-1 flex flex-col gap-y-5">
 									<li><a href="/" class="hover:text-accent transition-all">Accueil</a></li>
-									<li><a href="prestations" class="hover:text-accent transition-all">Prestations</a></li>
-									<li><a href="réalisations" class="hover:text-accent transition-all">Réalisations</a></li>
-									<li><a href="avis" class="hover:text-accent transition-all">Avis</a></li>
+									<li><a href="/prestations" class="hover:text-accent transition-all">Prestations</a></li>
+									<li><a href="/realisations" class="hover:text-accent transition-all">Réalisations</a></li>
+									<li><a href="/avis" class="hover:text-accent transition-all">Avis</a></li>
 								</ul>
 								<!-- list 2   -->
 								<ul class="flex-1 flex flex-col gap-y-5">
-									<li><a href="contact" class="hover:text-accent transition-all">Contact</a></li>
-									<li><a href="about" class="hover:text-accent transition-all">Qui suis-je</a></li>
-									<li><a href="faq" class="hover:text-accent transition-all">FAQ</a></li>
-									<li><a href="actualité" class="hover:text-accent transition-all">Actualité</a></li>
+									<li><a href="/contact" class="hover:text-accent transition-all">Contact</a></li>
+									<li><a href="/about" class="hover:text-accent transition-all">Qui suis-je</a></li>
+									<li><a href="/faq" class="hover:text-accent transition-all">FAQ</a></li>
+									<li><a href="/actualite" class="hover:text-accent transition-all">Actualité</a></li>
 								</ul>
 							</div>
 						</div>
@@ -217,9 +217,9 @@ import "../styles/swiper-bundle.min.css";
 		<!-- swiper js -->
 		<script is:inline>
       const scripts = [
-			'js/swiper-bundle.min.js',
-      'js/scrolreveal.min.js',
-      'js/main.js',
+			'/js/swiper-bundle.min.js',
+      '/js/scrolreveal.min.js',
+      '/js/main.js',
       ];
 
       scripts.forEach(src => {
