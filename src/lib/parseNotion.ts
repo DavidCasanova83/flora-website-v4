@@ -22,5 +22,7 @@ export function mapPageData(page: PageObjectResponse): ParsedPage {
     images: props.Images?.files?.map(getUrlFromFile),
     created: page.created_time?.split("T")[0],
     edited: page.last_edited_time?.split("T")[0],
+    category: props.Category?.select?.name,
+    label: props.Label?.multi_select?.[0]?.name,
   };
 }

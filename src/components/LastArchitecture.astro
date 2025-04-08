@@ -7,9 +7,12 @@ import type { ParsedPage } from '../types/ParsedPage';
 const rawPages = await getPages();
 const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
 
-// 🎯 Filtre les réalisations ayant un statut "En ligne" ou "En Cours"
+// 🎯 Filtre les articles d'architecture d'intérieur ayant un statut "En ligne" ou "En Cours"
 const projects = parsedPages
-  .filter(p => ["En ligne", "En Cours"].includes(p.status ?? ""))
+  .filter(p => 
+    ["En ligne", "En Cours"].includes(p.status ?? "") &&
+    p.label === "architecture intérieur"
+  )
   .sort((a, b) => {
     if (!a.rank && !b.rank) return 0;
     if (!a.rank) return 1;
@@ -20,10 +23,10 @@ const projects = parsedPages
 
 ---
 
-<!-- mes réalisations -->
+<!-- Architecture d'intérieur -->
 <section class="blog py-12">
   <div class="container mx-auto">
-    <h2 class="blog__title h2 mb-[50px] text-center font-light xl:text-left">Nos dernières réalisations</h2>
+    <h2 class="blog__title h2 mb-[50px] text-center font-light xl:text-left">Architecture d'intérieur</h2>
     <!-- blog post -->
     <div class="flex flex-col xl:flex-row gap-8 items-stretch justify-center flex-wrap">
       {projects.map((project) => {
@@ -72,7 +75,7 @@ const projects = parsedPages
     </div>
   </div>
   <div class="container mx-auto flex justify-center mb-12">
-		<a href="/realisations" class="btn btn-lg btn-accent">Voir tous les projets</a>
+		<a href="/architecture-interieur" class="btn btn-lg btn-accent">Voir tous les projets</a>
 	</div>
 </section>
-<!-- mes réalisations end--> 
+<!-- Architecture d'intérieur end--> 

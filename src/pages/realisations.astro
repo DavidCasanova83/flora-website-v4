@@ -1,7 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
-
+import LastArchitecture from '../components/LastArchitecture.astro';
+import LastDecoration from '../components/LastDecoration.astro';
+import LastProjets from '../components/LastProjets.astro';
 ---
 
 <Layout title="Réalisations" description="Découvrez tous mes projets">
@@ -11,199 +13,14 @@ import "../styles/global.css";
     <div class="container mx-auto h-full flex flex-col justify-center items-center xl:px-24">
       <h1 class="h1 mb-6">Réalisations</h1>
       <p class="mb-[16px] md:max-w-xl text-justify">
-        Je vous accompagne pour la réalisation de vos projets de rénovation intérieur / extérieur et de décoration sur
-        mesure.
-
-      </p>
-      <p class="mb-[16px] md:max-w-xl text-justify">
-        Que vous soyez particuliers ou professionnels, mon objectif est de vous proposer un projet sur mesure, de
-        redessiner votre intérieur tout en respectant les diverses contraintes d’espace, de structure et de budget. Des
-        matériaux locaux, bio-sourcés, écologiques et ayant un faible impact sur l'environnement vous seront proposés
-        pour construire ensemble une architecture durable et responsable.
+        Nous apportons une attention particulière à chaque projet pour le rendre unique et personnalisé. Ainsi, nous vous accompagnons tout au long de la réalisation de vos projets de rénovation intérieure et extérieure, depuis l’esquisse jusqu’au suivi de chantier. Que vous soyez un particulier ou un professionnel, notre objectif est de concevoir un projet sur mesure qui redessine votre intérieur, tout en tenant compte des contraintes d’espace, de structure et de budget. 
       </p>
     </div>
   </section>
   <!-- hero end -->
 
-  <!-- blog -->
-  <section class="blog">
-    <div class="container mx-auto">
-      <h2 class="blog__title h2 mb-[50px] text-center xl:text-left">Architecture d'intérieur</h2>
-      <!-- blog post  -->
-      <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
-        <!-- post 1 -->
-        <a href="construction" class="block">
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden  h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/archi01.avif" alt="">
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">ESCLANGON</h4>
-              <p class="font-light">Rénovation intérieure et extérieure d'une villa
-              </p>
-            </div>
-          </div>
-        </a>
-        <!-- post 2 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/archi02.avif" alt="">
-
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">Liberté (Toulon 83)
-              </h4>
-              <p class="font-light">Rénovation d'un Cabinet d'expert comptable
-              </p>
-            </div>
-          </div>
-        </a>
-        <!-- post 3 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/archi03.avif" alt="">
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">RELAIS (Pau 64)
-              </h4>
-              <p class="font-light">Rénovation d'une maison d'habitation
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- blog end-->
-
-  <!-- blog 02 -->
-  <section class="blog">
-    <div class="container mx-auto">
-      <h2 class="blog__title h2 mb-[50px] text-center xl:text-left">Décoration</h2>
-      <!-- blog post  -->
-      <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
-        <!-- post 1 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/deco01.avif" alt="">
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">ESCLANGON</h4>
-              <p class="font-light">Rénovation intérieure et extérieure d'une villa
-              </p>
-            </div>
-          </div>
-        </a>
-        <!-- post 2 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/deco02.avif" alt="">
-
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">Liberté (Toulon 83)
-              </h4>
-              <p class="font-light">Rénovation d'un Cabinet d'expert comptable
-              </p>
-            </div>
-          </div>
-        </a>
-        <!-- post 3 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/deco03.avif" alt="">
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">RELAIS (Pau 64)
-              </h4>
-              <p class="font-light">Rénovation d'une maison d'habitation
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- blog 02 end-->
-
-  <!-- blog 03 -->
-  <section class="blog">
-    <div class="container mx-auto">
-      <h2 class="blog__title h2 mb-[50px] text-center xl:text-left">PROJETS D'ÉTUDES </h2>
-      <!-- blog post  -->
-      <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
-        <!-- post 1 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/etude01.avif" alt="">
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">​NOUVEL AIR
-              </h4>
-              <p class="font-light">Reconversion de la place d'Armes et de son parking sous terrain. (Toulon)
-                Février-Juin
-                2021
-              </p>
-            </div>
-          </div>
-        </a>
-        <!-- post 2 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/etude02.avif" alt="">
-
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">À TABLE !</h4>
-              <p class="font-light">Réhabilitation du restaurant de Châteauvallon (Ollioules) Sept-Déc 2020
-              </p>
-            </div>
-          </div>
-        </a>
-        <!-- post 3 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[300px]">
-              <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-                src="./assets/img/REALISATIONS/etude03.avif" alt="">
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">CONTRASTE
-              </h4>
-              <p class="font-light">Réhabilitation d'un navire (Toulon) Fev-mai 2020
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- blog 03 end-->
-
-
-
+  <LastArchitecture />
+  <LastDecoration />
+  <LastProjets />
 
 </Layout>

@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LastProjects from '../components/LastProjects.astro';
+import avis from '../data/avis.json';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Accueil" description="Flor'A - Architecte d'intérieur à Toulon. Spécialisée en architecture d'intérieur, décoration et aménagement, je vous accompagne dans vos projets de rénovation et d'aménagement avec une prestation clé en main.">
+<Layout title="Architecte d'intérieur Toulon" description="Architecte d'intérieur, décoration et aménagement, nous vous accompagnons dans vos projets de rénovation et d'aménagement avec une prestation clé en main.">
 	<!-- Section Hero avec slider en fond et texte fixe -->
 	<section class="relative h-screen overflow-hidden">
 		<!-- Slider en fond (positionné en absolu pour occuper tout le container) -->
@@ -34,16 +35,16 @@ import LastProjects from '../components/LastProjects.astro';
 					</a>
 				</div>					
 				<h1 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 text-primary">
-					Architecte d'intérieur <br/>sur TOULON
+					Architecte d'intérieur<br/> & Maître d'œuvre sur TOULON
 				</h1>
-				<p class="mb-6 text-sm sm:text-base font-light max-w-xl">
-					Installée à Toulon, dans le Var, je mets à votre disposition mon expertise en tant qu'Architecte d'intérieur,
-					Maître d'œuvre et Décoratrice, principalement sur le bassin toulonnais. J'accompagne aussi bien les
-					particuliers que les professionnels. Je conçois avec vous des projets sur mesure, de la conception 2D & 3D
-					jusqu'à la réalisation, grâce à une prestation clé en main.
+				<p class="mb-[42px] md:max-w-xl text-left">Basée à Toulon et certifié au CFAI (Conseil Français des Architectes d'intérieur), l'agence Flor'A vous accompagne dans vos projets de rénovation et d'aménagement intérieurs et extérieurs.
+
+					Soucieuse d'une architecture responsable et du bien-être de ses occupants, nous mettons notre sensibilité, notre savoir-faire et notre expertise à votre service afin de vous proposer un projet qui vous ressemble et qui soit en adéquation avec votre budget et votre mode de vie.
+					
+					Nous vous accompagnons ainsi de la première esquisse jusqu'au suivi de chantier, vous proposant un projet clé en main.
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4">
-					<a href="./contact.html" class="btn btn-lg btn-accent w-full sm:w-auto text-center">Contactez-moi</a>
+					<a href="./contact.html" class="btn btn-lg btn-accent w-full sm:w-auto text-center">Contactez-nous</a>
 				</div>
 			</div>
 		</div>
@@ -59,12 +60,11 @@ import LastProjects from '../components/LastProjects.astro';
 		<div
 			class="bg-services bg-cover bg-no-repeat max-w-[1466px] mx-4 xl:mx-auto rounded-[10px] xl:pt-[70px] px-6 xl:px-0 relative h-[368px] flex items-center xl:items-start -z-10">
 			<div class="container mx-auto">
-				<div class="services__top flex items-center flex-col xl:flex-row xl:mb-[60px]">
+				<div class="services__top flex items-center flex-col xl:flex-col xl:mb-[60px]">
 					<h2 class="h2 text-white flex-1 mb-4 xl:mb-0 texte-center xl:text-left">Flor'A - un m2 bien pensé en vaut
 						2 !
 					</h2>
-					<p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none">Diminutif de
-						FlorArchitecte, Flor'A est un cabinet où l'humain et l'environnement sont au cœur de chaque projet.
+					<p class="text-white flex-1 text-center xl:text-left max-w-2xl xl:max-w-none">Une agence qui met le bâti au service de ses occupants.
 					</p>
 				</div>
 
@@ -78,9 +78,9 @@ import LastProjects from '../components/LastProjects.astro';
 					<!-- <div class="mb-[15px]">
 						<img src="assets/icons/services/icon-1.svg" alt="">
 					</div> -->
-					<h3 class="h3 mb-[10px]">Visite conseil à domicile</h3>
+					<h3 class="h3 mb-[10px]">Conception</h3>
 					<p class="font-light leading-normal max-w-[300px]">
-						RDV à votre domicile pour vous conseiller et vous guider sur vos projets durant 1h</p>
+						De la découverte du lieu à l'étude du projet en plan et en 3D avec rendu réaliste</p>
 					<a class="text-accent underline" href="./index.html">En savoir plus</a>
 				</div>
 				<!-- bloque 2 -->
@@ -89,9 +89,9 @@ import LastProjects from '../components/LastProjects.astro';
 					<!-- <div class="mb-[15px]">
 						<img src="assets/icons/services/icon-2.svg" alt="">
 					</div> -->
-					<h3 class="h3 mb-[10px]">Prestation clé en main</h3>
+					<h3 class="h3 mb-[10px]">Démarches administratives</h3>
 					<p class="font-light leading-normal max-w-[300px]">
-						Prise en charge complète de votre projet d'aménagement intérieur avec une réception clé en main</p>
+						Accompagnement dans les autorisations d'urbanisme et les consultation des entreprises/des fournisseurs.</p>
 					<a class="text-accent underline" href="./index.html">En savoir plus</a>
 
 				</div>
@@ -101,10 +101,9 @@ import LastProjects from '../components/LastProjects.astro';
 					<!-- <div class="mb-[15px]">
 						<img src="assets/icons/services/icon-3.svg" alt="">
 					</div> -->
-					<h3 class="h3 mb-[10px]">Décoration</h3>
+					<h3 class="h3 mb-[10px]">Suivi de chantier</h3>
 					<p class="font-light leading-normal max-w-[300px]">
-						Conception d'espaces en fonctions de vos désirs en jouant avec les matériaux, le mobilier, la lumière, ...
-					</p>
+						Coordination des artisans, réunion de chantier hebdomadaires et réception des travaux.</p>
 					<a class="text-accent underline" href="./index.html">En savoir plus</a>
 
 				</div>
@@ -114,9 +113,9 @@ import LastProjects from '../components/LastProjects.astro';
 					<!-- <div class="mb-[15px]">
 						<img src="assets/icons/services/icon-4.svg" alt="">
 					</div> -->
-					<h3 class="h3 mb-[10px]">Proposition d'aménagement</h3>
+					<h3 class="h3 mb-[10px]">Aménagement</h3>
 					<p class="font-light leading-normal max-w-[300px]">
-						Remise d'un dossier d'étude complet préparatoire avant travaux
+						Proposition de mobilier et d'éléments de décoration, dessin de mobilier sur mesure.
 					</p>
 					<a class="text-accent underline" href="./index.html">En savoir plus</a>
 				</div>
@@ -179,81 +178,40 @@ import LastProjects from '../components/LastProjects.astro';
 
 	<LastProjects />
 
-	<div class="container mx-auto flex justify-center mb-12">
-		<a href="/blog" class="btn btn-lg btn-accent">Voir tous les projets</a>
-	</div>
-
 	<!-- testimonials -->
-	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat py-6 mb-12">
-		<div class="testimonial__container container mx-auto flex justify-center">
-			<div class="flex flex-col gap-x-14 xl:flex-row">
+	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat mb-12">
+		<div class="testimonial__container container mx-auto">
+			<div class="flex flex-col items-center">
+				<h2 class="h2 text-white text-center my-8">Vos avis comptent et nous vous en remercions</h2>
 				<!-- slider -->
-				<div class="max-w-[100%] xl:max-w-[710px]">
+				<div class="w-full max-w-[710px]">
 					<!-- Slider main container -->
-					<div class="swiper h-[400px]">
+					<div class="swiper testimonial-swiper h-[400px]">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
-							<!-- Slide 1 -->
-							<div class="swiper-slide">
-								<div class="h-full flex flex-col justify-center items-start">
-									<div class="max-w-[680px] mx-auto text-center xl:text-left">
-										<!-- Message 1 -->
-										<p
-											class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
-												after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
-											<span class="mx-2">Toujours de bonnes idées pour aménager au mieux les espaces de vie, elle sait
-												optimiser le moindre espace avec goût
-											</span>
-										</p>
-										<!-- Name -->
-										<div class="tet-[26px] text-[#4c5354] font-semibold">
-											Romain Reynaud
+							{avis.avis.map((avis) => (
+								<div class="swiper-slide">
+									<div class="h-full flex flex-col justify-center items-center">
+										<div class="max-w-[680px] mx-auto text-center">
+											<!-- Google Logo -->
+											<div class="flex justify-center mb-6">
+												<img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-12 w-auto" />
+											</div>
+											<!-- Message -->
+											<p
+												class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
+												<span class="mx-2">{avis.message}</span>
+											</p>
+											<!-- Name -->
+											<div class="text-[26px] text-[#4c5354] font-semibold mt-6">
+												{avis.nom}
+											</div>
+											<div class="text-white font-medium uppercase tracking-[2.24px]">{avis.type}</div>
 										</div>
-										<div class="text-white font-medium uppercase tracking-[2.24px]">Client</div>
 									</div>
 								</div>
-							</div>
-							<!-- Slide 2 -->
-							<div class="swiper-slide">
-								<div class="h-full flex flex-col justify-center items-start">
-									<div class="max-w-[680px] mx-auto text-center xl:text-left">
-										<!-- Message 1 -->
-										<p
-											class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
-												after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
-											<span class="mx-2">En qualité d'architecte d'intérieur Flora a eu en charge la rénovation complète
-												de notre maison familiale, un maison ancienne de 100 m2 dans la région toulonnaise.
-											</span>
-										</p>
-										<!-- Name -->
-										<div class="tet-[26px] text-[#4c5354] font-semibold">
-											Instant Shiatsu
-										</div>
-										<div class="text-white font-medium uppercase tracking-[2.24px]">Entreprise</div>
-									</div>
-								</div>
-							</div>
-							<!-- Slide 3-->
-							<div class="swiper-slide">
-								<div class="h-full flex flex-col justify-center items-start">
-									<div class="max-w-[680px] mx-auto text-center xl:text-left">
-										<!-- Message 1 -->
-										<p
-											class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center xl:text-left before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
-												after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
-											<span class="mx-2">Nous ne regrettons pas d'avoir fait appel à cette jeune designeuse pour la
-												rénovation de notre appartement.
-												Par son écoute et sa créativité, elle a su répondre à nos attentes tout en respectant le budget
-												que nous avions fixé.</span>
-										</p>
-										<!-- Name -->
-										<div class="tet-[26px] text-[#4c5354] font-semibold">
-											Marjorie Martinez
-										</div>
-										<div class="text-white font-medium uppercase tracking-[2.24px]">Cliente</div>
-									</div>
-								</div>
-							</div>
+							))}
 						</div>
 						<!-- Swipper pagination -->
 						<div class="swiper-pagination"></div>
@@ -265,8 +223,6 @@ import LastProjects from '../components/LastProjects.astro';
 	<!-- testimonials end -->
 
 
-
-
 	<!-- contact panel -->
 	<section class="newsletter bg-accent md:h-[444px] py-12 mx-2 lg:mx-24 rounded-[10px] flex items-center justify-center relative overflow-hidden">
 		<!-- container -->
@@ -275,14 +231,13 @@ import LastProjects from '../components/LastProjects.astro';
 			<div class="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-x-[58px] max-w-4xl mx-auto">
 				<!-- text -->
 				<div class="flex-1 z-10 text-center">
-					<div class="text-base uppercase text-white tracking-[2.24px] font-medium">Une question, un projet ? </div>
-					<h2 class="h2 mb-4 text-white">Je serai ravie de pouvoir vous rencontrer et de répondre à vos envies.
-					</h2>
+					<div class="text-base uppercase text-white tracking-[2.24px] font-medium">Une question, un projet ?</div>
+					<h2 class="h2 mb-4 text-white">Nous serons ravis de pouvoir vous rencontrer et de répondre à vos envies.</h2>
 				</div>
 				<!-- form -->
 				<div class="flex-1 flex justify-center">
 					<div class="flex flex-col md:flex-row relative gap-y-4">
-						<a href="./contact.html" class="btn btn-lg btn-white">Contactez-moi</a>
+						<a href="./contact.html" class="btn btn-lg btn-white">Contactez-nous</a>
 					</div>
 				</div>
 			</div>

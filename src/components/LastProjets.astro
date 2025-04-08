@@ -7,9 +7,12 @@ import type { ParsedPage } from '../types/ParsedPage';
 const rawPages = await getPages();
 const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
 
-// 🎯 Filtre les réalisations ayant un statut "En ligne" ou "En Cours"
+// 🎯 Filtre les articles de projets ayant un statut "En ligne" ou "En Cours"
 const projects = parsedPages
-  .filter(p => ["En ligne", "En Cours"].includes(p.status ?? ""))
+  .filter(p => 
+    ["En ligne", "En Cours"].includes(p.status ?? "") &&
+    p.label === "projet"
+  )
   .sort((a, b) => {
     if (!a.rank && !b.rank) return 0;
     if (!a.rank) return 1;
@@ -17,13 +20,11 @@ const projects = parsedPages
     return a.rank - b.rank;
   })
   .slice(0, 3); // On ne garde que les 3 dernières
-
 ---
-
-<!-- mes réalisations -->
+<!-- Projets -->
 <section class="blog py-12">
   <div class="container mx-auto">
-    <h2 class="blog__title h2 mb-[50px] text-center font-light xl:text-left">Nos dernières réalisations</h2>
+    <h2 class="blog__title h2 mb-[50px] text-center font-light xl:text-left">Projets</h2>
     <!-- blog post -->
     <div class="flex flex-col xl:flex-row gap-8 items-stretch justify-center flex-wrap">
       {projects.map((project) => {
@@ -31,7 +32,7 @@ const projects = parsedPages
 
         return (
           <a
-            href={isEnCours ? undefined : `/architecture-interieur/${project.slug}`}
+            href={isEnCours ? undefined : `/projet/${project.slug}`}
             class={`h-full w-full xl:w-[380px] block ${
               isEnCours ? 'pointer-events-none cursor-default opacity-60' : 'group cursor-pointer'
             }`}
@@ -70,9 +71,9 @@ const projects = parsedPages
         );
       })}
     </div>
+    <div class="container mx-auto flex justify-center mb-12">
+		  <a href="/projet" class="btn btn-lg btn-accent">Voir tous les projets</a>
+	  </div>
   </div>
-  <div class="container mx-auto flex justify-center mb-12">
-		<a href="/realisations" class="btn btn-lg btn-accent">Voir tous les projets</a>
-	</div>
 </section>
-<!-- mes réalisations end--> 
+<!-- Projets end--> 

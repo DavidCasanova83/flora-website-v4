@@ -8,47 +8,37 @@ import "../styles/global.css";
   <!-- hero -->
   <section class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden">
     <div class="container mx-auto h-full xl:px-24">
-      <div class="flex flex-col xl:flex-row items-center justify-between h-full">
-        <div class="hero__text xl:w-4/5 text-center xl:text-left p-12">
-          <div
-            class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full mx-auto xl:mx-0">
-            <div class="uppercase text-base font-medium tracking-[2.24px]">À propos de moi</div>
-          </div>
-          <h1 class="h1 mb-6">Flora LEICARRAGUE</h1>
+      <div class="flex flex-col xl:flex-row items-start justify-between h-full">
+        <div class="hero__text xl:w-3/5 text-center xl:text-left p-12">
+          <h1 class="text-4xl font-light mb-6">Flora LEICARRAGUE</h1>
           <p class="mb-[16px] md:max-w-xl text-justify">
-            Architecte d'Intérieur, Maître d'oeuvre et Décoratrice sur Toulon et alentours
-            Diplômée avec mention de la prestigieuse école Camondo et reconnue
-            par le CFAI (Conseil Français des Architectes d'intérieur), je décide de créer mon entreprise d'Architecture
-            d'Intérieur et de Décoration sur Toulon.
-          </p>
-          <p class="mb-[16px] md:max-w-xl text-justify">
-            Flor'A qui est le diminutif de FlorArchitecte est une agence pour qui l'humain et l'environnement sont les
-            préoccupations principales.
-          </p>
-          <p class="mb-[16px] md:max-w-xl text-justify">
-            Je vous propose mes services en tant qu'Architecte d'intérieur et Maître d'œuvre sur Toulon et ses
-            alentours. J'interviens aussi bien auprès de particuliers (résidence principale, investissements locatifs)
-            qu'auprès de professionnels (bar/restaurants, magasins, hôtels, bureaux etc).</p>
-          <p class="mb-[16px] md:max-w-xl text-justify">
-            L’architecture d’intérieur, au delà du simple fait de repenser un intérieur et/ou un extérieur, est avant
-            tout la connaissance des futurs occupants du lieu, de leur manière de vivre, leurs habitudes, leurs
-            attentes, leurs besoins et les usages qu’ils pourront faire du bâti.</p>
-          <p class="mb-[16px] md:max-w-xl text-justify">
-            Le facteur environnemental est tout aussi important. Les recherches que j’ai pu effectuer pour mon mémoire
-            de fin d’études, portant sur la transformation de l’existant et l’emploi de matériaux bio-sourcés et
-            écologiques, n’ont fait qu’accentuer mon désir de créer une agence soucieuse de ces enjeux environnementaux.
-          </p>
+            Originaire du Sud Ouest, je m'installe à Toulon pour intégrer la prestigieuse école <strong>Camondo</strong> dont je ressors diplômée avec mention et certifiée au <strong>CFAI</strong> (Conseil Français des Architectes d'intérieur). 
 
+            Je tombe amoureuse de la région et de son climat qui permettent de travailler une architecture où l'intérieur et l'extérieur sont confondus, sans limite palpable. Je décide donc de m'encrer sur Toulon et de créer l'agence <strong>Flor'A</strong>, diminutif de <em>FlorArchitecte</em>.
+          </p>
+          <div class="flex items-center gap-x-4 mb-6">
+            <h2 class="text-3xl font-light">L'agence</h2>
+            <img src="/assets/img/header/logo-transparent.png" alt="Logo Flor'A" class="h-12 w-auto">
+          </div>
           <p class="mb-[16px] md:max-w-xl text-justify">
-            En tant qu'architecte d'intérieur et maître d'œuvre, il est de mon devoir de participer à la construction du
-            monde de demain en prenant en compte ces problématiques. Je suis persuadée qu'il est réellement possible
-            d'envisager une architecture responsable qui cohabiterait en symbiose avec l'existant, que ce soit à travers
-            de nouvelles techniques de réalisation ou des matériaux plus responsables et écologiques.
+            Adopte une approche <strong>sensible et soignée</strong> pour concevoir vos projets de rénovation et d'aménagement, tant intérieurs qu'extérieurs.
+          </p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            Nous accordons une attention particulière au respect de l'<strong>architecture existante</strong>, en valorisant ses volumes, son charme, son authenticité, ainsi que sa lumière et son environnement. Cette base solide nous permet de réinventer les espaces, d'optimiser chaque mètre carré et de créer des aménagements sur mesure, alliant <strong>qualité et fonctionnalité</strong>. 
+          </p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            Nous mettons un point d'honneur à créer une architecture à votre service. En tant que futurs acteurs du lieu, nous vous plaçons au centre de notre réflexion en vous proposant un projet <strong>unique</strong> qui s'adapte à votre manière de vivre, vos habitudes, vos attentes et vos besoins en tenant compte des contraintes techniques et esthétiques.
+          </p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            De la première esquisse à la réalisation, nous concevons chaque projet dans ses moindres détails. Soucieux des <strong>enjeux environnementaux</strong> et des proportions de l'impact carbone produit par le bâtiment, nous privilégions les matériaux <strong>naturels, éco-responsables et de réemploi</strong> lorsque cela est possible. 
+          </p>
+          <p class="mb-[16px] md:max-w-xl text-justify">
+            En tant qu'<strong>architecte d'intérieur et maître d'œuvre</strong>, il est de notre devoir de participer à la construction du monde de demain en prenant en compte ces problématiques tout en créant des espaces <strong>lumineux, élégants et confortables</strong>, qui éveillent les sens et suscitent une émotion.
           </p>
         </div>
-        <div class="hero__img hidden xl:flex flex-col self-start pt-52">
-          <img src="assets/img/hero/photo-profil-flora.avif" alt="">
-          <button><a href="./contact" class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Me contacter</a></button>
+        <div class="hero__img xl:flex flex-col self-start pt-0 xl:w-2/5">
+          <img src="assets/img/hero/photo-profil-flora.avif" alt="Flora Leicarrague" class="w-full h-auto object-cover mt-8">
+          <button><a href="./contact" class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Nous contacter</a></button>
         </div>
       </div>
     </div>
@@ -96,18 +86,18 @@ import "../styles/global.css";
           </div>
         </div>
       </div>
-      <p class="container mx-auto text-justify mt-52 px-6 xl:mt-6">Intervenir sur l’existant, construire dans le
+      <p class="container mx-auto text-justify mt-52 px-6 xl:mt-6">Intervenir sur l'existant, construire dans le
         construit,
         reprendre
         la
         ville sur
         elle-même
         relèvent de décisions
-        telles que transformer, de renouveler, d’adapter, de détruire ou de conserver un espace déjà aménagé, déjà ouvré
-        et déjà instrument d’une activité sociale. «Un pas en arrière, deux pas en avant» désigne le fait d’avancer tout
-        en prenant en compte l’existant comme base de départ en excluant la possibilité de le détruire et de construire
+        telles que transformer, de renouveler, d'adapter, de détruire ou de conserver un espace déjà aménagé, déjà ouvré
+        et déjà instrument d'une activité sociale. «Un pas en arrière, deux pas en avant» désigne le fait d'avancer tout
+        en prenant en compte l'existant comme base de départ en excluant la possibilité de le détruire et de construire
         du
-        neuf. Cette démarche d’éco-responsabilité nous amène à repenser l’architecture sous une perspective d’économie
+        neuf. Cette démarche d'éco-responsabilité nous amène à repenser l'architecture sous une perspective d'économie
         circulaire. <br>
         <button><a href="./assets/img/documents/memoire-flora-architecte-fin-etude.pdf"
             class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Télécharger -
@@ -130,7 +120,7 @@ import "../styles/global.css";
               style="background-image: url('./assets/img/sliderphoto/about-flora.avif');">
               <div class="absolute inset-0 bg-black bg-opacity-50 blur-sm"></div>
               <h4 class="h4 text-white absolute inset-0 flex items-center justify-center p-8 text-center">
-                "L’espace habité, l’espace conçu par l’homme est construit selon des images vivantes mêlant réalité et
+                "L'espace habité, l'espace conçu par l'homme est construit selon des images vivantes mêlant réalité et
                 rêve, sensations et émotions, objectivité et subjectivité."
               </h4>
             </div>
