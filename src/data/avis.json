@@ -1,0 +1,40 @@
+{
+  "avis": [
+    {
+      "id": 1,
+      "nom": "Perrine Gremillet",
+      "message": "Je recommande vivement Flora qui s'est occupée de la rénovation de mon appartement. Très professionnelle, à l'écoute des besoins et de très bons conseils, j'ai été ravie de son travail.",
+      "type": "Cliente"
+    },
+    {
+      "id": 2,
+      "nom": "Romain Raynaud",
+      "message": "Toujours de bonnes idées pour aménager au mieux les espaces de vie, elle sait optimiser le moindre espace avec goût.",
+      "type": "Client"
+    },
+    {
+      "id": 3,
+      "nom": "Jean-Christophe Declercq",
+      "message": "Flora s'est occupée de la rénovation de la salle de bain et des sols d'un appartement en location, avec le suivi de chantier. Compte rendu régulier, très professionnelle, je recommande. Je lui confie d'ailleurs le réaménagement de mon cabinet pro.",
+      "type": "Client"
+    },
+    {
+      "id": 4,
+      "nom": "Marie-Thérèse",
+      "message": "Suite à l'achat de notre maison, nous avons fait appel à l'agence Flora* pour une rénovation partielle. À l'écoute, très créative et professionnelle, elle nous a proposé un projet qui nous a séduit et dont le résultat a dépassé toutes nos attentes ! Elle a assuré le suivi de chantier de A à Z en nous faisant des comptes rendus régulièrement. Nous avons eu également pu bénéficier de ses précieux conseils déco pour l'aménagement intérieur de la maison. Nous pouvons maintenant profiter d'une maison plus agréable.",
+      "type": "Cliente"
+    },
+    {
+      "id": 5,
+      "nom": "Matjory Martinez",
+      "message": "Nous ne regrettons pas d'avoir fait appel à cette jeune designeuse pour la rénovation de notre appartement. Par son écoute et sa créativité, elle a su répondre à nos attentes tout en respectant le budget que nous avions fixé. Un travail très professionnel et une belle sensibilité artistique.",
+      "type": "Cliente"
+    },
+    {
+      "id": 6,
+      "nom": "Delphine C.",
+      "message": "J'ai fait appel à Flora pour mon aménagement intérieur. Elle a été de très bons conseils et aujourd'hui l'espace est bien agencé et surtout bien mieux rangé ! Une maison organisée, colorée et bien décorée fait vraiment toute la différence pour nous ! On s'y sent encore mieux ! À tel point que j'ai également fait appel à elle pour mon local professionnel. Je recommande Flora à tout le monde dès que j'en ai l'occasion à Toulon.",
+      "type": "Cliente"
+    }
+  ]
+}
