@@ -71,29 +71,36 @@ const editedDate = edited
 ---
 
 <Layout>
-  <article class="max-w-3xl mx-auto p-6 md:p-12">
-    <header class="mb-10">
-      {date && <p class="text-gray-500 text-sm">📅 {date}</p>}
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
-
-      {/* Statut de l'article */}
-      {status && <p class="text-sm mb-2">🟣 Statut : {status}</p>}
-
-      {/* Si marqué comme publié */}
-      {published && <p class="text-sm mb-2">✅ Publié</p>}
-
-      {/* Extrait d'intro */}
-      {excerpt && <p class="text-gray-600 text-base mb-6 italic">{excerpt}</p>}
-
+  <article class="max-w-6xl mx-auto p-6 md:p-12">
+    <div class="flex flex-col md:flex-row gap-8 mb-10">
       {/* Image principale */}
       {imagePresentation && (
-        <img src={imagePresentation} alt={title} class="rounded-lg w-full object-cover mb-6 shadow-md" />
+        <div class="md:w-1/2">
+          <img src={imagePresentation} alt={title} class="rounded-lg w-full h-full object-cover shadow-md" />
+        </div>
       )}
-    </header>
 
-    {/* Contenu principal */}
-    <div class="prose prose-lg max-w-none mb-10">
-      {content}
+      {/* Contenu à droite */}
+      <div class="md:w-1/2">
+        <header class="mb-6">
+          {date && <p class="text-gray-500 text-sm">📅 {date}</p>}
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
+
+          {/* Statut de l'article */}
+          {status && <p class="text-sm mb-2">🟣 Statut : {status}</p>}
+
+          {/* Si marqué comme publié */}
+          {published && <p class="text-sm mb-2">✅ Publié</p>}
+
+          {/* Extrait d'intro */}
+          {excerpt && <p class="text-gray-600 text-base mb-6 italic">{excerpt}</p>}
+        </header>
+
+        {/* Contenu principal */}
+        <div class="prose prose-lg max-w-none">
+          {content}
+        </div>
+      </div>
     </div>
 
     {/* Galerie d'images associées */}

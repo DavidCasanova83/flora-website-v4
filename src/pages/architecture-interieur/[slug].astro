@@ -32,6 +32,14 @@ if (!page) {
   throw new Error(`Article introuvable pour le slug : ${slug}`);
 }
 
+// // Affichage des données dans la console
+// console.log("=== Données de la page ===");
+// console.log("Page complète:", page);
+// console.log("\n=== Données brutes de Notion ===");
+// console.log("Pages brutes:", rawPages);
+// console.log("\n=== Pages parsées ===");
+// console.log("Pages parsées:", parsedPages);
+
 // ✅ Extraction des données typées
 const {
   title,
@@ -48,7 +56,16 @@ const {
   rank,
   created,
   edited,
-  label
+  label,
+  montexte,
+  content2,
+  content3,
+  content4,
+  content5,
+  images02 = [],
+  images03 = [],
+  images04 = [],
+  images05 = []
 } = page;
 
 // ✅ Formatage de la date de modification (ex: "23 mars 2025")
@@ -62,52 +79,158 @@ const editedDate = edited
 ---
 
 <Layout>
-  <article class="max-w-3xl mx-auto p-6 md:p-12">
-    <header class="mb-10">
-      {date && <p class="text-gray-500 text-sm">📅 {date}</p>}
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">{title}</h1>
-
-      {/* Statut de l'article */}
-      {status && <p class="text-sm mb-2">🟣 Statut : {status}</p>}
-
-      {/* Si marqué comme publié */}
-      {published && <p class="text-sm mb-2">✅ Publié</p>}
-
-      {/* Extrait d'intro */}
-      {excerpt && <p class="text-gray-600 text-base mb-6 italic">{excerpt}</p>}
-
+  <article class="w-4/5 mx-auto p-4 md:p-8">
+    <div class="flex flex-col md:flex-row gap-16 mb-10 h-[60vh]">
       {/* Image principale */}
       {imagePresentation && (
-        <img src={imagePresentation} alt={title} class="rounded-lg w-full object-cover mb-6 shadow-md" />
+        <div class="md:w-1/4 h-[400px] self-end"> {/* <-- Ajout de self-end ici */}
+          <img src={imagePresentation} alt={title} class="w-full h-full object-cover shadow-md" />
+        </div>
       )}
-    </header>
+    
+      {/* Contenu à droite */}
+      <div class="md:w-3/4 flex flex-col justify-end">
+        <header class="mb-6">
+          {date && <p class="text-gray-500 text-sm">📅 {date}</p>}
+          <h1 class="text-4xl uppercase font-bold text-gray-900 mb-4">{title}</h1>
+        </header>
+    
+        {/* Contenu principal */}
+        <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug">
+          {content}
+        </div>
 
-    {/* Contenu principal */}
-    <div class="prose prose-lg max-w-none mb-10">
-      {content}
+     
+      </div>
     </div>
 
     {/* Galerie d'images associées */}
     {images.length > 0 && (
-      <section class="mb-8">
-        <h2 class="text-2xl font-semibold mb-4">Images associées</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <section class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {images.map((img, i) => (
-            <img src={img} alt={`Image ${i + 1}`} class="rounded shadow" />
+            <div class={`group relative overflow-hidden ${i === 0 ? 'md:col-span-2' : ''}`}>
+              <img 
+                src={img} 
+                alt={`Image ${i + 1}`} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+            </div>
           ))}
         </div>
       </section>
     )}
 
-    {/* Pied de page avec métadonnées */}
-    <footer class="border-t pt-4 mt-10 text-sm text-gray-500">
-      {slugText && <p>🆔 Slug : {slugText}</p>}
-      {btnText && <p>🔘 Bouton : {btnText}</p>}
-      {link && <p>🔗 Lien : <a href={link} class="text-blue-600 underline">{link}</a></p>}
-      {rank !== null && <p>📊 Rank : {rank}</p>}
-      {created && <p>🕒 Créé le : {created}</p>}
-      {editedDate && <p>✏️ Modifié le {editedDate}</p>}
-      {label && <p>🏷️ Label : {label}</p>}
-    </footer>
+    {content2 && content2.trim() !== '' && (
+      <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
+        {content2}
+      </div>
+    )}
+
+ 
+
+    {/* Galerie d'images associées 02 */}
+    {images02 && images02.length > 0 && (
+      <section class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          {images02.map((img, i) => (
+            <div class={`group relative overflow-hidden ${
+              i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : 
+              i % 3 === 0 ? 'md:col-span-2' : 
+              'md:col-span-1'
+            }`}>
+              <img 
+                src={img} 
+                alt={`Image ${i + 1}`} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+
+
+{content3 && content3.trim() !== '' && (
+<div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
+  {content3}
+</div>
+)}
+
+{/* Galerie d'images associées 03 */}
+{images03 && images03.length > 0 && (
+  <section class="mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+      {images03.map((img, i) => (
+        <div class={`group relative overflow-hidden ${
+          i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : 
+          i % 3 === 0 ? 'md:col-span-2' : 
+          'md:col-span-1'
+        }`}>
+          <img 
+            src={img} 
+            alt={`Image ${i + 1}`} 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+{content4 && content4.trim() !== '' && (
+  <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
+    {content4}
+  </div>
+)}
+
+{/* Galerie d'images associées 04 */}
+{images04 && images04.length > 0 && (
+  <section class="mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {images04.map((img, i) => (
+        <div class={`group relative overflow-hidden ${i === 0 ? 'md:col-span-2' : ''}`}>
+          <img 
+            src={img} 
+            alt={`Image ${i + 1}`} 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+
+{content5 && content5.trim() !== '' && (
+  <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
+    {content5}
+  </div>
+)}
+
+{/* Galerie d'images associées 05 */}
+{images05 && images05.length > 0 && (
+  <section class="mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {images05.map((img, i) => (
+        <div class="group relative overflow-hidden aspect-[3/4]">
+          <img 
+            src={img} 
+            alt={`Image ${i + 1}`} 
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+          />
+          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
+
   </article>
 </Layout>
