@@ -27,7 +27,7 @@ import avis from '../data/avis.json';
 
 		<!-- Texte Hero en overlay (positionné en relatif pour se placer au-dessus du slider) -->
 		<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 lg:mx-24 md:px-8 py-12">
-			<div class="bg-white bg-opacity-60 rounded-md text-left text-primary p-6 md:p-12 max-w-2xl w-full">
+			<div class="bg-white bg-opacity-80 rounded-md text-left text-primary p-6 md:p-12 max-w-2xl w-full">
 				<!-- logo  -->
 				<div class="max-w-[300px] flex flex-col justify-end items-end mb-[30px]">
 					<a href="./index.html">
@@ -74,50 +74,44 @@ import avis from '../data/avis.json';
 			<div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
 				<!-- bloque 1 -->
 				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
-					<!-- <div class="mb-[15px]">
-						<img src="assets/icons/services/icon-1.svg" alt="">
-					</div> -->
-					<h3 class="h3 mb-[10px]">Conception</h3>
-					<p class="font-light leading-normal max-w-[300px]">
-						De la découverte du lieu à l'étude du projet en plan et en 3D avec rendu réaliste</p>
-					<a class="text-accent underline" href="./index.html">En savoir plus</a>
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+					<div class="text-center">
+						<h3 class="h3 mb-[10px]">Conception</h3>
+						<p class="font-light leading-normal max-w-[300px] mx-auto">
+							De la découverte du lieu à l'étude du projet en plan et en 3D avec rendu réaliste</p>
+					</div>
+					<a class="text-accent underline text-center" href="./Presta02#etape1">Étape 1</a>
 				</div>
 				<!-- bloque 2 -->
 				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
-					<!-- <div class="mb-[15px]">
-						<img src="assets/icons/services/icon-2.svg" alt="">
-					</div> -->
-					<h3 class="h3 mb-[10px]">Démarches administratives</h3>
-					<p class="font-light leading-normal max-w-[300px]">
-						Accompagnement dans les autorisations d'urbanisme et les consultation des entreprises/des fournisseurs.</p>
-					<a class="text-accent underline" href="./index.html">En savoir plus</a>
-
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+					<div class="text-center">
+						<h3 class="h3 mb-[10px]">Démarches administratives</h3>
+						<p class="font-light leading-normal max-w-[300px] mx-auto">
+							Accompagnement dans les autorisations d'urbanisme et les consultation des entreprises/des fournisseurs.</p>
+					</div>
+					<a class="text-accent underline text-center" href="./Presta02#etape2">Étape 2</a>
 				</div>
 				<!-- bloque 3 -->
 				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
-					<!-- <div class="mb-[15px]">
-						<img src="assets/icons/services/icon-3.svg" alt="">
-					</div> -->
-					<h3 class="h3 mb-[10px]">Suivi de chantier</h3>
-					<p class="font-light leading-normal max-w-[300px]">
-						Coordination des artisans, réunion de chantier hebdomadaires et réception des travaux.</p>
-					<a class="text-accent underline" href="./index.html">En savoir plus</a>
-
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+					<div class="text-center">
+						<h3 class="h3 mb-[10px]">Suivi de chantier</h3>
+						<p class="font-light leading-normal max-w-[300px] mx-auto">
+							Coordination des artisans, réunion de chantier hebdomadaires et réception des travaux.</p>
+					</div>
+					<a class="text-accent underline text-center" href="./Presta02#etape3">Étape 3</a>
 				</div>
 				<!-- bloque 4 -->
 				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col items-center text-center">
-					<!-- <div class="mb-[15px]">
-						<img src="assets/icons/services/icon-4.svg" alt="">
-					</div> -->
-					<h3 class="h3 mb-[10px]">Aménagement</h3>
-					<p class="font-light leading-normal max-w-[300px]">
-						Proposition de mobilier et d'éléments de décoration, dessin de mobilier sur mesure.
-					</p>
-					<a class="text-accent underline" href="./index.html">En savoir plus</a>
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+					<div class="text-center">
+						<h3 class="h3 mb-[10px]">Aménagement</h3>
+						<p class="font-light leading-normal max-w-[300px] mx-auto">
+							Proposition de mobilier et d'éléments de décoration, dessin de mobilier sur mesure.
+						</p>
+					</div>
+					<a class="text-accent underline text-center" href="./Presta02#etape4">Étape 4</a>
 				</div>
 			</div>
 		</div>
@@ -179,7 +173,7 @@ import avis from '../data/avis.json';
 	<LastProjects />
 
 	<!-- testimonials -->
-	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat mb-12">
+	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat p-12 my-24">
 		<div class="testimonial__container container mx-auto">
 			<div class="flex flex-col items-center">
 				<h2 class="h2 text-white text-center my-8">Vos avis comptent et nous vous en remercions</h2>
@@ -199,12 +193,12 @@ import avis from '../data/avis.json';
 											</div>
 											<!-- Message -->
 											<p
-												class="font-light relative text-[22px] text-[#4c5345] leading-[198%] text-center before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
+												class="font-light relative text-[18px] text-[#4c5345] leading-[198%] text-center before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
 													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
 												<span class="mx-2">{avis.message}</span>
 											</p>
 											<!-- Name -->
-											<div class="text-[26px] text-[#4c5354] font-semibold mt-6">
+											<div class="text-[22px] text-[#4c5354] font-semibold mt-6">
 												{avis.nom}
 											</div>
 											<div class="text-white font-medium uppercase tracking-[2.24px]">{avis.type}</div>
@@ -232,7 +226,7 @@ import avis from '../data/avis.json';
 				<!-- text -->
 				<div class="flex-1 z-10 text-center">
 					<div class="text-base uppercase text-white tracking-[2.24px] font-medium">Une question, un projet ?</div>
-					<h2 class="h2 mb-4 text-white">Nous serons ravis de pouvoir vous rencontrer et de répondre à vos envies.</h2>
+					<h2 class=" mb-4 text-3xl text-left text-white">Nous serons ravis de pouvoir vous rencontrer et de répondre à vos envies.</h2>
 				</div>
 				<!-- form -->
 				<div class="flex-1 flex justify-center">
