@@ -26,22 +26,23 @@ import avis from '../data/avis.json';
 		</div>
 
 		<!-- Texte Hero en overlay (positionné en relatif pour se placer au-dessus du slider) -->
-		<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 lg:mx-24 md:px-8 py-12">
-			<div class="bg-white bg-opacity-90 rounded-md text-left text-primary p-6 md:p-12 max-w-2xl w-full">
+		<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-6 md:px-8 py-8 sm:py-12">
+			<div class="bg-white bg-opacity-90 rounded-md text-left text-primary p-4 sm:p-6 md:p-12 max-w-2xl w-full mx-4 md:mx-0 md:ml-24">
 				<!-- logo  -->
-				<div class="max-w-[300px] flex flex-col justify-end items-end mb-[30px]">
+				<div class="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] flex flex-col justify-end items-end mb-6 sm:mb-[30px]">
 					<a href="./index.html">
-						<img class="mb-[30px]" src="./assets/img/header/logo-transparent.png" alt="">
+						<img class="w-full h-auto mb-4 sm:mb-[30px]" src="./assets/img/header/logo-transparent.png" alt="Logo Flor'A">
 					</a>
 				</div>					
-				<h1 class="text-2xl sm:text-3xl md:text-4xl font-light mb-4 text-primary">
-					Architecte d'intérieur<br/> & Maître d'œuvre sur TOULON
+				<h1 class="text-xl sm:text-2xl md:text-4xl font-light mb-3 sm:mb-4 text-primary">
+					Architecte d'intérieur<br class="hidden sm:block"/> & Maître d'œuvre sur TOULON
 				</h1>
-				<p class="mb-[42px] md:max-w-xl text-left">Flor'A, agence d’architecture d’intérieur certifiée CFAI à Toulon, vous accompagne dans vos projets de rénovation et d’aménagement, intérieurs comme extérieurs.
+				<p class="mb-6 sm:mb-[42px] text-sm sm:text-base md:max-w-xl text-left">
+					Flor'A, agence d'architecture d'intérieur certifiée CFAI à Toulon, vous accompagne dans vos projets de rénovation et d'aménagement, intérieurs comme extérieurs.
 
-					Nous concevons des espaces sur mesure, en accord avec votre style, votre budget et votre mode de vie. Sensibles à une architecture responsable et au bien-être des occupants, nous vous guidons de la première esquisse jusqu’au suivi de chantier, pour un projet clé en main.
+					Nous concevons des espaces sur mesure, en accord avec votre style, votre budget et votre mode de vie. Sensibles à une architecture responsable et au bien-être des occupants, nous vous guidons de la première esquisse jusqu'au suivi de chantier, pour un projet clé en main.
 				</p>
-				<div class="flex flex-col sm:flex-row gap-4">
+				<div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
 					<a href="./contact.html" class="btn btn-lg btn-accent w-full sm:w-auto text-center">Contactez-nous</a>
 				</div>
 			</div>
@@ -70,46 +71,46 @@ import avis from '../data/avis.json';
 		<div class="container mx-auto mt-8 xl:-mt-[144px]">
 			<div class="grid xl:grid-cols-4 gap-5 px-8 xl:px-0">
 				<!-- bloque 1 -->
-				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+				<a href="./prestations#etape1"
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
 					<div class="text-center">
 						<h3 class="h3 mb-[10px]">Conception</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							De la découverte du lieu à l'étude du projet en plan et en 3D avec rendu réaliste</p>
 					</div>
-					<a class="text-accent underline text-center" href="./prestations#etape1">Étape 1</a>
-				</div>
+					<span class="text-accent underline text-center">Étape 1</span>
+				</a>
 				<!-- bloque 2 -->
-				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+				<a href="./prestations#etape2"
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
 					<div class="text-center">
 						<h3 class="h3 mb-[10px]">Démarches administratives</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							Accompagnement dans les autorisations d'urbanisme et les consultation des entreprises/des fournisseurs.</p>
 					</div>
-					<a class="text-accent underline text-center" href="./prestations#etape2">Étape 2</a>
-				</div>
+					<span class="text-accent underline text-center">Étape 2</span>
+				</a>
 				<!-- bloque 3 -->
-				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+				<a href="./prestations#etape3"
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
 					<div class="text-center">
 						<h3 class="h3 mb-[10px]">Suivi de chantier</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							Coordination des artisans, réunion de chantier hebdomadaires et réception des travaux.</p>
 					</div>
-					<a class="text-accent underline text-center" href="./prestations#etape3">Étape 3</a>
-				</div>
+					<span class="text-accent underline text-center">Étape 3</span>
+				</a>
 				<!-- bloque 4 -->
-				<div
-					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between">
+				<a href="./prestations#etape4"
+					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
 					<div class="text-center">
 						<h3 class="h3 mb-[10px]">Aménagement</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							Proposition de mobilier et d'éléments de décoration, dessin de mobilier sur mesure.
 						</p>
 					</div>
-					<a class="text-accent underline text-center" href="./prestations#etape4">Étape 4</a>
-				</div>
+					<span class="text-accent underline text-center">Étape 4</span>
+				</a>
 			</div>
 		</div>
 	</section>
@@ -170,32 +171,32 @@ import avis from '../data/avis.json';
 	<LastProjects />
 
 	<!-- testimonials -->
-	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat p-12 my-24">
+	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat p-8 sm:p-8 md:p-12 my-12 sm:my-16 md:my-24">
 		<div class="testimonial__container container mx-auto">
 			<div class="flex flex-col items-center">
-				<h2 class="h2 text-white text-center my-8">Vos avis comptent et nous vous en remercions</h2>
+				<h2 class="h2 text-white text-center my-4 sm:my-6 md:my-8 text-2xl sm:text-3xl md:text-4xl">Vos avis comptent et nous vous en remercions</h2>
 				<!-- slider -->
-				<div class="w-full max-w-[710px]">
+				<div class="w-full max-w-[710px] px-4 sm:px-0">
 					<!-- Slider main container -->
-					<div class="swiper testimonial-swiper h-[400px]">
+					<div class="swiper testimonial-swiper min-h-[300px] sm:min-h-[350px] md:min-h-[400px]">
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							{avis.avis.map((avis) => (
 								<div class="swiper-slide">
-									<div class="h-full flex flex-col justify-center items-center">
-										<div class="max-w-[680px] mx-auto text-center">
+									<div class="h-full flex flex-col justify-center items-center py-8">
+										<div class="max-w-[680px] mx-auto text-center px-4">
 											<!-- Google Logo -->
-											<div class="flex justify-center mb-6">
-												<img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-12 w-auto" />
+											<div class="flex justify-center mb-4 sm:mb-6">
+												<img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-8 sm:h-10 md:h-12 w-auto object-contain" />
 											</div>
 											<!-- Message -->
 											<p
-												class="font-light relative text-[18px] text-[#4c5345] leading-[198%] text-center before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-10 before:h-10 before:bg-no-repeat
-													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-10 after:h-10 after:bg-no-repeat">
-												<span class="mx-2">{avis.message}</span>
+												class="font-light relative text-base sm:text-lg md:text-[18px] text-[#4c5345] leading-relaxed sm:leading-[198%] text-center before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-6 sm:before:w-8 md:before:w-10 before:h-6 sm:before:h-8 md:before:h-10 before:bg-no-repeat
+													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-6 sm:after:w-8 md:after:w-10 after:h-6 sm:after:h-8 md:after:h-10 after:bg-no-repeat">
+												<span class="mx-1 sm:mx-2">{avis.message}</span>
 											</p>
 											<!-- Name -->
-											<div class="text-[22px] text-[#4c5354] font-semibold mt-6">
+											<div class="text-lg sm:text-xl md:text-[22px] text-[#4c5354] font-semibold mt-4 sm:mt-6">
 												{avis.nom}
 											</div>
 										</div>
@@ -206,6 +207,18 @@ import avis from '../data/avis.json';
 						<!-- Swipper pagination -->
 						<div class="swiper-pagination"></div>
 					</div>
+				</div>
+				<!-- Bouton pour écrire un avis -->
+				<div class="mt-8 sm:mt-10 md:mt-12">
+					<a 
+						href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" 
+						target="_blank" 
+						rel="noopener noreferrer"
+						class="inline-flex items-center gap-2 bg-white text-[#4c5345] px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
+					>
+						<img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" />
+						<span class="font-medium">Écrire un avis</span>
+					</a>
 				</div>
 			</div>
 		</div>
