@@ -10,17 +10,41 @@ const rawPages = await getPages();
 const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
 
 // 🎯 Filtre les articles ayant un statut "En ligne" ou "En Cours" ET le label "architecture intérieur"
-const articles = parsedPages.filter(p =>
-  ["En ligne", "En Cours"].includes(p.status ?? "") &&
-  p.label === "architecture intérieur"
-);
+const articles = parsedPages
+  .filter(p =>
+    ["En ligne", "En Cours"].includes(p.status ?? "") &&
+    p.label === "architecture intérieur"
+  )
+  .sort((a, b) => {
+    // Si les deux articles ont une date, on trie par date décroissante
+    if (a.date && b.date) {
+      return new Date(b.date).getTime() - new Date(a.date).getTime();
+    }
+    // Si un article n'a pas de date, il passe après
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+    return 0;
+  });
 ---
 
 <Layout>
+  <!-- hero -->
+  <section class="heropy-12 mb-12 xl:pt-12 xl:pb-0 overflow-hidden">
+    <div class="container mx-auto h-full flex flex-col justify-center items-center xl:px-24">
+      <h1 class="h1 mb-6">Architecture d'intérieur</h1>
+      <p class="mb-[16px] md:max-w-xl text-justify">
+        Découvrez notre expertise en architecture d'intérieur à travers nos réalisations. Chaque projet est une histoire unique,
+        une transformation d'espace qui allie esthétique, fonctionnalité et bien-être.
+      </p>
+      <p class="mb-[16px] md:max-w-xl text-justify">
+        Notre approche personnalisée vous accompagne dans la création d'intérieurs qui reflètent votre personnalité et répondent
+        à vos besoins spécifiques, que ce soit pour une rénovation complète ou une simple réorganisation d'espace.
+      </p>
+    </div>
+  </section>
+  <!-- hero end -->
+
   <section class="p-6 md:p-12 bg-gradient-to-b from-gray-50 to-white min-h-screen">
-    <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">
-      Architecture d'intérieur
-    </h1>
 
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
       {
@@ -37,7 +61,7 @@ const articles = parsedPages.filter(p =>
           const isEnCours = status === "En Cours";
 
           const content = (
-            <div class={`group block bg-white rounded-[10px] shadow-lg transition overflow-hidden relative 
+            <div class={`group block bg-white rounded-[10px] shadow-lg transition overflow-hidden relative min-h-[340px]
               ${isEnCours ? 'opacity-50 pointer-events-none' : 'hover:shadow-xl'}`}>
 
               {/* Badge En cours */}
@@ -55,7 +79,7 @@ const articles = parsedPages.filter(p =>
 
               <div class="p-5">
                 <p class="text-sm text-gray-500 mb-1">{date}</p>
-                <h2 class="text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition">{title}</h2>
+                <h2 class="text-xl font-semibold uppercase text-gray-800 group-hover:text-indigo-600 transition">{title}</h2>
                 <p class="mt-2 text-gray-600 text-[14px] line-clamp-2">{excerpt}</p>
               </div>
             </div>
