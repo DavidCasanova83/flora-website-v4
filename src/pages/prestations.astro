@@ -5,6 +5,14 @@ import "../styles/global.css";
 ---
 
 <Layout title="Mes prestations" description="Découvrez mes prestations concernant l'architecture d'intérieur.">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    [id] {
+      scroll-margin-top: 100px;
+    }
+  </style>
 
   <!-- hero -->
   <section class="heropy-12 mb-12 xl:pt-12 xl:pb-0 overflow-hidden">
@@ -30,63 +38,195 @@ import "../styles/global.css";
 
   <!-- blog 01-->
   <section class="blog">
-    <div class="container mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-[50px]">
+    <div class="container mx-auto px-8 lg:px-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-y-24 md:gap-x-12 mb-[50px]">
         <!-- post 1 -->
-        <div class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px]">
+        <a href="#etape1" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
             <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              src="./assets/img/PRESTATIONS/Flora-2.avif" alt="">
+              src="./assets/img/PRESTATIONS/Flora-2.avif" alt="Étape 1 - Conception">
             <div
               class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-              En savoir plus
+              Étape 1
             </div>
           </div>
           <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-            <h4 class="h4 mb-[10px]">Visite conseil à domicile</h4>
-            <p class="font-light">RDV à votre domicile pour vous conseiller et vous guider sur vos projets durant 1h.</p>
+            <h4 class="h4 mb-[10px]">Conception</h4>
+            <p class="font-light">De la découverte du lieu à l'étude du projet en plan et en 3D avec rendu réaliste</p>
           </div>
-        </div>
+        </a>
   
         <!-- post 2 -->
-        <div class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px]">
+        <a href="#etape2" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
             <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              src="./assets/img/PRESTATIONS/Flora-3.avif" alt="">
+              src="./assets/img/PRESTATIONS/Flora-3.avif" alt="Étape 2 - Démarches administratives">
             <div
               class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-              En savoir plus
+              Étape 2
             </div>
           </div>
           <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-            <h4 class="h4 mb-[10px]">Proposition d'aménagement</h4>
-            <p class="font-light">Remise d'un dossier d'étude complet préparatoire avant travaux.</p>
+            <h4 class="h4 mb-[10px]">Démarches administratives</h4>
+            <p class="font-light">Accompagnement dans les autorisations d'urbanisme et les consultation des entreprises/des fournisseurs</p>
           </div>
-        </div>
+        </a>
   
         <!-- post 3 -->
-        <div class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px]">
+        <a href="#etape3" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
             <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              src="./assets/img/PRESTATIONS/Flora-4.avif" alt="">
+              src="./assets/img/PRESTATIONS/Flora-4.avif" alt="Étape 3 - Suivi de chantier">
             <div
               class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-              En savoir plus
+              Étape 3
             </div>
           </div>
           <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-            <h4 class="h4 mb-[10px]">Prestation clé en main</h4>
-            <p class="font-light">Prise en charge complète de votre projet d'aménagement intérieur avec une réception
-              clé en main.</p>
+            <h4 class="h4 mb-[10px]">Suivi de chantier</h4>
+            <p class="font-light">Coordination des artisans, réunion de chantier hebdomadaires et réception des travaux</p>
           </div>
-        </div>
+        </a>
+
+        <!-- post 4 -->
+        <a href="#etape4" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
+          <div class="relative overflow-hidden h-[500px]">
+            <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
+              src="./assets/img/PRESTATIONS/Flora-2.avif" alt="Étape 4 - Aménagement">
+            <div
+              class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+              Étape 4
+            </div>
+          </div>
+          <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
+            <h4 class="h4 mb-[10px]">Aménagement</h4>
+            <p class="font-light">Proposition de mobilier et d'éléments de décoration, dessin de mobilier sur mesure</p>
+          </div>
+        </a>
       </div>
     </div>
   </section>
   <!-- blog 01 end-->
 
+  <!-- Détails des étapes -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-8 lg:px-16">
+      <!-- Étape 1 -->
+      <div id="etape1" class="flex flex-col md:flex-row items-start gap-12 mb-32">
+        <div class="md:w-1/2">
+          <h2 class="h2 mb-6">ÉTAPE 1 - Conception</h2>
+          <p class="text-[14px] mb-4">
+            Lors de notre premier rendez-vous, nous découvrons le lieu à rénover et nous prenons le temps de définir vos attentes : vos envies, vos besoins, vos goûts, mais aussi les contraintes techniques et le budget à respecter.
+          </p>
+          <div class="space-y-4">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">1 - APS : Avant-Projet Sommaire</h3>
+              <p class="text-[14px]">
+                Nous commençons par prendre les mesures sur place, afin de travailler sur des bases solides et précises en plan 2D. Lors d'un second rendez-vous, nous vous présentons une ou deux propositions d'aménagement pour valider l'agencement général des espaces. Nous vous partageons des images d'inspiration qui vous guideront dans vos choix et vous aideront à mieux visualiser le projet.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">2 - APD : Avant-Projet Définitif</h3>
+              <p class="text-[14px]">
+                Nous entrons alors dans les détails : en 3D, nous dessinons chaque espace, intégrons les matériaux et couleurs, et ajoutons le mobilier pour vous permettre de visualiser le projet dans son ensemble.
+                Tous les aspects techniques nécessaires à une bonne compréhension sont également détaillés en plans 2D : implantations, plans pour les entreprises (démolition, construction, électricité, plomberie, calepinage), ainsi que des plans de coupe et des façades si nécessaire.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">3 - Dossier de Conception</h3>
+              <p class="text-[14px]">
+                Enfin, vous recevez un dossier complet par mail, comprenant les plans d'intentions en 2D annotés, des coupes et des plans de façades si besoin, ainsi que des visuels 3D, pour que vous puissiez pleinement apprécier le projet dans son ensemble.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img 
+            src="./assets/img/PRESTATIONS/Flora-2.avif" 
+            alt="Étape 1 - Conception" 
+            class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
 
+      <!-- Étape 2 -->
+      <div id="etape2" class="flex flex-col md:flex-row-reverse items-start gap-12 mb-32">
+        <div class="md:w-1/2">
+          <h2 class="h2 mb-6">ÉTAPE 2 - Démarches administratives</h2>
+          <div class="space-y-4">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">DCE : dossier de consultation des entreprises</h3>
+              <p class="text-[14px]">
+                L'étape DCE correspond à la phase de chiffrage des travaux.
+                Nous faisons intervenir plusieurs entreprises sur site pour obtenir des devis comparatifs. Avec l'expérience, nous avons sélectionné des équipes fiables avec lesquelles nous avons l'habitude de collaborer, garantissant ainsi un travail de qualité et un chantier serein.
+              </p>
+              <p class="text-[14px]">
+                Chaque devis est analysé afin de s'assurer qu'il ne manque aucune étape ni aucun élément vous évitant ainsi au maximum des travaux supplémentaires en cours de chantier.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Autorisations d'urbanisme</h3>
+              <p class="text-[14px]">
+                Lorsque la demande auprès de l'urbanisme est nécessaire, nous prenons en charge la constitution des dossiers de déclarations préalables et les déposons directement en mairie.
+              </p>
+              <p class="text-[14px]">
+                Pour les établissements professionnels, nous nous occupons également de la préparation des dossiers ERP (Établissement Recevant du Public).
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img 
+            src="./assets/img/PRESTATIONS/Flora-3.avif" 
+            alt="Étape 2 - Démarches administratives" 
+            class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
 
+      <!-- Étape 3 -->
+      <div id="etape3" class="flex flex-col md:flex-row items-start gap-12 mb-32">
+        <div class="md:w-1/2">
+          <h2 class="h2 mb-6">ÉTAPE 3 - Suivi de chantier</h2>
+          <p class="text-[14px] mb-4">
+            En tant que maître d'œuvre, nous bénéficions d'une assurance décennale, ce qui nous permet d'assurer un suivi complet du chantier, de A à Z.
+          </p>
+          <p class="text-[14px]">
+            Nous coordonnons les différents intervenants en élaborant un planning de chantier précis. Des réunions hebdomadaires sont organisées lors de nos visites sur site pour vérifier l'avancement et le bon déroulement des travaux. Un compte-rendu détaillé vous est envoyé par mail, accompagné de photographies si nécessaire.
+          </p>
+          <p class="text-[14px]">
+            À la fin du chantier, un procès-verbal de réception de chantier est réalisé pour chaque entreprise afin de garantir la bonne exécution des travaux et de clore l'intervention des artisans.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img 
+            src="./assets/img/PRESTATIONS/Flora-4.avif" 
+            alt="Étape 3 - Suivi de chantier" 
+            class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
 
+      <!-- Étape 4 -->
+      <div id="etape4" class="flex flex-col md:flex-row-reverse items-start gap-12">
+        <div class="md:w-1/2">
+          <h2 class="h2 mb-6">ÉTAPE 4 - Aménagement</h2>
+          <p class="text-[14px] mb-4">
+            Si vous souhaitez aller jusqu'à l'aménagement des espaces, nous proposons également une prestation spéciale « décoration ».
+          </p>
+          <p class="text-[14px]">
+            Nous élaborons pour vous une shopping-list détaillée comprenant du mobilier, des luminaires et des objets décoratifs. Cette liste est présentée sous forme de tableau avec les prix unitaires, les quantités, les liens directs vers les sites marchands et les totaux répertoriés par pièce. Nous nous chargeons ensuite de l'achat, de la gestion des livraisons, du stockage et de l'installation du mobilier.
+          </p>
+        </div>
+        <div class="md:w-1/2">
+          <img 
+            src="./assets/img/PRESTATIONS/Flora-2.avif" 
+            alt="Étape 4 - Aménagement" 
+            class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 
 </Layout>
