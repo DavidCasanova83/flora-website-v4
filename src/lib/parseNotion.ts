@@ -29,6 +29,7 @@ export function mapPageData(page: PageObjectResponse): ParsedPage {
     images03: props.Images03?.files?.map(getUrlFromFile),
     images04: props.Images04?.files?.map(getUrlFromFile),
     images05: props.Images05?.files?.map(getUrlFromFile),
+    images06: props.Images06projet?.files?.map(getUrlFromFile),
     created: page.created_time?.split("T")[0],
     edited: page.last_edited_time?.split("T")[0],
     category: props.Category?.select?.name,

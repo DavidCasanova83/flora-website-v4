@@ -22,6 +22,7 @@ export type ParsedPage = {
   images03?: string[];
   images04?: string[];
   images05?: string[];
+  images06?: string[];
   created?: string;
   edited?: string;
   category?: string;

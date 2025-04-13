@@ -80,27 +80,24 @@ const editedDate = edited
 
 <Layout>
   <article class="w-4/5 mx-auto p-4 md:p-8">
-    <div class="flex flex-col md:flex-row gap-16 mb-10 h-[60vh]">
+    <div class="flex flex-col md:flex-row gap-8 md:gap-16 mb-10">
       {/* Image principale */}
       {imagePresentation && (
-        <div class="md:w-1/4 h-[400px] self-end"> {/* <-- Ajout de self-end ici */}
+        <div class="md:w-1/4 h-[300px] md:h-[400px]">
           <img src={imagePresentation} alt={title} class="w-full h-full object-cover shadow-md" />
         </div>
       )}
     
       {/* Contenu à droite */}
-      <div class="md:w-3/4 flex flex-col justify-end">
+      <div class="md:w-3/4">
         <header class="mb-6">
-          {date && <p class="text-gray-500 text-sm">📅 {date}</p>}
-          <h1 class="text-4xl uppercase font-bold text-gray-900 mb-4">{title}</h1>
+          <h1 class="text-3xl md:text-4xl uppercase font-bold text-gray-900 mb-4">{title}</h1>
         </header>
     
         {/* Contenu principal */}
         <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug">
           {content}
         </div>
-
-     
       </div>
     </div>
 
@@ -216,9 +213,9 @@ const editedDate = edited
 {/* Galerie d'images associées 05 */}
 {images05 && images05.length > 0 && (
   <section class="mb-16">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="flex flex-wrap gap-6 justify-center">
       {images05.map((img, i) => (
-        <div class="group relative overflow-hidden aspect-[3/4]">
+        <div class="group relative overflow-hidden aspect-[3/4] w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)]">
           <img 
             src={img} 
             alt={`Image ${i + 1}`} 
