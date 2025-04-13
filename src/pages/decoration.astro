@@ -9,17 +9,17 @@ import "../styles/global.css";
 const rawPages = await getPages();
 const parsedPages: ParsedPage[] = rawPages.map(mapPageData);
 
-// 🎯 Filtre les articles ayant un statut "En ligne" ou "En Cours" ET le label "architecture intérieur"
+// 🎯 Filtre les articles ayant un statut "En ligne" ou "En Cours" ET le label "décoration"
 const articles = parsedPages.filter(p =>
   ["En ligne", "En Cours"].includes(p.status ?? "") &&
-  p.label === "architecture intérieur"
+  p.label === "décoration"
 );
 ---
 
 <Layout>
   <section class="p-6 md:p-12 bg-gradient-to-b from-gray-50 to-white min-h-screen">
     <h1 class="text-4xl md:text-5xl font-bold text-center text-gray-800 mb-12">
-      Architecture d'intérieur
+      Décoration
     </h1>
 
     <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -56,7 +56,7 @@ const articles = parsedPages.filter(p =>
               <div class="p-5">
                 <p class="text-sm text-gray-500 mb-1">{date}</p>
                 <h2 class="text-xl font-semibold text-gray-800 group-hover:text-indigo-600 transition">{title}</h2>
-                <p class="mt-2 text-gray-600 text-[14px] line-clamp-2">{excerpt}</p>
+                <p class="mt-2 text-gray-600 text-sm line-clamp-2">{excerpt}</p>
               </div>
             </div>
           );
@@ -64,7 +64,7 @@ const articles = parsedPages.filter(p =>
           // 🔗 Lien cliquable seulement si l'article est en ligne
           return isEnCours
             ? <div>{content}</div>
-            : <a href={`/architecture-interieur/${slug}`}>{content}</a>;
+            : <a href={`/decoration/${slug}`}>{content}</a>;
         })
       }
     </div>
