@@ -4,9 +4,10 @@ import { Image } from 'astro:assets';
 import "../styles/global.css";
 
 // Import des images
-import imgPrestations2 from '../assets/img/PRESTATIONS/Flora-2.avif';
-import imgPrestations3 from '../assets/img/PRESTATIONS/Flora-3.avif';
-import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
+import imgPrestations2 from '../assets/img/PRESTATIONS/Conception.jpg';
+import imgPrestations3 from '../assets/img/PRESTATIONS/Démarches-administratives.jpg';
+import imgPrestations4 from '../assets/img/PRESTATIONS/Suivi-de-chantier.jpg';
+import imgPrestations5 from '../assets/img/PRESTATIONS/Aménagement.jpg';
 ---
 
 <Layout title="Mes prestations" description="Découvrez mes prestations concernant l'architecture d'intérieur.">
@@ -52,8 +53,8 @@ import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
               src={imgPrestations2}
               alt="Étape 1 - Conception"
               class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              width={500}
-              height={500}
+              width={1000}
+              height={1000}
             />
             <div
               class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-['Montserrat'] uppercase py-[6px] px-[18px]">
@@ -94,6 +95,7 @@ import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
               src={imgPrestations4}
               alt="Étape 3 - Suivi de chantier"
               class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
+              loading="lazy"
               width={500}
               height={500}
             />
@@ -112,11 +114,12 @@ import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
         <a href="#etape4" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
             <Image
-              src={imgPrestations2}
+              src={imgPrestations5}
               alt="Étape 4 - Aménagement"
               class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              width={500}
-              height={500}
+              loading="lazy"
+              width={1000}
+              height={1000}
             />
             <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-['Montserrat'] uppercase py-[6px] px-[18px]">
@@ -170,8 +173,9 @@ import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
             src={imgPrestations2}
             alt="Étape 1 - Conception"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
-            width={500}
-            height={500}
+            loading="lazy"
+            width={1000}
+            height={1000}
           />
         </div>
       </div>
@@ -207,8 +211,9 @@ import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
             src={imgPrestations3}
             alt="Étape 2 - Démarches administratives"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
-            width={500}
-            height={500}
+            loading="lazy"
+            width={1000}
+            height={1000}
           />
         </div>
       </div>
@@ -232,8 +237,9 @@ import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
             src={imgPrestations4}
             alt="Étape 3 - Suivi de chantier"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
-            width={500}
-            height={500}
+            loading="lazy"
+            width={1000}
+            height={1000}
           />
         </div>
       </div>
@@ -251,11 +257,12 @@ import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
         </div>
         <div class="md:w-1/2">
           <Image
-            src={imgPrestations2}
+            src={imgPrestations5}
             alt="Étape 4 - Aménagement"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
-            width={500}
-            height={500}
+            loading="lazy"
+            width={1000}
+            height={1000}
           />
         </div>
       </div>
