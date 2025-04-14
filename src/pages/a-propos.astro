@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
+import { Image } from 'astro:assets';
+import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
 
 ---
 
@@ -37,8 +39,8 @@ import "../styles/global.css";
           </p>
         </div>
         <div class="hero__img xl:flex flex-col self-start pt-0 xl:w-2/5">
-          <img src="assets/img/hero/photo-profil-flora.avif" alt="Flora Leicarrague" class="w-full h-auto object-cover mt-8">
-          <button><a href="./contact" class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Nous contacter</a></button>
+          <img src="assets/img/hero/photo-profil-flora.jpg" alt="Flora Leicarrague" class="w-full h-auto object-cover mt-8">
+          <button><a href="contact" class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Nous contacter</a></button>
         </div>
       </div>
     </div>
@@ -116,16 +118,19 @@ import "../styles/global.css";
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide relative">
-            <div class="relative w-full h-[600px] bg-cover bg-center"
-              style="background-image: url('./assets/img/sliderphoto/about-flora.avif');">
+            <div class="relative w-full h-[600px]">
+              <Image
+                src={aboutFlora}
+                alt="Citation sur l'espace habité"
+                class="object-cover w-full h-full"
+              />
               <div class="absolute inset-0 bg-black bg-opacity-50 blur-sm"></div>
-              <h4 class="h4 text-white absolute inset-0 flex items-center justify-center p-8 text-center">
+              <h4 class="text-xl text-white absolute inset-0 flex items-center justify-center px-64 text-center">
                 "L'espace habité, l'espace conçu par l'homme est construit selon des images vivantes mêlant réalité et
                 rêve, sensations et émotions, objectivité et subjectivité."
               </h4>
             </div>
           </div>
-
         </div>
         <!-- Swiper pagination -->
         <div class="swiper-pagination"></div>
