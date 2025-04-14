@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import "../styles/swiper-bundle.min.css";
+import { Image } from 'astro:assets';
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,7 +16,7 @@ import "../styles/swiper-bundle.min.css";
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   </head>
 
@@ -113,7 +114,7 @@ import "../styles/swiper-bundle.min.css";
 								<div class="flex items-center gap-x-[6px]">
 									<i class="ri-map-pin-fill text-[24px] text-accent"></i>
 									<div>
-										<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4e0e2a68f1a90c79:0x8249c7a822d6161d?sa=X&ved=1t:8290&ictx=111" target="_blank" class="hover:text-accent transition-all">
+										<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4e0e2a68f1a90c79:0x8249c7a822d6161d?sa=X&ved=1t:8290&ictx=111" target="_blank" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											3 Imp. François Marcel, 83000 Toulon
 										</a>
 									</div>
@@ -121,7 +122,7 @@ import "../styles/swiper-bundle.min.css";
 								<div class="flex items-center gap-x-[6px]">
 									<i class="ri-mail-fill text-[24px] text-accent"></i>
 									<div>
-										<a href="/contact" class="hover:text-accent transition-all">
+										<a href="/contact" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											leicarragueflora@gmail.com
 										</a>
 									</div>
@@ -129,7 +130,7 @@ import "../styles/swiper-bundle.min.css";
 								<div class="flex items-center gap-x-[6px]">
 									<i class="ri-phone-fill text-[24px] text-accent"></i>
 									<div>
-										<a href="tel:+33695584639" class="hover:text-accent transition-all">
+										<a href="tel:+33695584639" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											06 95 58 46 39
 										</a>
 									</div>
@@ -137,7 +138,7 @@ import "../styles/swiper-bundle.min.css";
 								<div class="flex items-center gap-x-[6px]">
 									<i class="ri-google-fill text-[24px] text-accent"></i>
 									<div>
-										<a href="https://g.co/kgs/gBdYzP1" target="_blank" class="hover:text-accent transition-all">
+										<a href="https://g.co/kgs/gBdYzP1" target="_blank" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											Voir notre fiche Google
 										</a>
 									</div>
@@ -148,14 +149,14 @@ import "../styles/swiper-bundle.min.css";
 					</div>
 					<!-- footer hours  -->
 					<div class="footer__item flex-1">
-						<h4>Disponibilités</h4>
+						<p class="mb-4">Disponibilités</p>
 						<!-- list   -->
 						<div class="flex flex-col gap-5">
 							<!--  item  -->
 							<div class="flex-1">
 								<div class="flex justify-between items-center border-b pb-[10px]">
 									<div>Lundi au Vendredi</div>
-									<div class="text-accent font-medium">9h00 - 19h00</div>
+									<div class="text-accent font-medium font-['Montserrat']">9h00 - 19h00</div>
 								</div>
 							</div>
 							<!--  item 2 -->

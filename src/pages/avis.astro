@@ -7,7 +7,7 @@ import "../styles/global.css";
 <Layout title="Avis & actualité" description="Découvrez les avis de mes clients et l'actualité concernant l'architecture d'intérieur.">
 
   <!-- hero -->
-  <section class="heropy-12 mb-12 xl:pt-12 xl:pb-0 overflow-hidden">
+  <section class="heropy-12 my-24 xl:pt-12 xl:pb-0 overflow-hidden">
     <div class="container mx-auto h-full flex flex-col justify-center items-center xl:px-24">
       <h1 class="h1 mb-6">Vos avis</h1>
       <p class="mb-[42px] md:max-w-xl text-left">Vous nous avez fait confiance et nous vous en remercions.
@@ -17,59 +17,48 @@ import "../styles/global.css";
   </section>
   <!-- hero end -->
 
-  <!-- avis list 01 -->
-  <section class="blog">
+  <!-- avis list -->
+  <section class="blog my-24">
     <div class="container mx-auto">
       <!-- blog post  -->
-      <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-center justify-between mb-[50px]">
         <!-- post 1 -->
-        <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+        <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
           <div class="relative overflow-hidden h-[480px]">
             <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
               src="./assets/img/AVIS/avis01.png" alt="">
           </div>
         </div>
         <!-- post 2 -->
-        <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+        <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
           <div class="relative overflow-hidden h-[480px]">
             <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
               src="./assets/img/AVIS/avis02.png" alt="">
           </div>
         </div>
         <!-- post 3 -->
-        <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+        <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
           <div class="relative overflow-hidden h-[480px]">
             <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
               src="./assets/img/AVIS/avis05.png" alt="">
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- avis list 01 end-->
-
-  <!-- avis list 02 -->
-  <section class="blog">
-    <div class="container mx-auto">
-      <!-- blog post  -->
-      <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
-
         <!-- post 4 -->
-        <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+        <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
           <div class="relative overflow-hidden h-[480px]">
             <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
               src="./assets/img/AVIS/avis06.png" alt="">
           </div>
         </div>
         <!-- post 5 -->
-        <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+        <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
           <div class="relative overflow-hidden h-[480px]">
             <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
               src="./assets/img/AVIS/avis07.png" alt="">
           </div>
         </div>
         <!-- post 6 -->
-        <div class="blog__post max-w-[420px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+        <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
           <div class="relative overflow-hidden h-[480px]">
             <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
               src="./assets/img/AVIS/avis08.png" alt="">
@@ -78,22 +67,23 @@ import "../styles/global.css";
       </div>
     </div>
   </section>
-  <!-- avis list 02 end-->
- <!-- Bouton pour écrire un avis -->
- <div class="mt-8 sm:mt-10 md:mt-12 mb-12">
-  <a 
-    href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    class="btn background-red inline-flex items-center gap-2 px-6 py-3"
-  >
-    <img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" />
-    <span class="font-medium">Écrire un avis</span>
-  </a>
-</div>
+  <!-- avis list end-->
+
+  <!-- Bouton pour écrire un avis -->
+  <div class="my-24">
+    <a 
+      href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="btn background-red inline-flex items-center gap-2 px-6 py-3"
+    >
+      <img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" />
+      <span class="font-medium">Écrire un avis</span>
+    </a>
+  </div>
 
   <!-- actualité 01 -->
-  <section class="blog">
+  <section class="blog my-24">
     <div class="container mx-auto">
       <h2 class="blog__title h2 mb-[50px] text-center xl:text-left">ACTUALITÉ</h2>
       <p class="mb-12">Découvrez l'actualité concernant les nouvelles techniques de réalisation, les nouveautés en terme d'innovation, de matériaux écologiques & bio-sourcés et des conseils au niveau de l'architecture d'intérieur et de décoration.</p>
@@ -167,7 +157,7 @@ import "../styles/global.css";
   <!-- actualité 01 end-->
 
   <!-- actualité 02 -->
-  <section class="blog">
+  <section class="blog my-24">
     <div class="container mx-auto">
       <!-- blog post  -->
       <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-start mb-[50px]">
