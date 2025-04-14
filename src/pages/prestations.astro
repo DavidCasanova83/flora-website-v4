@@ -1,7 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 import "../styles/global.css";
 
+// Import des images
+import imgPrestations2 from '../assets/img/PRESTATIONS/Flora-2.avif';
+import imgPrestations3 from '../assets/img/PRESTATIONS/Flora-3.avif';
+import imgPrestations4 from '../assets/img/PRESTATIONS/Flora-4.avif';
 ---
 
 <Layout title="Mes prestations" description="Découvrez mes prestations concernant l'architecture d'intérieur.">
@@ -43,8 +48,13 @@ import "../styles/global.css";
         <!-- post 1 -->
         <a href="#etape1" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
-            <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              src="./assets/img/PRESTATIONS/Flora-2.avif" alt="Étape 1 - Conception">
+            <Image
+              src={imgPrestations2}
+              alt="Étape 1 - Conception"
+              class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
+              width={500}
+              height={500}
+            />
             <div
               class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-['Montserrat'] uppercase py-[6px] px-[18px]">
               Étape 1
@@ -59,8 +69,13 @@ import "../styles/global.css";
         <!-- post 2 -->
         <a href="#etape2" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
-            <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              src="./assets/img/PRESTATIONS/Flora-3.avif" alt="Étape 2 - Démarches administratives">
+            <Image
+              src={imgPrestations3}
+              alt="Étape 2 - Démarches administratives"
+              class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
+              width={500}
+              height={500}
+            />
             <div
               class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-['Montserrat'] uppercase py-[6px] px-[18px]">
               Étape 2
@@ -75,8 +90,13 @@ import "../styles/global.css";
         <!-- post 3 -->
         <a href="#etape3" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
-            <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              src="./assets/img/PRESTATIONS/Flora-4.avif" alt="Étape 3 - Suivi de chantier">
+            <Image
+              src={imgPrestations4}
+              alt="Étape 3 - Suivi de chantier"
+              class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
+              width={500}
+              height={500}
+            />
             <div
               class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-['Montserrat'] uppercase py-[6px] px-[18px]">
               Étape 3
@@ -91,8 +111,13 @@ import "../styles/global.css";
         <!-- post 4 -->
         <a href="#etape4" class="blog__post shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group min-h-[620px] mx-auto w-full max-w-[500px]">
           <div class="relative overflow-hidden h-[500px]">
-            <img class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
-              src="./assets/img/PRESTATIONS/Flora-2.avif" alt="Étape 4 - Aménagement">
+            <Image
+              src={imgPrestations2}
+              alt="Étape 4 - Aménagement"
+              class="group-hover:scale-110 transition-all duration-500 h-full w-full object-cover"
+              width={500}
+              height={500}
+            />
             <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-['Montserrat'] uppercase py-[6px] px-[18px]">
               Étape 4
@@ -141,10 +166,12 @@ import "../styles/global.css";
           </div>
         </div>
         <div class="md:w-1/2">
-          <img 
-            src="./assets/img/PRESTATIONS/Flora-2.avif" 
-            alt="Étape 1 - Conception" 
+          <Image
+            src={imgPrestations2}
+            alt="Étape 1 - Conception"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+            width={500}
+            height={500}
           />
         </div>
       </div>
@@ -176,10 +203,12 @@ import "../styles/global.css";
           </div>
         </div>
         <div class="md:w-1/2">
-          <img 
-            src="./assets/img/PRESTATIONS/Flora-3.avif" 
-            alt="Étape 2 - Démarches administratives" 
+          <Image
+            src={imgPrestations3}
+            alt="Étape 2 - Démarches administratives"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+            width={500}
+            height={500}
           />
         </div>
       </div>
@@ -199,10 +228,12 @@ import "../styles/global.css";
           </p>
         </div>
         <div class="md:w-1/2">
-          <img 
-            src="./assets/img/PRESTATIONS/Flora-4.avif" 
-            alt="Étape 3 - Suivi de chantier" 
+          <Image
+            src={imgPrestations4}
+            alt="Étape 3 - Suivi de chantier"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+            width={500}
+            height={500}
           />
         </div>
       </div>
@@ -219,10 +250,12 @@ import "../styles/global.css";
           </p>
         </div>
         <div class="md:w-1/2">
-          <img 
-            src="./assets/img/PRESTATIONS/Flora-2.avif" 
-            alt="Étape 4 - Aménagement" 
+          <Image
+            src={imgPrestations2}
+            alt="Étape 4 - Aménagement"
             class="w-full h-[500px] object-cover rounded-lg shadow-lg"
+            width={500}
+            height={500}
           />
         </div>
       </div>

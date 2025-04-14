@@ -2,6 +2,19 @@
 import Layout from '../layouts/Layout.astro';
 import LastProjects from '../components/LastProjects.astro';
 import avis from '../data/avis.json';
+import { Image } from 'astro:assets';
+import headerImage from '../assets/img/sliderphoto/header-web-site-flora-opti.jpg';
+import slide01 from '../assets/img/sliderphoto/slide01.png.avif';
+import slide02 from '../assets/img/sliderphoto/slide02.png.avif';
+import slide03 from '../assets/img/sliderphoto/slide03.avif';
+import slide04 from '../assets/img/sliderphoto/slide04.avif';
+import slide05 from '../assets/img/sliderphoto/slide05.avif';
+import slide06 from '../assets/img/sliderphoto/slide06.avif';
+import slide07 from '../assets/img/sliderphoto/slide07.avif';
+import slide08 from '../assets/img/sliderphoto/slide08.avif';
+import slide09 from '../assets/img/sliderphoto/slide09.avif';
+import logoTransparent from '../assets/img/header/logo-transparent.png';
+import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -16,7 +29,11 @@ import avis from '../data/avis.json';
 				<div class="swiper-wrapper">
 					<!-- Slide 1 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/header-web-site-flora-opti.jpg" alt="image-deco-header-website" class="w-full h-screen object-cover">
+						<Image
+							src={headerImage}
+							alt="image-deco-header-website"
+							class="w-full h-screen object-cover"
+						/>
 					</div>
 					<!-- Ajoute autant de slides que nécessaire -->
 				</div>
@@ -31,7 +48,11 @@ import avis from '../data/avis.json';
 				<!-- logo  -->
 				<div class="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto sm:mx-0 flex flex-col justify-end items-center sm:items-end mb-6 sm:mb-[30px]">
 					<a href="/">
-						<img class="w-full h-auto mb-4 sm:mb-[30px]" src="./assets/img/header/logo-transparent.png" alt="Logo Flor'A">
+						<Image
+							src={logoTransparent}
+							alt="Logo Flor'A"
+							class="w-full h-auto mb-4 sm:mb-[30px]"
+						/>
 					</a>
 				</div>					
 				<h1 class="text-xl sm:text-2xl md:text-4xl font-light mb-3 sm:mb-4 text-primary">
@@ -123,39 +144,75 @@ import avis from '../data/avis.json';
 				<div class="swiper-wrapper slider__photo">
 					<!-- Slide 1 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide01.png.avif" alt="Photo 1" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide01}
+							alt="Photo 1"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 2 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide02.png.avif" alt="Photo 2" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide02}
+							alt="Photo 2"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 3 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide03.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide03}
+							alt="Photo 3"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 4 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide04.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide04}
+							alt="Photo 4"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 5 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide05.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide05}
+							alt="Photo 5"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 6 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide06.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide06}
+							alt="Photo 6"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 7 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide07.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide07}
+							alt="Photo 7"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 8 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide08.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide08}
+							alt="Photo 8"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 					<!-- Slide 9 -->
 					<div class="swiper-slide">
-						<img src="./assets/img/sliderphoto/slide09.avif" alt="Photo 3" class="w-full h-[600px] object-cover">
+						<Image
+							src={slide09}
+							alt="Photo 9"
+							class="w-full h-[600px] object-cover"
+						/>
 					</div>
 				</div>
 				<!-- Swiper pagination -->
@@ -185,8 +242,11 @@ import avis from '../data/avis.json';
                     <div class="max-w-[680px] mx-auto text-center px-4">
                       <!-- Google Logo -->
                       <div class="flex justify-center mb-4 sm:mb-6">
-                        <img src="/assets/img/testimonials/avis-google.avif" alt="Google"
-                          class="h-8 sm:h-10 md:h-12 w-auto object-contain" />
+                        <Image
+                          src={avisGoogle}
+                          alt="Google"
+                          class="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                        />
                       </div>
                       <!-- Message -->
                       <p

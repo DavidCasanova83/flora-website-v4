@@ -2,6 +2,9 @@
 import "../styles/global.css";
 import "../styles/swiper-bundle.min.css";
 import { Image } from 'astro:assets';
+
+// Import des images
+import logo from '../assets/img/header/logo.png';
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -101,7 +104,13 @@ import { Image } from 'astro:assets';
 				<!-- logo  -->
 				<div class="max-w-[300px] flex justify-center mx-auto mb-[30px]">
 					<a href="/">
-						<img class="mb-[30px]" src="/assets/img/header/logo.png" alt="">
+						<Image
+							src={logo}
+							alt="Flor'architecte - Logo"
+							class="mb-[30px]"
+							width={300}
+							height={100}
+						/>
 					</a>
 				</div>
 
