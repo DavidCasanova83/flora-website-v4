@@ -116,24 +116,15 @@ import actu05 from '../assets/img/AVIS/actu05.jpg';
   </section>
   <!-- avis list end-->
 
-  <!-- Bouton pour écrire un avis -->
-  <div class="my-24">
-    <a 
-      href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      class="btn background-red inline-flex items-center gap-2 px-6 py-3"
-    >
-      <Image
-        src={avisGoogle}
-        alt="Google"
-        class="h-6 w-auto"
-        width={24}
-        height={24}
-      />
-      <span class="font-medium">Écrire un avis</span>
-    </a>
-  </div>
+    <!-- Bouton pour écrire un avis -->
+    <div class="mt-8 sm:mt-10 md:mt-12 mx-auto flex justify-center">
+      <a href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-white text-[#4c5345] px-6 py-3 rounded-md shadow-2xl hover:shadow-lg transition-all duration-300">
+        <img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" loading="lazy" />
+        <span class="font-medium">Écrire un avis</span>
+      </a>
+    </div>
 
   <!-- actualité 01 -->
   <section class="blog my-24">
@@ -150,9 +141,10 @@ import actu05 from '../assets/img/AVIS/actu05.jpg';
               <Image
                 src={actu01}
                 alt="Les méthodes de rafraîchissement"
-                class="group-hover:scale-110 transition-all duration-500 object-cover"
+                class="group-hover:scale-110 transition-all duration-500 object-cover"    
                 width={391}
                 height={344}
+                loading="lazy"
               />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
@@ -179,6 +171,7 @@ import actu05 from '../assets/img/AVIS/actu05.jpg';
                 class="group-hover:scale-110 transition-all duration-500 object-cover"
                 width={391}
                 height={344}
+                loading="lazy"
               />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
@@ -204,6 +197,7 @@ import actu05 from '../assets/img/AVIS/actu05.jpg';
                 class="group-hover:scale-110 transition-all duration-500 object-cover"
                 width={391}
                 height={344}
+                loading="lazy"
               />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
@@ -240,6 +234,7 @@ import actu05 from '../assets/img/AVIS/actu05.jpg';
                 class="group-hover:scale-110 transition-all duration-500 object-cover"
                 width={391}
                 height={344}
+                loading="lazy"
               />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
@@ -266,6 +261,7 @@ import actu05 from '../assets/img/AVIS/actu05.jpg';
                 class="group-hover:scale-110 transition-all duration-500 object-cover"
                 width={391}
                 height={344}
+                loading="lazy"
               />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
@@ -279,8 +275,6 @@ import actu05 from '../assets/img/AVIS/actu05.jpg';
               </h4>
               <p class="font-light">Plus écologiques et esthétiquement désirables, les matières naturelles dépaysent
                 l'ambiance de nos intérieurs comme aucun autre matériaux.
-
-
               </p>
             </div>
           </div>

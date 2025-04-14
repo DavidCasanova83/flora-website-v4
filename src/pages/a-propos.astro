@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import { Image } from 'astro:assets';
-import aboutFlora from '../assets/img/sliderphoto/about-flora.avif';
+import aboutFlora from '../assets/img/sliderphoto/about-flora.png';
 import logoTransparent from '../assets/img/header/logo-transparent.png';
 import photoProfil from '../assets/img/hero/photo-profil-flora.jpg';
 import logoDesign from '../assets/img/design/logo-design.avif';
@@ -50,6 +50,7 @@ import papierRecycle from '../assets/img/design/papier-recycle.avif';
           <Image
             src={photoProfil}
             alt="Flora Leicarrague"
+            width={600}
             class="w-full h-auto object-cover mt-8"
           />
           <div class="flex justify-center xl:justify-start">
@@ -144,10 +145,12 @@ import papierRecycle from '../assets/img/design/papier-recycle.avif';
               <Image
                 src={aboutFlora}
                 alt="Citation sur l'espace habité"
+                loading="lazy"
+                width={1920}
                 class="object-cover w-full h-full"
               />
               <div class="absolute inset-0 bg-black bg-opacity-50 blur-sm"></div>
-              <h4 class="text-base sm:text-lg md:text-xl text-white absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64 text-center">
+              <h4 class="text-base sm:text-lg md:text-xl text-justify text-white absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64">
                 "L'espace habité, l'espace conçu par l'homme est construit selon des images vivantes mêlant réalité et
                 rêve, sensations et émotions, objectivité et subjectivité."
               </h4>

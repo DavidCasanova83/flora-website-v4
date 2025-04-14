@@ -3,16 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import LastProjects from '../components/LastProjects.astro';
 import avis from '../data/avis.json';
 import { Image } from 'astro:assets';
-import headerImage from '../assets/img/sliderphoto/header-web-site-flora-opti.jpg';
-import slide01 from '../assets/img/sliderphoto/slide01.png.avif';
-import slide02 from '../assets/img/sliderphoto/slide02.png.avif';
-import slide03 from '../assets/img/sliderphoto/slide03.avif';
-import slide04 from '../assets/img/sliderphoto/slide04.avif';
-import slide05 from '../assets/img/sliderphoto/slide05.avif';
-import slide06 from '../assets/img/sliderphoto/slide06.avif';
-import slide07 from '../assets/img/sliderphoto/slide07.avif';
-import slide08 from '../assets/img/sliderphoto/slide08.avif';
-import slide09 from '../assets/img/sliderphoto/slide09.avif';
+import headerImage from '../assets/img/sliderphoto/header-site-web-flora-architecte.jpg';
+import slide01 from '../assets/img/sliderphoto/slide01.jpeg';
+import slide02 from '../assets/img/sliderphoto/slide02.jpeg';
+import slide03 from '../assets/img/sliderphoto/slide03.jpeg';
+import slide04 from '../assets/img/sliderphoto/slide04.jpg';
+import slide05 from '../assets/img/sliderphoto/slide05.jpg';
+import slide06 from '../assets/img/sliderphoto/slide06.jpg';
+import slide07 from '../assets/img/sliderphoto/slide07.jpg';
+import slide08 from '../assets/img/sliderphoto/slide08.jpg';
+import slide09 from '../assets/img/sliderphoto/slide09.jpg';
+import slide10 from '../assets/img/sliderphoto/slide10.jpg';
 import logoTransparent from '../assets/img/header/logo-transparent.png';
 import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 
@@ -30,9 +31,10 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<!-- Slide 1 -->
 					<div class="swiper-slide">
 						<Image
-							src={headerImage}
-							alt="image-deco-header-website"
-							class="w-full h-screen object-cover"
+					  	src={headerImage}
+					  	alt="image-deco-header-website"
+					  	width={1920} 
+					  	class="w-full h-screen object-cover"
 						/>
 					</div>
 					<!-- Ajoute autant de slides que nécessaire -->
@@ -58,7 +60,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				<h1 class="text-xl sm:text-2xl md:text-4xl font-light mb-3 sm:mb-4 text-primary">
 					Architecte d'intérieur<br class="hidden sm:block"/> & Maître d'œuvre sur TOULON
 				</h1>
-				<p class="mb-6 sm:mb-[42px] text-sm sm:text-base md:max-w-xl text-left">
+				<p class="mb-6 sm:mb-[42px] text-sm sm:text-base md:max-w-xl text-justify">
 					Flor'A, agence d'architecture d'intérieur certifiée CFAI à Toulon, vous accompagne dans vos projets de rénovation et d'aménagement, intérieurs comme extérieurs.
 
 					Nous concevons des espaces sur mesure, en accord avec votre style, votre budget et votre mode de vie. Sensibles à une architecture responsable et au bien-être des occupants, nous vous guidons de la première esquisse jusqu'au suivi de chantier, pour un projet clé en main.
@@ -91,7 +93,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				<!-- bloque 1 -->
 				<a href="./prestations#etape1"
 					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-					<div class="text-center">
+					<div class="text-justify">
 						<h3 class="h3 mb-[10px]">Conception</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							De la découverte du lieu à l'étude du projet en plan et en 3D avec rendu réaliste</p>
@@ -101,7 +103,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				<!-- bloque 2 -->
 				<a href="./prestations#etape2"
 					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-					<div class="text-center">
+					<div class="text-justify">
 						<h3 class="h3 mb-[10px]">Démarches administratives</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							Accompagnement dans les autorisations d'urbanisme et les consultation des entreprises/des fournisseurs.</p>
@@ -111,8 +113,8 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				<!-- bloque 3 -->
 				<a href="./prestations#etape3"
 					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-					<div class="text-center">
-						<h3 class="h3 mb-[10px]">Suivi de chantier</h3>
+					<div class="text-justify">
+						<h3 class="h3 mb-[10px] whitespace-nowrap">Suivi de chantier</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							Coordination des artisans, réunion de chantier hebdomadaires et réception des travaux.</p>
 					</div>
@@ -121,7 +123,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				<!-- bloque 4 -->
 				<a href="./prestations#etape4"
 					class="services__item bg-white p-[30px] rounded-[10px] shadow-custom2 min-h-[200px] flex flex-col justify-between transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-					<div class="text-center">
+					<div class="text-justify">
 						<h3 class="h3 mb-[10px]">Aménagement</h3>
 						<p class="font-light leading-normal max-w-[300px] mx-auto">
 							Proposition de mobilier et d'éléments de décoration, dessin de mobilier sur mesure.
@@ -146,7 +148,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide01}
+							loading="lazy"
 							alt="Photo 1"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -154,7 +158,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide02}
+							loading="lazy"
 							alt="Photo 2"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -162,7 +168,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide03}
+							loading="lazy"
 							alt="Photo 3"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -170,7 +178,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide04}
+							loading="lazy"
 							alt="Photo 4"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -178,7 +188,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide05}
+							loading="lazy"
 							alt="Photo 5"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -186,7 +198,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide06}
+							loading="lazy"
 							alt="Photo 6"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -194,7 +208,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide07}
+							loading="lazy"
 							alt="Photo 7"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -202,7 +218,9 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide08}
+							loading="lazy"
 							alt="Photo 8"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -210,7 +228,19 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 					<div class="swiper-slide">
 						<Image
 							src={slide09}
+							loading="lazy"
 							alt="Photo 9"
+							width={1920}
+							class="w-full h-[600px] object-cover"
+						/>
+					</div>
+					<!-- Slide 10 -->
+					<div class="swiper-slide">
+						<Image
+							src={slide10}
+							loading="lazy"
+							alt="Photo 10"
+							width={1920}
 							class="w-full h-[600px] object-cover"
 						/>
 					</div>
@@ -246,6 +276,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
                           src={avisGoogle}
                           alt="Google"
                           class="h-8 sm:h-10 md:h-12 w-auto object-contain"
+													loading="lazy"
                         />
                       </div>
                       <!-- Message -->
@@ -278,7 +309,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
       <div class="mt-8 sm:mt-10 md:mt-12">
         <a href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 bg-white text-[#4c5345] px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300">
+					class="inline-flex items-center gap-2 bg-white text-[#4c5345] px-6 py-3 rounded-md shadow-2xl hover:shadow-lg transition-all duration-300">
           <img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" />
           <span class="font-medium">Écrire un avis</span>
         </a>
