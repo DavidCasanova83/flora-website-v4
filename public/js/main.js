@@ -10,20 +10,48 @@ closeBtn.addEventListener('click', () => {
   closeBtnIcon.classList.toggle('rotate-90'); // Animation de rotation de l'icône
 });
 
+//glide
+document.addEventListener('DOMContentLoaded', function () {
+  new Glide('#testimonial-slider', {
+    type: 'carousel',
+    autoplay: 5000,
+    hoverpause: true,
+    perView: 1,
+    gap: 0,
+    animationDuration: 800,
+    rewind: true,
+    breakpoints: {
+      768: {
+        perView: 1
+      }
+    }
+  }).mount();
+});
 
-//swiper
-const swiper = new Swiper('.swiper', {
-  loop: true,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  speed: 2000, // Vitesse de transition en millisecondes (1 seconde ici)
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  effect: 'slide', // Effet de transition (optionnel, pour un effet plus fluide)
+// ✅ Swiper - attendre qu’il soit chargé
+function waitForSwiper(callback) {
+  const checkInterval = setInterval(() => {
+    if (typeof Swiper !== 'undefined') {
+      clearInterval(checkInterval);
+      callback();
+    }
+  }, 50);
+}
+
+waitForSwiper(() => {
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    speed: 2000,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    effect: 'slide',
+  });
 });
 
 

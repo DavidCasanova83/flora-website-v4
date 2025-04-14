@@ -29,8 +29,8 @@ import avis from '../data/avis.json';
 		<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-6 md:px-8 py-8 sm:py-12">
 			<div class="bg-white bg-opacity-90 rounded-md text-left text-primary p-4 sm:p-6 md:p-12 max-w-2xl w-full mx-4 md:mx-0 md:ml-24">
 				<!-- logo  -->
-				<div class="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] flex flex-col justify-end items-end mb-6 sm:mb-[30px]">
-					<a href="./index.html">
+				<div class="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto sm:mx-0 flex flex-col justify-end items-center sm:items-end mb-6 sm:mb-[30px]">
+					<a href="/">
 						<img class="w-full h-auto mb-4 sm:mb-[30px]" src="./assets/img/header/logo-transparent.png" alt="Logo Flor'A">
 					</a>
 				</div>					
@@ -47,7 +47,6 @@ import avis from '../data/avis.json';
 				</div>
 			</div>
 		</div>
-		
 	</section>
 	<!-- Section Hero avec slider en fond et texte fixe -->
 
@@ -168,68 +167,73 @@ import avis from '../data/avis.json';
 
 	<LastProjects  />
 
-	<!-- testimonials -->
-	<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat p-8 sm:p-8 md:p-12 my-48">
-		<div class="testimonial__container container mx-auto">
-			<div class="flex flex-col items-center">
-				<h2 class="h2 text-white text-center my-4 sm:my-6 md:my-8 text-2xl sm:text-3xl md:text-4xl">Vos avis comptent et nous vous en remercions</h2>
-				<!-- slider -->
-				<div class="w-full max-w-[710px] px-4 sm:px-0">
-					<!-- Slider main container -->
-					<div class="swiper testimonial-swiper min-h-[300px] sm:min-h-[350px] md:min-h-[400px]">
-						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper">
-							{avis.avis.map((avis) => (
-								<div class="swiper-slide">
-									<div class="h-full flex flex-col justify-center items-center py-8">
-										<div class="max-w-[680px] mx-auto text-center px-4">
-											<!-- Google Logo -->
-											<div class="flex justify-center mb-4 sm:mb-6">
-												<img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-8 sm:h-10 md:h-12 w-auto object-contain" />
-											</div>
-											<!-- Message -->
-											<p
-												class="font-light relative text-base sm:text-lg md:text-[18px] text-[#4c5345] leading-relaxed sm:leading-[198%] text-center before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-6 sm:before:w-8 md:before:w-10 before:h-6 sm:before:h-8 md:before:h-10 before:bg-no-repeat
-													after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-6 sm:after:w-8 md:after:w-10 after:h-6 sm:after:h-8 md:after:h-10 after:bg-no-repeat">
-												<span class="mx-1 sm:mx-2">{avis.message}</span>
-											</p>
-											<!-- Name -->
-											<div class="text-lg sm:text-xl md:text-[22px] text-[#4c5354] font-semibold mt-4 sm:mt-6">
-												{avis.nom}
-											</div>
-										</div>
-									</div>
-								</div>
-							))}
-						</div>
-						<!-- Swipper pagination -->
-						<div class="swiper-pagination"></div>
-					</div>
-				</div>
-				<!-- Bouton pour écrire un avis -->
-				<div class="mt-8 sm:mt-10 md:mt-12">
-					<a 
-						href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" 
-						target="_blank" 
-						rel="noopener noreferrer"
-						class="inline-flex items-center gap-2 bg-white text-[#4c5345] px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
-					>
-						<img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" />
-						<span class="font-medium">Écrire un avis</span>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- testimonials end -->
+<!-- testimonials -->
+<section class="testimonial bg-testimonials bg-cover bg-right bg-no-repeat p-8 sm:p-8 md:p-12 my-48">
+  <div class="testimonial__container container mx-auto">
+    <div class="flex flex-col items-center">
+      <h2 class="h2 text-white text-center my-4 sm:my-6 md:my-8 text-2xl sm:text-3xl md:text-4xl">
+        Vos avis comptent et nous vous en remercions
+      </h2>
+      <!-- Glide slider -->
+      <div class="w-full max-w-[710px] px-4 sm:px-0">
+        <div class="glide" id="testimonial-slider">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              {avis.avis.map((avis) => (
+                <li class="glide__slide">
+                  <div class="h-full flex flex-col justify-center items-center py-8">
+                    <div class="max-w-[680px] mx-auto text-center px-4">
+                      <!-- Google Logo -->
+                      <div class="flex justify-center mb-4 sm:mb-6">
+                        <img src="/assets/img/testimonials/avis-google.avif" alt="Google"
+                          class="h-8 sm:h-10 md:h-12 w-auto object-contain" />
+                      </div>
+                      <!-- Message -->
+                      <p
+                        class="font-light relative text-base sm:text-lg md:text-[18px] text-[#4c5345] leading-relaxed sm:leading-[198%] text-center before:bg-quoteLeft before:bg-contain before:bg-bottom before:inline-block before:top-0 before:w-6 sm:before:w-8 md:before:w-10 before:h-6 sm:before:h-8 md:before:h-10 before:bg-no-repeat
+                          after:bg-quoteRight after:bg-contain after:bg-bottom after:inline-block after:top-0 after:w-6 sm:after:w-8 md:after:w-10 after:h-6 sm:after:h-8 md:after:h-10 after:bg-no-repeat">
+                        <span class="mx-1 sm:mx-2">{avis.message}</span>
+                      </p>
+                      <!-- Name -->
+                      <div class="text-lg sm:text-xl md:text-[22px] text-[#4c5354] font-semibold mt-4 sm:mt-6">
+                        {avis.nom}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
+          <!-- Pagination bullets -->
+          <div class="glide__bullets mt-6 flex justify-center gap-3" data-glide-el="controls[nav]">
+            {avis.avis.map((_, i) => (
+              <button class="glide__bullet w-3 h-3 rounded-full bg-white opacity-40" data-glide-dir={`=${i}`}></button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Bouton pour écrire un avis -->
+      <div class="mt-8 sm:mt-10 md:mt-12">
+        <a href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 bg-white text-[#4c5345] px-6 py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300">
+          <img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" />
+          <span class="font-medium">Écrire un avis</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- testimonials end -->
 
 	<!-- contact panel -->
 	<section class="newsletter bg-accent md:h-[444px] rounded-[10px] flex items-center justify-center xl:mx-56  mx-5 relative overflow-hidden my-44">
 		<!-- container -->
 		<div class="newsletter__container container mx-auto">
 			<!-- wrapper -->
-			<div class="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-x-[58px] max-w-4xl mx-auto px-8 xl:px-0">
+			<div class="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-x-[58px] max-w-4xl mx-auto py-8 px-8 xl:px-0">
 				<!-- text -->
 				<div class="flex-1 z-10 text-left">
 					<div class="text-2xl uppercase text-white tracking-[2.24px] font-medium">Une question, un projet ?</div>
@@ -238,7 +242,7 @@ import avis from '../data/avis.json';
 				<!-- form -->
 				<div class="flex-1 flex justify-center">
 					<div class="flex flex-col md:flex-row relative gap-y-4">
-						<a href="contact" class="btn btn-lg btn-white">Contactez-nous</a>
+						<a href="contact" class="btn btn-lg btn-white text-sm sm:text-base">Contactez-nous</a>
 					</div>
 				</div>
 			</div>

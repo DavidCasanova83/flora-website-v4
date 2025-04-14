@@ -18,6 +18,10 @@ import { Image } from 'astro:assets';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js" defer></script>
+		<script src="/js/main.js" defer></script>
   </head>
 
   <body class="font-primary">
@@ -227,20 +231,22 @@ import { Image } from 'astro:assets';
 	
 		<!-- SCRIPTS -->
 		<!-- swiper js -->
-		<script is:inline>
-      const scripts = [
-			'/js/swiper-bundle.min.js',
-      '/js/scrolreveal.min.js',
-      '/js/main.js',
-      ];
-
-      scripts.forEach(src => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.defer = true;
-        document.body.appendChild(script);
-      });
-    </script>
+		<script>
+			// Charge Swiper, puis ScrollReveal, puis main.js
+			const scriptSwiper = document.createElement('script');
+			scriptSwiper.src = '/js/swiper-bundle.min.js';
+			scriptSwiper.onload = () => {
+				const scriptScroll = document.createElement('script');
+				scriptScroll.src = '/js/scrolreveal.min.js';
+				scriptScroll.onload = () => {
+					const scriptMain = document.createElement('script');
+					scriptMain.src = '/js/main.js';
+					document.body.appendChild(scriptMain);
+				};
+				document.body.appendChild(scriptScroll);
+			};
+			document.body.appendChild(scriptSwiper);
+		</script>		
   </body>
 
 
