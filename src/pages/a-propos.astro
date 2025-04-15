@@ -53,8 +53,8 @@ import papierRecycle from '../assets/img/design/papier-recycle.avif';
             width={600}
             class="w-full h-auto object-cover mt-8"
           />
-          <div class="flex justify-center xl:justify-start">
-            <button><a href="contact" class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Nous contacter</a></button>
+          <div class="flex justify-center">
+            <button><a href="contact" class="btn btn-sm btn-accent mt-12 mx-auto">Nous contacter</a></button>
           </div>
         </div>
       </div>
@@ -110,7 +110,7 @@ import papierRecycle from '../assets/img/design/papier-recycle.avif';
           </div>
         </div>
       </div>
-      <p class="container mx-auto text-justify mt-60 px-6 xl:mt-6">Intervenir sur l'existant, construire dans le
+      <p class="container mx-auto text-justify mt-72 px-6 xl:mt-6">Intervenir sur l'existant, construire dans le
         construit,
         reprendre
         la
@@ -136,12 +136,12 @@ import papierRecycle from '../assets/img/design/papier-recycle.avif';
   <section class="photo-slider testimonial pb-[150px] xl:min-h-[800px] xl:py-0">
     <div class="mx-auto xl:container">
       <!-- slider -->
-      <div class="photo-slider swiper min-h-[650px]">
+      <div class="photo-slider swiper min-h-[300px] sm:min-h-[650px]">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide relative">
-            <div class="relative w-full h-[600px]">
+            <div class="relative w-full h-[200px] sm:h-[600px]">
               <Image
                 src={aboutFlora}
                 alt="Citation sur l'espace habité"
@@ -150,10 +150,12 @@ import papierRecycle from '../assets/img/design/papier-recycle.avif';
                 class="object-cover w-full h-full"
               />
               <div class="absolute inset-0 bg-black bg-opacity-50 blur-sm"></div>
-              <h4 class="text-base sm:text-lg md:text-xl text-justify text-white absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64">
-                "L'espace habité, l'espace conçu par l'homme est construit selon des images vivantes mêlant réalité et
-                rêve, sensations et émotions, objectivité et subjectivité."
-              </h4>
+              <div class="absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64">
+                <h4 class="text-sm sm:text-base md:text-lg lg:text-xl text-justify text-white max-w-2xl mx-auto">
+                  "L'espace habité, l'espace conçu par l'homme est construit selon des images vivantes mêlant réalité et
+                  rêve, sensations et émotions, objectivité et subjectivité."
+                </h4>
+              </div>
             </div>
           </div>
         </div>
