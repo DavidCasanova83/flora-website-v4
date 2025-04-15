@@ -95,7 +95,7 @@ const editedDate = edited
         </header>
     
         {/* Contenu principal */}
-        <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug">
+        <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug text-justify">
           {content}
         </div>
       </div>
@@ -120,12 +120,10 @@ const editedDate = edited
     )}
 
     {content2 && content2.trim() !== '' && (
-      <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
+      <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug text-justify mt-12 px-8 mb-16">
         {content2}
       </div>
     )}
-
- 
 
     {/* Galerie d'images associées 02 */}
     {images02 && images02.length > 0 && (
@@ -149,85 +147,81 @@ const editedDate = edited
       </section>
     )}
 
+    {content3 && content3.trim() !== '' && (
+      <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug text-justify mt-12 px-8 mb-16">
+        {content3}
+      </div>
+    )}
 
-
-{content3 && content3.trim() !== '' && (
-<div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
-  {content3}
-</div>
-)}
-
-{/* Galerie d'images associées 03 */}
-{images03 && images03.length > 0 && (
-  <section class="mb-16">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-      {images03.map((img, i) => (
-        <div class={`group relative overflow-hidden ${
-          i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : 
-          i % 3 === 0 ? 'md:col-span-2' : 
-          'md:col-span-1'
-        }`}>
-          <img 
-            src={img} 
-            alt={`Image ${i + 1}`} 
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-          />
-          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+    {/* Galerie d'images associées 03 */}
+    {images03 && images03.length > 0 && (
+      <section class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+          {images03.map((img, i) => (
+            <div class={`group relative overflow-hidden ${
+              i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : 
+              i % 3 === 0 ? 'md:col-span-2' : 
+              'md:col-span-1'
+            }`}>
+              <img 
+                src={img} 
+                alt={`Image ${i + 1}`} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </section>
-)}
+      </section>
+    )}
 
-{content4 && content4.trim() !== '' && (
-  <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
-    {content4}
-  </div>
-)}
+    {content4 && content4.trim() !== '' && (
+      <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug text-justify mt-12 px-8 mb-16">
+        {content4}
+      </div>
+    )}
 
-{/* Galerie d'images associées 04 */}
-{images04 && images04.length > 0 && (
-  <section class="mb-16">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {images04.map((img, i) => (
-        <div class={`group relative overflow-hidden ${i === 0 ? 'md:col-span-2' : ''}`}>
-          <img 
-            src={img} 
-            alt={`Image ${i + 1}`} 
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-          />
-          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+    {/* Galerie d'images associées 04 */}
+    {images04 && images04.length > 0 && (
+      <section class="mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {images04.map((img, i) => (
+            <div class={`group relative overflow-hidden ${i === 0 ? 'md:col-span-2' : ''}`}>
+              <img 
+                src={img} 
+                alt={`Image ${i + 1}`} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </section>
-)}
+      </section>
+    )}
 
+    {content5 && content5.trim() !== '' && (
+      <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug text-justify mt-12 px-8 mb-16">
+        {content5}
+      </div>
+    )}
 
-{content5 && content5.trim() !== '' && (
-  <div class="prose prose-lg text-black max-w-none whitespace-pre-line leading-snug mt-12 px-8 mb-16">
-    {content5}
-  </div>
-)}
-
-{/* Galerie d'images associées 05 */}
-{images05 && images05.length > 0 && (
-  <section class="mb-16">
-    <div class="flex flex-wrap gap-6 justify-center">
-      {images05.map((img, i) => (
-        <div class="group relative overflow-hidden aspect-[3/4] w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)]">
-          <img 
-            src={img} 
-            alt={`Image ${i + 1}`} 
-            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
-          />
-          <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+    {/* Galerie d'images associées 05 */}
+    {images05 && images05.length > 0 && (
+      <section class="mb-16">
+        <div class="flex flex-wrap gap-6 justify-center">
+          {images05.map((img, i) => (
+            <div class="group relative overflow-hidden aspect-[3/4] w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-16px)]">
+              <img 
+                src={img} 
+                alt={`Image ${i + 1}`} 
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
+              />
+              <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </section>
-)}
-
+      </section>
+    )}
 
   </article>
 </Layout>

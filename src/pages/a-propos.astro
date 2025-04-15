@@ -2,7 +2,11 @@
 import Layout from '../layouts/Layout.astro';
 import "../styles/global.css";
 import { Image } from 'astro:assets';
-import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
+import aboutFlora from '../assets/img/sliderphoto/about-flora.png';
+import logoTransparent from '../assets/img/header/logo-transparent.png';
+import photoProfil from '../assets/img/hero/photo-profil-flora.jpg';
+import logoDesign from '../assets/img/design/logo-design.avif';
+import papierRecycle from '../assets/img/design/papier-recycle.avif';
 
 ---
 
@@ -20,7 +24,11 @@ import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
           </p>
           <div class="flex items-center gap-x-4 mb-6">
             <h2 class="text-3xl font-light">L'agence</h2>
-            <img src="/assets/img/header/logo-transparent.png" alt="Logo Flor'A" class="h-12 w-auto">
+            <Image
+              src={logoTransparent}
+              alt="Logo Flor'A"
+              class="h-12 w-auto"
+            />
           </div>
           <p class="mb-[16px] md:max-w-xl text-justify">
             Adopte une approche <strong>sensible et soignée</strong> pour concevoir vos projets de rénovation et d'aménagement, tant intérieurs qu'extérieurs.
@@ -39,9 +47,14 @@ import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
           </p>
         </div>
         <div class="hero__img xl:flex flex-col self-start pt-0 xl:w-2/5">
-          <img src="assets/img/hero/photo-profil-flora.jpg" alt="Flora Leicarrague" class="w-full h-auto object-cover mt-8">
-          <div class="flex justify-center xl:justify-start">
-            <button><a href="contact" class="btn btn-sm btn-accent mt-12 mx-auto xl:mx-0">Nous contacter</a></button>
+          <Image
+            src={photoProfil}
+            alt="Flora Leicarrague"
+            width={600}
+            class="w-full h-auto object-cover mt-8"
+          />
+          <div class="flex justify-center">
+            <button><a href="contact" class="btn btn-sm btn-accent mt-12 mx-auto">Nous contacter</a></button>
           </div>
         </div>
       </div>
@@ -58,11 +71,16 @@ import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
         <div class="relative z-10 hidden xl:block">
           <div class="bg-white shadow-md">
             <div class="relative">
-              <img
-                src="https://static.wixstatic.com/media/89463731f8724becabb6b7da44101399.jpg/v1/fill/w_944,h_362,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/89463731f8724becabb6b7da44101399.jpg"
-                alt="Papier recyclé" class="w-full h-auto object-cover">
-              <img src="./assets/img/design/logo-design.avif" alt="logo-design"
-                class="absolute top-4 left-36 w-[300px] h-[300px] transform ">
+              <Image
+                src={papierRecycle}
+                alt="Papier recyclé"
+                class="w-full h-[300px] object-cover"
+              />
+              <Image
+                src={logoDesign}
+                alt="logo-design"
+                class="absolute top-4 left-36 w-[300px] h-[300px] transform"
+              />
             </div>
           </div>
         </div>
@@ -72,8 +90,11 @@ import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
             <div class="relative z-10 xl:hidden">
               <div class="bg-white shadow-md">
                 <div class="relative">
-                  <img src="./assets/img/design/logo-design.avif" alt="logo-design"
-                    class="absolute -top-28 left-44 w-[150px] h-[150px] transform ">
+                  <Image
+                    src={logoDesign}
+                    alt="logo-design"
+                    class="absolute -top-28 left-44 w-[150px] h-[150px] transform"
+                  />
                 </div>
               </div>
             </div>
@@ -89,7 +110,7 @@ import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
           </div>
         </div>
       </div>
-      <p class="container mx-auto text-justify mt-60 px-6 xl:mt-6">Intervenir sur l'existant, construire dans le
+      <p class="container mx-auto text-justify mt-72 px-6 xl:mt-6">Intervenir sur l'existant, construire dans le
         construit,
         reprendre
         la
@@ -115,22 +136,26 @@ import aboutFlora from '../assets/img/sliderphoto/about-flora.jpg';
   <section class="photo-slider testimonial pb-[150px] xl:min-h-[800px] xl:py-0">
     <div class="mx-auto xl:container">
       <!-- slider -->
-      <div class="photo-slider swiper min-h-[650px]">
+      <div class="photo-slider swiper min-h-[300px] sm:min-h-[650px]">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
           <!-- Slide 1 -->
           <div class="swiper-slide relative">
-            <div class="relative w-full h-[600px]">
+            <div class="relative w-full h-[200px] sm:h-[600px]">
               <Image
                 src={aboutFlora}
                 alt="Citation sur l'espace habité"
+                loading="lazy"
+                width={1920}
                 class="object-cover w-full h-full"
               />
               <div class="absolute inset-0 bg-black bg-opacity-50 blur-sm"></div>
-              <h4 class="text-base sm:text-lg md:text-xl text-white absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64 text-center">
-                "L'espace habité, l'espace conçu par l'homme est construit selon des images vivantes mêlant réalité et
-                rêve, sensations et émotions, objectivité et subjectivité."
-              </h4>
+              <div class="absolute inset-0 flex items-center justify-center px-4 sm:px-8 md:px-16 lg:px-32 xl:px-64">
+                <h4 class="text-sm sm:text-base md:text-lg lg:text-xl text-justify text-white max-w-2xl mx-auto">
+                  "L'espace habité, l'espace conçu par l'homme est construit selon des images vivantes mêlant réalité et
+                  rêve, sensations et émotions, objectivité et subjectivité."
+                </h4>
+              </div>
             </div>
           </div>
         </div>

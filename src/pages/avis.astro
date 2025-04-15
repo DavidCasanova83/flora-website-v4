@@ -1,6 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
 import "../styles/global.css";
+
+// Import des images des avis
+import avis01 from '../assets/img/AVIS/avis01.png';
+import avis02 from '../assets/img/AVIS/avis02.png';
+import avis05 from '../assets/img/AVIS/avis05.png';
+import avis06 from '../assets/img/AVIS/avis06.png';
+import avis07 from '../assets/img/AVIS/avis07.png';
+import avis08 from '../assets/img/AVIS/avis08.png';
+import avisGoogle from '../assets/img/testimonials/avis-google.avif';
+
+// Import des images des actualités
+import actu01 from '../assets/img/AVIS/actu01.jpg';
+import actu02 from '../assets/img/AVIS/actu02.png';
+import actu03 from '../assets/img/AVIS/actu03.png';
+import actu04 from '../assets/img/AVIS/actu04.jpg';
+import actu05 from '../assets/img/AVIS/actu05.jpg';
 
 ---
 
@@ -24,44 +41,74 @@ import "../styles/global.css";
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-center justify-between mb-[50px]">
         <!-- post 1 -->
         <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-          <div class="relative overflow-hidden h-[480px]">
-            <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-              src="./assets/img/AVIS/avis01.png" alt="">
+          <div class="relative overflow-hidden h-[400px]">
+            <Image
+              src={avis01}
+              alt="Avis client"
+              class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
+              width={300}
+              height={400}
+            />
           </div>
         </div>
         <!-- post 2 -->
         <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-          <div class="relative overflow-hidden h-[480px]">
-            <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-              src="./assets/img/AVIS/avis02.png" alt="">
+          <div class="relative overflow-hidden h-[400px]">
+            <Image
+              src={avis02}
+              alt="Avis client"
+              class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
+              width={300}
+              height={400}
+            />
           </div>
         </div>
         <!-- post 3 -->
         <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-          <div class="relative overflow-hidden h-[480px]">
-            <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-              src="./assets/img/AVIS/avis05.png" alt="">
+          <div class="relative overflow-hidden h-[400px]">
+            <Image
+              src={avis05}
+              alt="Avis client"
+              class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
+              width={300}
+              height={400}
+            />
           </div>
         </div>
         <!-- post 4 -->
         <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-          <div class="relative overflow-hidden h-[480px]">
-            <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-              src="./assets/img/AVIS/avis06.png" alt="">
+          <div class="relative overflow-hidden h-[400px]">
+            <Image
+              src={avis06}
+              alt="Avis client"
+              class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
+              width={300}
+              height={400}
+            />
           </div>
         </div>
         <!-- post 5 -->
         <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-          <div class="relative overflow-hidden h-[480px]">
-            <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-              src="./assets/img/AVIS/avis07.png" alt="">
+          <div class="relative overflow-hidden h-[400px]">
+            <Image
+              src={avis07}
+              alt="Avis client"
+              class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
+              width={300}
+              height={400}
+            />
           </div>
         </div>
         <!-- post 6 -->
         <div class="blog__post max-w-[300px] mx-auto shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-          <div class="relative overflow-hidden h-[480px]">
-            <img class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
-              src="./assets/img/AVIS/avis08.png" alt="">
+          <div class="relative overflow-hidden h-[400px]">
+            <Image
+              src={avis08}
+              alt="Avis client"
+              class="group-hover:scale-125 transition-all duration-500 object-cover scale-110"
+              width={300}
+              height={400}
+            />
           </div>
         </div>
       </div>
@@ -69,65 +116,66 @@ import "../styles/global.css";
   </section>
   <!-- avis list end-->
 
-  <!-- Bouton pour écrire un avis -->
-  <div class="my-24">
-    <a 
-      href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      class="btn background-red inline-flex items-center gap-2 px-6 py-3"
-    >
-      <img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" />
-      <span class="font-medium">Écrire un avis</span>
-    </a>
-  </div>
+    <!-- Bouton pour écrire un avis -->
+    <div class="mt-8 sm:mt-10 md:mt-12 mx-auto flex justify-center">
+      <a href="https://search.google.com/local/writereview?placeid=ChIJeQyp8WgqDk4RHRbWIqjHSYI" target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 bg-white text-[#4c5345] px-6 py-3 rounded-md shadow-2xl hover:shadow-lg transition-all duration-300">
+        <img src="/assets/img/testimonials/avis-google.avif" alt="Google" class="h-6 w-auto" loading="lazy" />
+        <span class="font-medium">Écrire un avis</span>
+      </a>
+    </div>
 
-  <!-- actualité 01 -->
+  <!-- actualité -->
   <section class="blog my-24">
     <div class="container mx-auto">
       <h2 class="blog__title h2 mb-[50px] text-center xl:text-left">ACTUALITÉ</h2>
       <p class="mb-12">Découvrez l'actualité concernant les nouvelles techniques de réalisation, les nouveautés en terme d'innovation, de matériaux écologiques & bio-sourcés et des conseils au niveau de l'architecture d'intérieur et de décoration.</p>
       <!-- blog post  -->
-      <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-between mb-[50px]">
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 items-center justify-between mb-[50px]">
         <!-- post 1 -->
         <a href="construction" class="block">
-
           <div class="blog__post max-w-[391px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
             <div class="relative overflow-hidden h-[344px]">
-              <img class="group-hover:scale-110 transition-all duration-500 object-cover"
-                src="./assets/img/AVIS/actu01.jpg" alt="">
+              <Image
+                src={actu01}
+                alt="Les méthodes de rafraîchissement"
+                class="group-hover:scale-110 transition-all duration-500 object-cover"    
+                width={800}
+                loading="lazy"
+              />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
                 Voir plus
               </div>
             </div>
             <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">Les méthodes de rafraîchissement
-              </h4>
-              <p class="font-light">Comment rafraîchir son intérieur et son extérieur lorsque la chaleur devient
-                insoutenable ? Voici quelques idées accessibles à tous !
-              </p>
+              <h4 class="h4 mb-[10px]">Les méthodes de rafraîchissement</h4>
+              <p class="font-light text-sm">Comment rafraîchir son intérieur et son extérieur lorsque la chaleur devient
+                insoutenable ? Voici quelques idées accessibles à tous !</p>
             </div>
           </div>
         </a>
         <!-- post 2 -->
         <a href="construction" class="block">
-
           <div class="blog__post max-w-[391px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
             <div class="relative overflow-hidden h-[344px]">
-              <img class="group-hover:scale-110 transition-all duration-500 object-cover"
-                src="./assets/img/AVIS/actu02.png" alt="">
+              <Image
+                src={actu02}
+                alt="Les matières naturelles"
+                class="group-hover:scale-110 transition-all duration-500 object-cover"
+                width={800}
+                loading="lazy"
+              />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
                 Voir plus
               </div>
             </div>
             <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">Les matières naturelles
-              </h4>
-              <p class="font-light">Plus écologiques et esthétiquement désirables, les matières naturelles dépaysent
-                l'ambiance de nos intérieurs comme aucun autre matériaux.
-              </p>
+              <h4 class="h4 mb-[10px]">Les matières naturelles</h4>
+              <p class="font-light text-sm">Plus écologiques et esthétiquement désirables, les matières naturelles dépaysent
+                l'ambiance de nos intérieurs comme aucun autre matériaux.</p>
             </div>
           </div>
         </a>
@@ -135,81 +183,74 @@ import "../styles/global.css";
         <a href="construction" class="block">
           <div class="blog__post max-w-[391px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
             <div class="relative overflow-hidden h-[344px]">
-              <img class="group-hover:scale-110 transition-all duration-500 object-cover"
-                src="./assets/img/AVIS/actu03.png" alt="">
+              <Image
+                src={actu03}
+                alt="Le papier peint"
+                class="group-hover:scale-110 transition-all duration-500 object-cover"
+                width={800}
+                loading="lazy"
+              />
               <div
                 class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
                 Voir plus
               </div>
             </div>
             <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">Le papier peint
-              </h4>
-              <p class="font-light">Le papier peint fait son retour depuis quelques années et devient une pièce
-                incontournable dans nos intérieurs !
-              </p>
+              <h4 class="h4 mb-[10px]">Le papier peint</h4>
+              <p class="font-light text-sm">Le papier peint fait son retour depuis quelques années et devient une pièce
+                incontournable dans nos intérieurs !</p>
+            </div>
+          </div>
+        </a>
+        <!-- post 4 -->
+        <a href="construction" class="block">
+          <div class="blog__post max-w-[391px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+            <div class="relative overflow-hidden h-[344px]">
+              <Image
+                src={actu04}
+                alt="Les méthodes de rafraîchissement"
+                class="group-hover:scale-110 transition-all duration-500 object-cover"
+                width={800}
+                loading="lazy"
+              />
+              <div
+                class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                Voir plus
+              </div>
+            </div>
+            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
+              <h4 class="h4 mb-[10px]">Les méthodes de rafraîchissement</h4>
+              <p class="font-light text-sm">Comment rafraîchir son intérieur et son extérieur lorsque la chaleur devient
+                insoutenable ? Voici quelques idées accessibles à tous !</p>
+            </div>
+          </div>
+        </a>
+        <!-- post 5 -->
+        <a href="construction" class="block">
+          <div class="blog__post max-w-[391px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
+            <div class="relative overflow-hidden h-[344px]">
+              <Image
+                src={actu05}
+                alt="Les matières naturelles"
+                class="group-hover:scale-110 transition-all duration-500 object-cover"
+                width={800}
+                loading="lazy"
+              />
+              <div
+                class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
+                Voir plus
+              </div>
+            </div>
+            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
+              <h4 class="h4 mb-[10px]">Les matières naturelles</h4>
+              <p class="font-light text-sm">Plus écologiques et esthétiquement désirables, les matières naturelles dépaysent
+                l'ambiance de nos intérieurs comme aucun autre matériaux.</p>
             </div>
           </div>
         </a>
       </div>
     </div>
   </section>
-  <!-- actualité 01 end-->
-
-  <!-- actualité 02 -->
-  <section class="blog my-24">
-    <div class="container mx-auto">
-      <!-- blog post  -->
-      <div class="flex flex-col xl:flex-row gap-y-6 xl:gap-y-0 xl:gap-x-6 items-center xl:justify-start mb-[50px]">
-        <!-- post 1 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[391px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[344px]">
-              <img class="group-hover:scale-110 transition-all duration-500 object-cover"
-                src="./assets/img/AVIS/actu04.jpg" alt="">
-              <div
-                class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-                Voir plus
-              </div>
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">Les méthodes de rafraîchissement
-              </h4>
-              <p class="font-light">Comment rafraîchir son intérieur et son extérieur lorsque la chaleur devient
-                insoutenable ? Voici quelques idées accessibles à tous !
-              </p>
-            </div>
-          </div>
-        </a>
-        <!-- post 2 -->
-        <a href="construction" class="block">
-
-          <div class="blog__post max-w-[391px] shadow-custom2 rounded-[10px] overflow-hidden cursor-pointer group">
-            <div class="relative overflow-hidden h-[344px]">
-              <img class="group-hover:scale-110 transition-all duration-500 object-cover"
-                src="./assets/img/AVIS/actu05.jpg" alt="">
-              <div
-                class="bg-accent-tertiary absolute bottom-0 right-0 text-white text-base tracking-[2.24px] font-medium uppercase py-[6px] px-[18px]">
-                Voir plus
-              </div>
-            </div>
-            <div class="px-5 py-6 h-[160px] flex flex-col justify-between">
-              <h4 class="h4 mb-[10px]">Les matières naturelles
-
-
-              </h4>
-              <p class="font-light">Plus écologiques et esthétiquement désirables, les matières naturelles dépaysent
-                l'ambiance de nos intérieurs comme aucun autre matériaux.
-
-
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- actualité 02 end-->
+  <!-- actualité end-->
 
 </Layout>

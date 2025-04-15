@@ -41,8 +41,8 @@ const projects = parsedPages
               isEnCours ? 'pointer-events-none cursor-default opacity-60' : 'group cursor-pointer'
             }`}
           >
-            <div class="blog__post flex flex-col h-full shadow-custom2 rounded-[10px] overflow-hidden min-h-[550px]">
-              <div class="relative overflow-hidden h-[250px]">
+            <div class="blog__post flex flex-col h-full shadow-custom2 rounded-[10px] overflow-hidden">
+              <div class="relative overflow-hidden h-[344px]">
                 {project.imagePresentation && (
                   <img 
                     class={`w-full h-full object-cover ${!isEnCours ? 'group-hover:scale-110 transition-all duration-500' : ''}`}
@@ -61,11 +61,7 @@ const projects = parsedPages
                 <p class="font-light line-clamp-2 flex-1 text-[#4c5354]">
                   {project.excerpt}
                 </p>
-                {!isEnCours && (
-                  <span class="italic underline text-[#4c5354] mt-4 hover:text-accent transition-colors duration-300">
-                    Voir le projet
-                  </span>
-                )}
+                
               </div>
             </div>
           </a>
