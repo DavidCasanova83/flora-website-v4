@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LastProjects from '../components/LastProjects.astro';
 import avis from '../data/avis.json';
-import { Image } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 import headerImage from '../assets/img/sliderphoto/header-site-web-flora-architecte.jpg';
 import slide01 from '../assets/img/sliderphoto/slide01.jpeg';
 import slide02 from '../assets/img/sliderphoto/slide02.jpeg';
@@ -30,12 +30,16 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				<div class="swiper-wrapper">
 					<!-- Slide 1 -->
 					<div class="swiper-slide">
-						<Image
-					  	src={headerImage}
-					  	alt="image-deco-header-website"
-					  	width={1920}
+						<Picture
+							src={headerImage}
+							alt="image-deco-header-website"
+							formats={["avif", "webp"]}
+							width={1920}
+							height={1280}
 							quality={90}
-					  	class="w-full h-screen object-cover"
+							loading="eager"
+							decoding="async"
+							class="w-full h-screen object-cover"
 						/>
 					</div>
 					<!-- Ajoute autant de slides que nécessaire -->
