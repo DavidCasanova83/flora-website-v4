@@ -22,37 +22,28 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 ---
 
 <Layout title="Architecte d'intérieur et maître d'œuvre sur Toulon" description="Décoration et aménagement, nous vous accompagnons dans vos projets de rénovation et d'aménagement avec une prestation clé en main.">
-	<!-- Section Hero avec slider en fond et texte fixe -->
-	<section class="relative h-screen overflow-hidden">
-		<!-- Slider en fond (positionné en absolu pour occuper tout le container) -->
+	<!-- Section Hero avec image de fond fixe -->
+	<section class="relative bg-[#f7f7f7] overflow-hidden">
+		<!-- Image de fond -->
 		<div class="absolute inset-0 z-0">
-			<div class="swiper slider-bg">
-				<div class="swiper-wrapper">
-					<!-- Slide 1 -->
-					<div class="swiper-slide">
-						<Picture
-							src={headerImage}
-							alt="Rénovation d’un salon moderne par Flor'Architecte à Toulon"
-							formats={["avif", "webp"]}
-							width={1920}
-							height={1280}
-							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 50vw"
-							loading="eager"
-							decoding="async"
-							class="w-full h-screen object-cover"
-						/>
-					</div>
-					<!-- Ajoute autant de slides que nécessaire -->
-				</div>
-				<!-- Pagination du slider -->
-				<div class="swiper-pagination"></div>
-			</div>
+			<Picture
+				src={headerImage}
+				alt="Rénovation d’un salon moderne par Flor'Architecte à Toulon"
+				formats={["avif", "webp"]}
+				width={1920}
+				height={1280}
+				quality={80}
+				decoding="async"
+				fetchpriority="high"
+				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 100vw"
+				class="w-full h-[700px] sm:h-[800px] lg:h-[900px] object-cover"
+			/>
 		</div>
 
-		<!-- Texte Hero en overlay (positionné en relatif pour se placer au-dessus du slider) -->
-		<div class="relative z-10 flex items-center justify-center md:justify-start h-full px-4 sm:px-6 md:px-8 py-8 sm:py-12">
+		<!-- Texte Hero en overlay -->
+		<div class="relative z-10 flex items-center justify-center md:justify-start h-[700px] sm:h-[800px] lg:h-[900px] px-4 sm:px-6 md:px-8 py-8 sm:py-12">
 			<div class="bg-white bg-opacity-90 rounded-md text-left text-primary p-4 sm:p-6 md:p-12 max-w-2xl w-full mx-4 md:mx-0 md:ml-24">
-				<!-- logo  -->
+				<!-- Logo -->
 				<div class="max-w-[200px] sm:max-w-[250px] md:max-w-[300px] mx-auto sm:mx-0 flex flex-col justify-end items-center sm:items-end mb-6 sm:mb-[30px]">
 					<a href="/">
 						<Image
@@ -61,15 +52,17 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 							class="w-full h-auto mb-4 sm:mb-[30px]"
 							width={400}
 							height={136}
+							decoding="async"
+							loading="lazy"
 						/>
 					</a>
-				</div>					
+				</div>
 				<h1 class="text-xl sm:text-2xl md:text-4xl font-light mb-3 sm:mb-4 text-primary">
-					Architecte d'intérieur<br class="hidden sm:block"/> & Maître d'œuvre sur TOULON
+					Architecte d'intérieur<br class="hidden sm:block" /> & Maître d'œuvre sur TOULON
 				</h1>
 				<p class="mb-6 sm:mb-[42px] text-sm sm:text-base md:max-w-xl text-justify">
 					Flor'A, agence d'architecture d'intérieur certifiée CFAI à Toulon, vous accompagne dans vos projets de rénovation et d'aménagement, intérieurs comme extérieurs.
-
+					<br /><br />
 					Nous concevons des espaces sur mesure, en accord avec votre style, votre budget et votre mode de vie. Sensibles à une architecture responsable et au bien-être des occupants, nous vous guidons de la première esquisse jusqu'au suivi de chantier, pour un projet clé en main.
 				</p>
 				<div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
