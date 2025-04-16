@@ -4,7 +4,7 @@ import LastProjects from '../components/LastProjects.astro';
 import avis from '../data/avis.json';
 import { Image, Picture } from 'astro:assets';
 import headerImage from '../assets/img/sliderphoto/header-site-web-flora-architecte.jpg';
-import headerMobile from "../assets/img/sliderphoto/header-site-web-flora-architecte-mobile.png";
+import headerMobile from "../assets/img/sliderphoto/header-site-web-flora-architecte-mobile.jpg";
 import slide01 from '../assets/img/sliderphoto/slide01.jpeg';
 import slide02 from '../assets/img/sliderphoto/slide02.jpeg';
 import slide03 from '../assets/img/sliderphoto/slide03.jpeg';
@@ -39,8 +39,8 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 			<Picture
 				src={headerMobile}
 				alt="Rénovation d'un salon moderne par Flor'Architecte à Toulon"
-				widths={[414, 700]}
-				sizes="(max-width: 768px) 100vw"
+				width={414}
+				height={700}
 				loading="eager"
 				formats={['avif', 'webp']}
 				class="block md:hidden w-full h-full object-cover"
