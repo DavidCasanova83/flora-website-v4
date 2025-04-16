@@ -24,7 +24,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 
 <Layout title="Architecte d'intérieur et maître d'œuvre sur Toulon" description="Décoration et aménagement, nous vous accompagnons dans vos projets de rénovation et d'aménagement avec une prestation clé en main.">
 	<!-- Section Hero avec image de fond fixe -->
-	<section class="relative bg-[#f7f7f7] overflow-hidden">
+	<section class="relative overflow-hidden bg-mobile">
 		<!-- Image de fond -->
 		<div class="absolute inset-0 z-0">
 			<Picture
@@ -35,15 +35,6 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				formats={['avif', 'webp']}
 				sizes="(max-width: 768px) 400px, 1920px"
 				class="hidden md:block w-full h-screen object-cover"
-			/>
-			<Picture
-				src={headerMobile}
-				alt="Rénovation d'un salon moderne par Flor'Architecte à Toulon"
-				width={414}
-				height={700}
-				loading="eager"
-				formats={['avif', 'webp']}
-				class="block md:hidden w-full h-full object-cover"
 			/>
 		</div>
 		<!-- Texte Hero en overlay -->

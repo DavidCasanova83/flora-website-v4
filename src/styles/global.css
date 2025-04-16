@@ -50,6 +50,15 @@ h6 {
   /* text-primary : Définit la couleur principale pour les titres */
 }
 
+@media (max-width: 767px) {
+  .bg-mobile {
+    background-image: url("/assets/img/sliderphoto/header-site-web-flora-architecte-mobile.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
 /* Styles spécifiques pour le titre de classe .h1 */
 .h1 {
   @apply text-[36px] font-semibold xl:text-[64px];
