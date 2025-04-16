@@ -31,6 +31,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				src={headerImage}
 				alt="Rénovation d'un salon moderne par Flor'Architecte à Toulon"
 				widths={[400, 700, 1080, 1920]}
+				loading="eager"
 				formats={['avif', 'webp']}
 				sizes="(max-width: 768px) 400px, 1920px"
 				class="hidden md:block w-full h-screen object-cover"
@@ -38,9 +39,11 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 			<Picture
 				src={headerMobile}
 				alt="Rénovation d'un salon moderne par Flor'Architecte à Toulon"
-				widths={[400, 700, 1080, 1920]}
+				widths={[414, 700]}
+				sizes="(max-width: 768px) 100vw"
+				loading="eager"
 				formats={['avif', 'webp']}
-				class="block md:hidden w-full h-screen object-cover"
+				class="block md:hidden w-full h-full object-cover"
 			/>
 		</div>
 		<!-- Texte Hero en overlay -->
