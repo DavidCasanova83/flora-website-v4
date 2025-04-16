@@ -27,33 +27,22 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 	<section class="relative bg-[#f7f7f7] overflow-hidden">
 		<!-- Image de fond -->
 		<div class="absolute inset-0 z-0">
-			<picture>
-				<!-- Image mobile -->
-				<source
-					srcset={headerMobile.src}
-					media="(max-width: 768px)"
-					type="image/webp"
-				/>
-				<!-- Image desktop -->
-				<source
-					srcset={headerImage.src}
-					media="(min-width: 769px)"
-					type="image/webp"
-				/>
-				<!-- Fallback -->
-				<img
-					src={headerImage.src}
-					alt="Rénovation d'un salon moderne par Flor'Architecte à Toulon"
-					width={1920}
-					height={1080}
-					loading="eager"
-					decoding="async"
-					fetchpriority="high"
-					class="w-full h-screen object-cover"
-				/>
-			</picture>
+			<Picture
+				src={headerImage}
+				alt="Rénovation d'un salon moderne par Flor'Architecte à Toulon"
+				widths={[400, 700, 1080, 1920]}
+				formats={['avif', 'webp']}
+				sizes="(max-width: 768px) 400px, 1920px"
+				class="hidden md:block w-full h-screen object-cover"
+			/>
+			<Picture
+				src={headerMobile}
+				alt="Rénovation d'un salon moderne par Flor'Architecte à Toulon"
+				widths={[400, 700, 1080, 1920]}
+				formats={['avif', 'webp']}
+				class="block md:hidden w-full h-screen object-cover"
+			/>
 		</div>
-
 		<!-- Texte Hero en overlay -->
 		<div class="relative z-10 flex items-center justify-center md:justify-start h-[700px] sm:h-[800px] lg:h-[900px] px-4 sm:px-6 md:px-8 py-8 sm:py-12">
 			<div class="bg-white bg-opacity-90 rounded-md text-left text-primary p-4 sm:p-6 md:p-12 max-w-2xl w-full mx-4 md:mx-0 md:ml-24">
