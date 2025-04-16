@@ -4,10 +4,12 @@ import "../styles/swiper-bundle.min.css";
 import { Image } from 'astro:assets';
 import StructuredData from "../components/StructuredData.astro";
 
-
 // Import des images
 import logo from '../assets/img/header/logo-transparent.png';
 
+
+// Import des icons
+import Icon from "../components/Icon.astro";
 
 // Définition des props
 interface Props {
@@ -78,18 +80,6 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 				"https://www.linkedin.com/in/flora-leicarrague-4a7baa205/"
 			]}
 		/>
-    
-    <!-- Remixicon en mode non-bloquant -->
-		<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css">
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css"
-			media="print"
-			onload="this.media='all'"
-		>
-		<noscript>
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css">
-		</noscript>
 
 
 		<!-- Google Fonts -->
@@ -169,7 +159,7 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 							<!-- nav trigger -->
 							<div
 								class="mnav__close-btn w-8 h-8 fixed top-4 right-4 flex justify-center items-center rounded-br-lg cursor-pointer transition-all lg:hidden">
-								<i class="mnav__close-btn-icon ri-menu-line text-2xl text-black transition-transform duration-300"></i>
+								<Icon name="menu" class="mnav__close-btn-icon w-6 h-6 text-black transition-transform duration-300" />
 							</div>
 							<div class="px-12 my-24 flex flex-col items-center text-center gap-y-12 h-full">
 								<ul>
@@ -189,8 +179,9 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 							</div>
 						</nav>
 						<a href="tel:+33695584639"
-							class="lg:hidden flex justify-center items-center border-2 px-4 py-2 border-accent rounded-xl transition-all duration-300 text-accent hover:text-white hover:border-accent hover:bg-accent focus:outline-none">
-							<i class="ri-phone-fill text-2xl"></i>
+							class="lg:hidden flex justify-center items-center border-2 px-4 py-2 border-accent rounded-xl transition-all duration-300 text-accent hover:text-white hover:border-accent hover:bg-accent focus:outline-none"
+						>
+							<Icon name="phone" class="w-6 h-6" />
 						</a>
 					</div>
 				
@@ -227,7 +218,7 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 							<!-- location email phone -->
 							<div class="flex flex-col gap-y-3 mb-10">
 								<div class="flex items-center gap-x-[6px]">
-									<i class="ri-map-pin-fill text-[24px] text-accent"></i>
+									<Icon name="mapPin" class="w-6 h-6 text-accent" />
 									<div>
 										<a href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4e0e2a68f1a90c79:0x8249c7a822d6161d?sa=X&ved=1t:8290&ictx=111" target="_blank" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											3 Imp. François Marcel, 83000 Toulon
@@ -235,7 +226,7 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 									</div>
 								</div>
 								<div class="flex items-center gap-x-[6px]">
-									<i class="ri-mail-fill text-[24px] text-accent"></i>
+									<Icon name="mail" class="w-6 h-6 text-accent" />
 									<div>
 										<a href="/contact" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											leicarragueflora@gmail.com
@@ -243,7 +234,7 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 									</div>
 								</div>
 								<div class="flex items-center gap-x-[6px]">
-									<i class="ri-phone-fill text-[24px] text-accent"></i>
+									<Icon name="phone" class="w-6 h-6 text-accent" />
 									<div>
 										<a href="tel:+33695584639" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											06 95 58 46 39
@@ -251,7 +242,7 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 									</div>
 								</div>
 								<div class="flex items-center gap-x-[6px]">
-									<i class="ri-google-fill text-[24px] text-accent"></i>
+									<Icon name="google" class="w-6 h-6 text-accent" />
 									<div>
 										<a href="https://g.co/kgs/gBdYzP1" target="_blank" class="hover:text-accent transition-all font-['Montserrat'] font-light">
 											Voir notre fiche Google
@@ -291,25 +282,12 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 						</div>
 					</div>
 				</div>
-
-				<!-- social -->
-				<div class="flex justify-center items-center gap-[14px] text-[30px] my-12">
-					<div
-						class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
-						<a href="https://www.instagram.com/florarchitecte/"><i class="ri-instagram-fill"></i></a>
-					</div>
-					<div
-						class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
-						<a href="https://www.facebook.com/profile.php?id=100090151565975"><i
-								class="ri-facebook-circle-fill"></i></a>
-					</div>
-					<div
-						class="p-[10px] rounded-[10px] shadow-custom2 text-accent-tertiary hover:text-accent cursor-pointer transition-all">
-						<a href="https://www.linkedin.com/in/flora-leicarrague-4a7baa205/"><i
-								class="ri-linkedin-box-fill"></i></a>
-					</div>
+				<!-- social 01 -->
+				<div class="flex flex-row justify-center items-center gap-[20px] text-[30px] my-12">
+					<Icon name="instagram" class="w-7 h-7 text-accent-tertiary hover:text-accent transition-all shadow-custom2 cursor-pointer" />
+					<Icon name="facebook" class="w-7 h-7 text-accent-tertiary hover:text-accent transition-all shadow-custom2 cursor-pointer" />
+					<Icon name="linkedin" class="w-7 h-7 text-accent-tertiary hover:text-accent transition-all shadow-custom2 cursor-pointer" />
 				</div>
-
 				<!-- 1 colonne  -->
 				<div class="flex flex-col xl:flex-row border-t pt-[50px] mt-[30px]">
 					<!-- footer link section -->

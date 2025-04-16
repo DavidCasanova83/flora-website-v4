@@ -1,0 +1,35 @@
+---
+// Import all icons as raw SVG strings
+import menuIcon from '../assets/icons/menu-line.svg?raw';
+import mapPinIcon from '../assets/icons/map-pin-fill.svg?raw';
+import mailIcon from '../assets/icons/mail-fill.svg?raw';
+import phoneIcon from '../assets/icons/phone-fill.svg?raw';
+import googleIcon from '../assets/icons/google-fill.svg?raw';
+import instagramIcon from '../assets/icons/instagram-fill.svg?raw';
+import facebookIcon from '../assets/icons/facebook-circle-fill.svg?raw';
+import linkedinIcon from '../assets/icons/linkedin-box-fill.svg?raw';
+
+// Define icon map
+const icons = {
+  menu: menuIcon,
+  mapPin: mapPinIcon,
+  mail: mailIcon,
+  phone: phoneIcon,
+  google: googleIcon,
+  instagram: instagramIcon,
+  facebook: facebookIcon,
+  linkedin: linkedinIcon,
+};
+
+interface Props {
+  name: keyof typeof icons;
+  class?: string;
+}
+
+const { name, class: className = "w-6 h-6" } = Astro.props;
+
+// Get the SVG content
+const svgContent = icons[name];
+---
+
+<span class={className} set:html={svgContent.replace(/fill="[^"]*"/g, 'fill="currentColor"')} /> 
