@@ -34,7 +34,8 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				height={1080}
 				quality={60}
 				loading="eager"
-				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 100vw"
+				widths={[240, 540, 720, headerImage.width]}
+				sizes={`(max-width: 360px) 240px, (max-width: 720px) 540px, (max-width: 1600px) 720px, ${headerImage.width}px`}
 				class="w-full h-screen object-cover"
 			/>
 		</div>
