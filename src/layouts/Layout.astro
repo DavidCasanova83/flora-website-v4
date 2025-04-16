@@ -2,29 +2,94 @@
 import "../styles/global.css";
 import "../styles/swiper-bundle.min.css";
 import { Image } from 'astro:assets';
+import StructuredData from "../components/StructuredData.astro";
+
 
 // Import des images
 import logo from '../assets/img/header/logo.png';
+
+// Définition des props
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+}
+
+const { title, description, keywords = "architecte d'intérieur, décoration, aménagement, rénovation, Toulon, Var", ogImage = "/assets/img/header/logo.png", canonicalUrl = "https://www.flora-architecteinterieur.com" } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <link rel="icon" type="image/svg+xml" href="/favicon-32x32.svg">
-    <title>Flor'architecte - {Astro.props.title}</title>
     
+    <!-- Balises meta essentielles -->
+    <title>Flor'architecte - {title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content={keywords}>
+    <meta name="author" content="Flor'architecte">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Balises Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content={`Flor'architecte - ${title}`}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content={ogImage}>
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content={canonicalUrl}>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Flor'architecte">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Balises Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content={`Flor'architecte - ${title}`}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={ogImage}>
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalUrl}>
+
+
+		<!-- Structured Data -->
+		<StructuredData
+			name="Flor'architecte	"
+			url="https://www.flora-architecteinterieur.com"
+			logo="https://www.flora-architecteinterieur.com/_astro/logo-transparent.D0W9nURY_1JNeax.webp"
+			telephone="+33695584639"
+			email="leicarragueflora@gmail.com"
+			address={{
+				street: "3 Impasse François Marcel",
+				city: "Toulon",
+				postalCode: "83000",
+				country: "FR"
+			}}
+			geo={{
+				lat: 43.1242,
+				lng: 5.928
+			}}
+			socialLinks={[
+				"https://www.instagram.com/florarchitecte/",
+				"https://www.facebook.com/profile.php?id=100090151565975",
+				"https://www.linkedin.com/in/flora-leicarrague-4a7baa205/"
+			]}
+		/>
+    
+    <!-- Autres liens et scripts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.min.css">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
-		<script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js" defer></script>
-		<script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js" defer></script>
+    <script src="/js/main.js" defer></script>
   </head>
 
   <body class="font-primary">

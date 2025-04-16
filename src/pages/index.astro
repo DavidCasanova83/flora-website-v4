@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import LastProjects from '../components/LastProjects.astro';
 import avis from '../data/avis.json';
-import { Image } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 import headerImage from '../assets/img/sliderphoto/header-site-web-flora-architecte.jpg';
 import slide01 from '../assets/img/sliderphoto/slide01.jpeg';
 import slide02 from '../assets/img/sliderphoto/slide02.jpeg';
@@ -21,7 +21,7 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="Architecte d'intérieur Toulon" description="Architecte d'intérieur, décoration et aménagement, nous vous accompagnons dans vos projets de rénovation et d'aménagement avec une prestation clé en main.">
+<Layout title="Architecte d'intérieur et maître d'œuvre sur Toulon" description="Décoration et aménagement, nous vous accompagnons dans vos projets de rénovation et d'aménagement avec une prestation clé en main.">
 	<!-- Section Hero avec slider en fond et texte fixe -->
 	<section class="relative h-screen overflow-hidden">
 		<!-- Slider en fond (positionné en absolu pour occuper tout le container) -->
@@ -30,12 +30,16 @@ import avisGoogle from '../assets/img/testimonials/avis-google.avif';
 				<div class="swiper-wrapper">
 					<!-- Slide 1 -->
 					<div class="swiper-slide">
-						<Image
-					  	src={headerImage}
-					  	alt="image-deco-header-website"
-					  	width={1920}
+						<Picture
+							src={headerImage}
+							alt="image-deco-header-website"
+							formats={["avif", "webp"]}
+							width={1920}
+							height={1280}
 							quality={90}
-					  	class="w-full h-screen object-cover"
+							loading="eager"
+							decoding="async"
+							class="w-full h-screen object-cover"
 						/>
 					</div>
 					<!-- Ajoute autant de slides que nécessaire -->

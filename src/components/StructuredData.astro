@@ -1,0 +1,72 @@
+---
+// src/components/StructuredData.astro
+
+interface Props {
+  name: string;
+  url: string;
+  logo: string;
+  telephone: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+    postalCode: string;
+    country: string;
+  };
+  geo: {
+    lat: number;
+    lng: number;
+  };
+  socialLinks: string[];
+}
+
+const {
+  name,
+  url,
+  logo,
+  telephone,
+  email,
+  address,
+  geo,
+  socialLinks
+} = Astro.props;
+---
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "{name}",
+    "image": "{logo}",
+    "url": "{url}",
+    "telephone": "{telephone}",
+    "email": "{email}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{address.street}",
+      "addressLocality": "{address.city}",
+      "postalCode": "{address.postalCode}",
+      "addressCountry": "{address.country}"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": {geo.lat},
+      "longitude": {geo.lng}
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "19:00"
+      }
+    ],
+    "sameAs": {JSON.stringify(socialLinks)}
+  }
+</script>
