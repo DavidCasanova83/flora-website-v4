@@ -1,0 +1,457 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import "../styles/global.css";
+
+// Import des images (réutilisation d'images existantes adaptées au style méditerranéen)
+import slide01 from '../assets/img/sliderphoto/slide01.jpeg';
+import slide02 from '../assets/img/sliderphoto/slide02.jpeg';
+import slide03 from '../assets/img/sliderphoto/slide03.jpeg';
+import slide04 from '../assets/img/sliderphoto/slide04.jpg';
+import slide05 from '../assets/img/sliderphoto/slide05.jpg';
+
+// Import des images prestations
+import imgConception from '../assets/img/PRESTATIONS/Conception.jpg';
+import imgDemarches from '../assets/img/PRESTATIONS/Démarches-administratives.jpg';
+import imgSuivi from '../assets/img/PRESTATIONS/Suivi-de-chantier.jpg';
+import imgAmenagement from '../assets/img/PRESTATIONS/Aménagement.jpg';
+---
+
+<Layout
+  title="Architecte d'intérieur Toulon | Flora Leicarrague - Flor'A"
+  description="Architecte d'intérieur certifiée CFAI à Toulon. Agence locale spécialisée en rénovation, aménagement et décoration sur mesure. Projets clé en main dans le Var."
+  keywords="architecte d'intérieur Toulon, rénovation Toulon, aménagement Toulon, décoration Toulon, architecte Toulon, maître d'œuvre Toulon"
+  canonicalUrl="https://www.flora-architecteinterieur.com/architecte-interieur-toulon"
+  noindex={true}
+>
+
+  <!-- Schema.org LocalBusiness markup -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Flor'A - Architecte d'intérieur Toulon",
+    "image": "https://www.flora-architecteinterieur.com/_astro/logo-transparent.D0W9nURY_1JNeax.webp",
+    "description": "Architecte d'intérieur certifiée CFAI à Toulon. Agence locale spécialisée en rénovation, aménagement et décoration sur mesure.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3 Impasse François Marcel",
+      "addressLocality": "Toulon",
+      "postalCode": "83000",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.1242,
+      "longitude": 5.928
+    },
+    "telephone": "+33695584639",
+    "email": "leicarragueflora@gmail.com",
+    "url": "https://www.flora-architecteinterieur.com/architecte-interieur-toulon",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Toulon, Var, France"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.1242,
+        "longitude": 5.928
+      },
+      "geoRadius": "20000"
+    },
+    "priceRange": "€€",
+    "openingHours": "Mo-Fr 09:00-19:00"
+  }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+    <div class="container mx-auto h-full xl:px-24">
+      <div class="flex flex-col xl:flex-row items-start justify-between h-full">
+        <div class="hero__text xl:w-3/5 text-left p-12">
+          <div class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full">
+            <div class="uppercase text-base font-medium tracking-[2.24px]">Architecte d'intérieur Toulon</div>
+          </div>
+          <h1 class="text-4xl font-light mb-6">Architecte d'intérieur à Toulon</h1>
+          <h2 class="text-2xl font-light mb-6 text-accent">Votre agence locale d'architecture d'intérieur</h2>
+
+          <p class="mb-[16px] md:max-w-xl text-left">
+            <strong>Flor'A</strong>, votre agence d'<strong>architecture d'intérieur à Toulon</strong>, est installée au cœur de la ville. Nous vous accompagnons dans tous vos projets de rénovation et d'aménagement, avec une expertise locale inégalée.
+          </p>
+
+          <p class="mb-[16px] md:max-w-xl text-left">
+            Que vous habitiez dans le <strong>centre-ville de Toulon</strong>, au <strong>Mourillon</strong>, à <strong>Sainte-Musse</strong> ou dans les hauteurs, nous concevons des espaces uniques qui s'adaptent au <strong>style méditerranéen</strong> et à l'architecture toulonnaise.
+          </p>
+
+          <p class="mb-[16px] md:max-w-xl text-left">
+            <strong>Architecte d'intérieur certifiée CFAI</strong>, Flora Leicarrague transforme vos espaces de vie en lieux d'exception, en respectant le patrimoine architectural toulonnais et en optimisant la luminosité naturelle de la rade.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
+            <a href="/contact" class="btn btn-sm btn-accent">Devis gratuit à Toulon</a>
+            <a href="tel:+33695584639" class="btn btn-sm btn-outline">06 95 58 46 39</a>
+          </div>
+        </div>
+
+        <div class="hero__img xl:flex flex-col self-start pt-0 xl:w-2/5">
+          <Image
+            src={slide01}
+            alt="Rénovation d'appartement à Toulon par Flor'A architecte d'intérieur"
+            class="w-full h-auto rounded-lg shadow-lg"
+            loading="eager"
+            width={500}
+            height={400}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Pourquoi choisir un architecte à Toulon -->
+  <section class="my-10 xl:my-20">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-8 text-left">Votre architecte d'intérieur local à Toulon</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-left">Expertise de l'architecture toulonnaise</h3>
+          <p class="mb-4 text-left">
+            <strong>Toulon</strong>, préfecture du Var, possède un patrimoine architectural riche entre tradition provençale et influences navales. Notre agence locale maîtrise parfaitement ces spécificités : <strong>immeubles haussmanniens</strong>, <strong>maisons de ville</strong>, et <strong>appartements avec vue sur la rade</strong>.
+          </p>
+          <p class="mb-4 text-left">
+            Du <strong>centre historique</strong> aux quartiers résidentiels du <strong>Faron</strong>, en passant par le <strong>Mourillon</strong> et <strong>Sainte-Musse</strong>, nous adaptons nos créations à l'identité de chaque quartier toulonnais.
+          </p>
+
+          <h3 class="text-2xl font-semibold mb-4 text-left mt-8">Avantages de notre agence locale</h3>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li><strong>Proximité immédiate</strong> - Agence au cœur de Toulon</li>
+            <li><strong>Connaissance des contraintes</strong> urbaines toulonnaises</li>
+            <li><strong>Réseau d'artisans locaux</strong> de confiance</li>
+            <li><strong>Déplacements rapides</strong> sur tous les quartiers</li>
+            <li><strong>Expertise du patrimoine</strong> architectural local</li>
+          </ul>
+        </div>
+
+        <div>
+          <Image
+            src={slide02}
+            alt="Appartement rénové à Toulon vue sur la rade par architecte d'intérieur"
+            class="w-full h-auto rounded-lg shadow-lg"
+            loading="lazy"
+            width={500}
+            height={400}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Nos réalisations à Toulon -->
+  <section class="my-10 xl:my-20 bg-grey py-16">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-12 text-left">Projets d'architecture d'intérieur réalisés à Toulon</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={slide03}
+            alt="Rénovation appartement centre-ville Toulon vue rade"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+            width={400}
+            height={300}
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-left">Appartement centre-ville Toulon</h3>
+            <p class="text-left">Rénovation complète d'un appartement haussmannien de 90m² avec optimisation de la vue sur la rade et mise en valeur des éléments d'époque.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={slide04}
+            alt="Villa Mourillon Toulon rénovation architecte intérieur"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+            width={400}
+            height={300}
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-left">Villa au Mourillon</h3>
+            <p class="text-left">Aménagement d'une villa de 140m² avec création d'un espace de vie ouvert et rénovation complète de la cuisine donnant sur le jardin.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={slide05}
+            alt="Maison Sainte-Musse Toulon rénovation style provençal"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+            width={400}
+            height={300}
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-left">Maison à Sainte-Musse</h3>
+            <p class="text-left">Transformation d'une maison des années 70 en lieu de vie moderne, préservant le charme provençal tout en intégrant les dernières technologies.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto flex justify-center my-12">
+        <a href="/realisations" class="btn btn-sm btn-accent">Voir toutes nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Services spécialisés -->
+  <section class="my-10 xl:my-20">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-12 text-left">Nos prestations d'architecture d'intérieur à Toulon</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgConception}
+            alt="Conception 3D architecte intérieur Toulon"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Conception & Design</h3>
+          <p class="text-left mb-4">
+            Étude personnalisée de votre projet à Toulon avec <strong>plans 2D et rendus 3D réalistes</strong>. Nous analysons les spécificités de votre logement (exposition, vue sur la rade, style architectural) pour créer un aménagement optimal.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Plans d'aménagement adaptés au climat méditerranéen</li>
+            <li>Rendus 3D avec éclairage naturel de Toulon</li>
+            <li>Valorisation des vues sur la rade</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgDemarches}
+            alt="Démarches administratives architecte Toulon mairie"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Démarches administratives</h3>
+          <p class="text-left mb-4">
+            Accompagnement complet pour vos <strong>autorisations d'urbanisme à Toulon</strong>. Notre connaissance approfondie du PLU toulonnais et nos relations avec les services municipaux facilitent vos démarches.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Permis de construire et déclarations préalables</li>
+            <li>Expertise du PLU de Toulon</li>
+            <li>Relations privilégiées avec la mairie</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgSuivi}
+            alt="Suivi chantier rénovation Toulon architecte intérieur"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Suivi de chantier</h3>
+          <p class="text-left mb-4">
+            <strong>Coordination complète de vos travaux à Toulon</strong> avec notre réseau d'artisans locaux de confiance. Proximité géographique permettant un suivi quotidien optimal.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Réseau d'artisans toulonnais sélectionnés</li>
+            <li>Suivi quotidien possible grâce à la proximité</li>
+            <li>Réactivité immédiate en cas de besoin</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgAmenagement}
+            alt="Aménagement mobilier style méditerranéen Toulon"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Aménagement & Décoration</h3>
+          <p class="text-left mb-4">
+            <strong>Sélection de mobilier et décoration</strong> adaptés au style de vie toulonnais. Création de mobilier sur mesure et choix d'éléments décoratifs résistants au climat maritime.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Mobilier adapté au style méditerranéen</li>
+            <li>Fournisseurs locaux privilégiés</li>
+            <li>Livraison et installation rapides</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container mx-auto flex justify-center my-12">
+        <a href="/prestations" class="btn btn-sm btn-accent">Découvrir toutes nos prestations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Zone d'intervention -->
+  <section class="my-10 xl:my-20 bg-accent/10 py-16">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-8 text-left">Intervention sur Toulon et ses quartiers</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-xl mb-6 text-left">
+            Notre agence située au <strong>3 Impasse François Marcel à Toulon</strong> nous permet d'intervenir rapidement sur tous les quartiers de la ville avec un service de proximité exceptionnel.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-4 text-left">Quartiers d'intervention :</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <ul class="space-y-2 text-left">
+              <li><strong>Centre-ville historique</strong></li>
+              <li><strong>Le Mourillon</strong></li>
+              <li><strong>Sainte-Musse</strong></li>
+              <li><strong>Saint-Jean du Var</strong></li>
+            </ul>
+            <ul class="space-y-2 text-left">
+              <li><strong>Hauteurs du Faron</strong></li>
+              <li><strong>Pont du Las</strong></li>
+              <li><strong>La Serinette</strong></li>
+              <li><strong>Claret</strong></li>
+            </ul>
+          </div>
+
+          <div class="mt-8 p-4 bg-white rounded-lg">
+            <p class="text-left"><strong>Temps de trajet :</strong> 5-15 minutes selon le quartier</p>
+            <p class="text-left"><strong>Rendez-vous :</strong> À domicile dans l'heure</p>
+            <p class="text-left"><strong>Devis :</strong> Gratuit et sans engagement</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4 text-left">Contactez votre architecte local à Toulon</h3>
+          <p class="mb-6 text-left">
+            Parlons de votre projet d'<strong>architecture d'intérieur à Toulon</strong>. Notre proximité nous permet de vous rencontrer rapidement pour une première visite conseil.
+          </p>
+          <div class="space-y-4">
+            <a href="/contact" class="btn btn-sm btn-accent">Demander un devis gratuit</a>
+            <a href="tel:+33695584639" class="btn btn-sm btn-outline">Appeler maintenant</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section FAQ -->
+  <section class="my-10 xl:my-20">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-12 text-left">Questions fréquentes - Architecte d'intérieur Toulon</h2>
+
+      <div class="space-y-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Pourquoi choisir une agence locale à Toulon ?</h3>
+          <p class="text-left">
+            Notre <strong>agence toulonnaise</strong> offre une proximité unique : déplacements immédiats, connaissance parfaite des contraintes locales, relations privilégiées avec les artisans et les services municipaux de Toulon.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Quels sont vos tarifs pour un projet à Toulon ?</h3>
+          <p class="text-left">
+            Nos <strong>tarifs d'architecture d'intérieur à Toulon</strong> varient selon la complexité du projet. Pour une mission complète, comptez entre 8% et 12% du montant des travaux. La proximité nous permet de réduire les frais de déplacement.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Travaillez-vous avec des artisans toulonnais ?</h3>
+          <p class="text-left">
+            Exclusivement ! Notre <strong>réseau d'artisans toulonnais</strong> est constitué de professionnels que nous connaissons personnellement. Cette proximité garantit une qualité constante et des délais respectés.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Comment gérez-vous les spécificités du patrimoine toulonnais ?</h3>
+          <p class="text-left">
+            Notre expertise du <strong>patrimoine architectural toulonnais</strong> nous permet de respecter les contraintes historiques tout en modernisant votre intérieur. Nous maîtrisons les réglementations du centre-ville et des bâtiments classés.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Quelle est la durée moyenne d'un projet à Toulon ?</h3>
+          <p class="text-left">
+            Grâce à notre <strong>proximité à Toulon</strong>, nous réduisons les délais : 2-3 mois pour un aménagement complet d'appartement, et 3-5 mois pour une rénovation de maison. Notre réactivité locale accélère le processus.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Proposez-vous des visites d'urgence à Toulon ?</h3>
+          <p class="text-left">
+            Oui ! Notre <strong>localisation au cœur de Toulon</strong> nous permet d'intervenir en urgence pour des conseils ou des expertises. Nous pouvons nous déplacer dans l'heure selon les disponibilités.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact finale -->
+  <section class="my-10 xl:my-20 bg-accent text-white py-16">
+    <div class="container mx-auto px-8 lg:px-16 text-center">
+      <h2 class="h2 mb-8 text-left">Votre architecte d'intérieur à Toulon</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="text-left">
+          <h3 class="text-2xl font-semibold mb-4">Flor'A - Agence toulonnaise</h3>
+          <p class="mb-6 text-xl">
+            Votre projet d'<strong>aménagement à Toulon</strong> bénéficie de notre expertise locale. Rencontrons-nous dans nos locaux ou directement chez vous.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <span class="text-2xl">📍</span>
+              <div>
+                <p class="font-semibold">Agence Toulon</p>
+                <p>3 Impasse François Marcel, 83000 Toulon</p>
+                <p class="text-sm opacity-90">Au cœur de la ville</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <span class="text-2xl">📞</span>
+              <div>
+                <p class="font-semibold">Téléphone local</p>
+                <a href="tel:+33695584639" class="text-xl hover:underline">06 95 58 46 39</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <span class="text-2xl">✉️</span>
+              <div>
+                <p class="font-semibold">Email</p>
+                <a href="mailto:leicarragueflora@gmail.com" class="hover:underline">leicarragueflora@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
+          <h3 class="text-xl font-semibold mb-6 text-left">Rendez-vous à Toulon</h3>
+          <div class="space-y-4">
+            <p class="text-left">
+              Décrivez-nous votre projet d'<strong>architecture d'intérieur à Toulon</strong> et planifions un rendez-vous rapide grâce à notre proximité.
+            </p>
+            <a href="/contact" class="btn btn-sm btn-white">Obtenir mon devis gratuit</a>
+            <p class="text-sm text-left opacity-90">
+              Visite possible dans l'heure - Devis gratuit à domicile
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>

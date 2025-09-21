@@ -1,0 +1,499 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import "../styles/global.css";
+import LastArchitecture from '../components/LastArchitecture.astro';
+
+// Import des images (réutilisation d'images existantes adaptées au style côtier)
+import slide01 from '../assets/img/sliderphoto/slide01.jpeg';
+import slide02 from '../assets/img/sliderphoto/slide02.jpeg';
+import slide03 from '../assets/img/sliderphoto/slide03.jpeg';
+import slide04 from '../assets/img/sliderphoto/slide04.jpg';
+import slide05 from '../assets/img/sliderphoto/slide05.jpg';
+
+// Import des images prestations
+import imgConception from '../assets/img/PRESTATIONS/Conception.jpg';
+import imgDemarches from '../assets/img/PRESTATIONS/Démarches-administratives.jpg';
+import imgSuivi from '../assets/img/PRESTATIONS/Suivi-de-chantier.jpg';
+import imgAmenagement from '../assets/img/PRESTATIONS/Aménagement.jpg';
+---
+
+<Layout
+	title="Maître d'œuvre Toulon | Flora Leicarrague - Flor'A"
+	description="Maître d'œuvre certifiée à Toulon. Rénovation, construction et extension dans le Var. Suivi de chantier complet de A à Z. Devis gratuit."
+	keywords="maître d'œuvre Toulon, rénovation Toulon, construction Toulon, extension Toulon, suivi chantier Toulon, travaux Toulon"
+	canonicalUrl="https://www.flora-architecteinterieur.com/maitre-oeuvre-toulon"
+  noindex={true}
+>
+
+<!-- Schema.org LocalBusiness pour SEO local -->
+<script type="application/ld+json" is:inline>
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Flor'A - Maître d'œuvre Toulon",
+  "alternateName": "Flora Leicarrague Maître d'œuvre",
+  "description": "Maître d'œuvre certifiée à Toulon spécialisée dans la rénovation, construction et extension. Suivi de chantier complet dans le Var.",
+  "url": "https://www.flora-architecteinterieur.com/maitre-oeuvre-toulon",
+  "telephone": "+33 (0)6 52 74 93 31",
+  "email": "contact@flora-architecteinterieur.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "3 Imp. François Marcel",
+    "addressLocality": "Toulon",
+    "addressRegion": "Var",
+    "postalCode": "83000",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 43.1242,
+    "longitude": 5.9280
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.1242,
+      "longitude": 5.9280
+    },
+    "geoRadius": "15000"
+  },
+  "serviceArea": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.1242,
+      "longitude": 5.9280
+    },
+    "geoRadius": "15000"
+  },
+  "openingHours": [
+    "Mo-Fr 09:00-19:00"
+  ],
+  "priceRange": "€€",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services maître d'œuvre Toulon",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation complète Toulon",
+          "description": "Rénovation globale de maisons et appartements à Toulon"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Construction Toulon",
+          "description": "Construction de maisons individuelles dans le Var"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Extension Toulon",
+          "description": "Extensions et agrandissements de maisons à Toulon"
+        }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Hero Section -->
+<section class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+  <div class="container mx-auto h-full xl:px-24">
+    <div class="flex flex-col xl:flex-row items-start justify-between h-full">
+      <div class="hero__text xl:w-3/5 text-left p-12">
+        <div class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full">
+          <div class="uppercase text-base font-medium tracking-[2.24px]">Maître d'œuvre Toulon</div>
+        </div>
+        <h1 class="text-4xl font-light mb-6">Maître d'œuvre à Toulon</h1>
+        <h2 class="text-2xl font-light mb-6 text-accent">Votre expert en construction et rénovation</h2>
+
+        <p class="mb-[16px] md:max-w-xl text-left">
+          <strong>Flora Leicarrague</strong>, maître d'œuvre certifiée, vous accompagne dans tous vos projets de <strong>construction, rénovation et extension à Toulon</strong>. Du Mourillon au centre-ville, bénéficiez d'un suivi de chantier professionnel et personnalisé dans le Var.
+        </p>
+
+        <p class="mb-[16px] md:max-w-xl text-left">
+          Que vous souhaitiez construire une maison neuve à Sainte-Musse, rénover un appartement dans le centre historique, ou agrandir votre villa au Mourillon, nous coordonnons tous les corps de métier pour un projet réussi.
+        </p>
+
+        <p class="mb-[16px] md:max-w-xl text-left">
+          <strong>Maître d'œuvre expérimentée</strong>, Flora Leicarrague transforme vos projets les plus ambitieux en réalité, en respectant l'architecture méditerranéenne et en optimisant chaque étape de votre chantier.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
+          <a href="/contact" class="btn btn-sm btn-accent">Devis gratuit à Toulon</a>
+          <a href="tel:+33652749331" class="btn btn-sm btn-outline">06 52 74 93 31</a>
+        </div>
+      </div>
+
+      <div class="hero__img xl:flex flex-col self-start pt-0 xl:w-2/5">
+        <Image
+          src={slide01}
+          alt="Maître d'œuvre Toulon - Rénovation complète par Flora Leicarrague"
+          class="w-full h-auto rounded-lg shadow-lg"
+          loading="eager"
+          width={500}
+          height={400}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Pourquoi choisir un maître d'œuvre à Toulon -->
+<section class="my-10 xl:my-20">
+  <div class="container mx-auto px-8 lg:px-16">
+    <h2 class="h2 mb-8 text-left">Votre maître d'œuvre de proximité à Toulon</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-2xl font-semibold mb-4 text-left">Spécialiste de la construction méditerranéenne</h3>
+        <p class="mb-4 text-left">
+          Basée au cœur de <strong>Toulon</strong>, je connais parfaitement les spécificités architecturales et réglementaires de notre belle ville méditerranéenne. De la construction de maisons neuves à Sainte-Musse aux rénovations d'appartements dans le centre historique, chaque projet bénéficie de mon expertise locale.
+        </p>
+        <p class="mb-4 text-left">
+          Du <strong>Mourillon</strong> à <strong>Ollioules</strong>, en passant par <strong>La Seyne-sur-Mer</strong> et <strong>Six-Fours-les-Plages</strong>, nous adaptons nos méthodes de construction aux contraintes et atouts de chaque environnement.
+        </p>
+
+        <h3 class="text-2xl font-semibold mb-4 text-left mt-8">Expertise maître d'œuvre reconnue</h3>
+        <ul class="list-disc list-inside space-y-2 text-left">
+          <li><strong>Construction de maisons</strong> individuelles</li>
+          <li><strong>Rénovation complète</strong> d'appartements et villas</li>
+          <li><strong>Extensions et agrandissements</strong></li>
+          <li><strong>Coordination des artisans</strong> locaux</li>
+          <li><strong>Suivi de chantier</strong> rigoureux de A à Z</li>
+        </ul>
+      </div>
+
+      <div>
+        <Image
+          src={slide02}
+          alt="Maître d'œuvre Toulon spécialiste construction méditerranéenne"
+          class="w-full h-auto rounded-lg shadow-lg"
+          loading="lazy"
+          width={500}
+          height={400}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Nos réalisations à Toulon -->
+<section class="my-10 xl:my-20 bg-grey py-16">
+  <div class="container mx-auto px-8 lg:px-16">
+    <h2 class="h2 mb-12 text-left">Projets de maître d'œuvre réalisés à Toulon</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <Image
+          src={slide03}
+          alt="Rénovation appartement centre-ville Toulon maître d'œuvre"
+          class="w-full h-48 object-cover"
+          loading="lazy"
+          width={400}
+          height={300}
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-left">Rénovation appartement centre-ville</h3>
+          <p class="text-left">Rénovation complète d'un appartement de 90m² dans le quartier historique de Toulon. Respect du patrimoine architectural avec modernisation complète.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <Image
+          src={slide04}
+          alt="Extension villa Le Mourillon Toulon maître d'œuvre"
+          class="w-full h-48 object-cover"
+          loading="lazy"
+          width={400}
+          height={300}
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-left">Extension villa Le Mourillon</h3>
+          <p class="text-left">Agrandissement d'une villa familiale avec création d'une suite parentale de 35m². Harmonie parfaite avec l'existant.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+        <Image
+          src={slide05}
+          alt="Construction maison Sainte-Musse Toulon maître d'œuvre"
+          class="w-full h-48 object-cover"
+          loading="lazy"
+          width={400}
+          height={300}
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-left">Construction maison Sainte-Musse</h3>
+          <p class="text-left">Construction d'une maison contemporaine de 140m² avec piscine. Conception bioclimatique adaptée au climat méditerranéen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto flex justify-center my-12">
+      <a href="/realisations" class="btn btn-sm btn-accent">Voir toutes nos réalisations</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Services spécialisés -->
+<section class="my-10 xl:my-20">
+  <div class="container mx-auto px-8 lg:px-16">
+    <h2 class="h2 mb-12 text-left">Nos prestations de maître d'œuvre à Toulon</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <Image
+          src={imgConception}
+          alt="Conception projets maître d'œuvre Toulon"
+          class="w-full h-48 object-cover rounded-lg mb-6"
+          loading="lazy"
+          width={400}
+          height={200}
+        />
+        <h3 class="text-2xl font-semibold mb-4 text-left">Conception & Études</h3>
+        <p class="text-left mb-4">
+          Étude personnalisée de votre projet à Toulon avec <strong>plans d'exécution et études techniques</strong>. Nous analysons les spécificités de votre terrain (exposition, contraintes, style architectural) pour créer un projet optimal.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-left">
+          <li>Plans d'exécution adaptés au climat méditerranéen</li>
+          <li>Études de faisabilité et calculs structurels</li>
+          <li>Sélection de matériaux résistants au sel marin</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <Image
+          src={imgDemarches}
+          alt="Démarches administratives maître d'œuvre Toulon"
+          class="w-full h-48 object-cover rounded-lg mb-6"
+          loading="lazy"
+          width={400}
+          height={200}
+        />
+        <h3 class="text-2xl font-semibold mb-4 text-left">Démarches administratives</h3>
+        <p class="text-left mb-4">
+          Accompagnement complet pour vos <strong>autorisations d'urbanisme à Toulon</strong>. Nous connaissons les spécificités locales et les contraintes du PLU toulonnais.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-left">
+          <li>Permis de construire et déclarations préalables</li>
+          <li>Respect du PLU de Toulon</li>
+          <li>Consultation des entreprises locales du Var</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <Image
+          src={imgSuivi}
+          alt="Suivi chantier maître d'œuvre Toulon"
+          class="w-full h-48 object-cover rounded-lg mb-6"
+          loading="lazy"
+          width={400}
+          height={200}
+        />
+        <h3 class="text-2xl font-semibold mb-4 text-left">Suivi de chantier</h3>
+        <p class="text-left mb-4">
+          <strong>Coordination complète de vos travaux à Toulon</strong> avec des artisans sélectionnés et expérimentés. Réunions de chantier hebdomadaires et contrôle qualité rigoureux.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-left">
+          <li>Réseau d'artisans qualifiés du bassin toulonnais</li>
+          <li>Suivi qualité et respect des délais</li>
+          <li>Réception des travaux et garanties</li>
+        </ul>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <Image
+          src={imgAmenagement}
+          alt="Réception travaux maître d'œuvre Toulon"
+          class="w-full h-48 object-cover rounded-lg mb-6"
+          loading="lazy"
+          width={400}
+          height={200}
+        />
+        <h3 class="text-2xl font-semibold mb-4 text-left">Réception & Garanties</h3>
+        <p class="text-left mb-4">
+          <strong>Réception des travaux et gestion des garanties</strong> pour votre projet à Toulon. Accompagnement complet jusqu'à la fin des garanties décennales.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-left">
+          <li>Réception des travaux avec procès-verbal</li>
+          <li>Levée des réserves et parfait achèvement</li>
+          <li>Suivi des garanties décennales</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container mx-auto flex justify-center my-12">
+      <a href="/prestations" class="btn btn-sm btn-accent">Découvrir toutes nos prestations</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Zone d'intervention -->
+<section class="my-10 xl:my-20 bg-accent/10 py-16">
+  <div class="container mx-auto px-8 lg:px-16">
+    <h2 class="h2 mb-8 text-left">Intervention sur Toulon et ses environs</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-xl mb-6 text-left">
+          Depuis notre agence de <strong>Toulon</strong>, nous intervenons sur tout le <strong>bassin toulonnais</strong> avec un temps de déplacement optimal pour assurer un suivi de proximité.
+        </p>
+
+        <h3 class="text-xl font-semibold mb-4 text-left">Zones d'intervention principales :</h3>
+        <div class="grid grid-cols-2 gap-4">
+          <ul class="space-y-2 text-left">
+            <li><strong>Centre-ville Toulon</strong></li>
+            <li><strong>Le Mourillon</strong></li>
+            <li><strong>Sainte-Musse</strong></li>
+            <li><strong>La Seyne-sur-Mer</strong></li>
+          </ul>
+          <ul class="space-y-2 text-left">
+            <li><strong>Six-Fours-les-Plages</strong></li>
+            <li><strong>Ollioules</strong></li>
+            <li><strong>Hyères</strong></li>
+            <li><strong>Bandol</strong></li>
+          </ul>
+        </div>
+
+        <div class="mt-8 p-4 bg-white rounded-lg">
+          <p class="text-left"><strong>Temps de trajet :</strong> Intervention locale immédiate</p>
+          <p class="text-left"><strong>Rendez-vous :</strong> À domicile ou dans nos locaux</p>
+          <p class="text-left"><strong>Devis :</strong> Gratuit et sans engagement</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-4 text-left">Contactez-nous pour votre projet à Toulon</h3>
+        <p class="mb-6 text-left">
+          Parlons de votre projet de <strong>maître d'œuvre à Toulon</strong>. Nous nous déplaçons gratuitement pour une première visite conseil.
+        </p>
+        <div class="space-y-4">
+          <a href="/contact" class="btn btn-sm btn-accent">Demander un devis gratuit</a>
+          <a href="tel:+33652749331" class="btn btn-sm btn-outline">Appeler maintenant</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section FAQ -->
+<section class="my-10 xl:my-20">
+  <div class="container mx-auto px-8 lg:px-16">
+    <h2 class="h2 mb-12 text-left">Questions fréquentes - Maître d'œuvre Toulon</h2>
+
+    <div class="space-y-8">
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-3 text-left">Quelle est la différence entre architecte et maître d'œuvre à Toulon ?</h3>
+        <p class="text-left">
+          Le maître d'œuvre se concentre sur l'exécution et le suivi de chantier, tandis que l'architecte conçoit. À <strong>Toulon</strong>, je cumule les deux expertises pour vous offrir un service complet : conception créative ET suivi rigoureux de réalisation.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-3 text-left">Quels sont vos tarifs de maître d'œuvre à Toulon ?</h3>
+        <p class="text-left">
+          Mes <strong>honoraires de maître d'œuvre à Toulon</strong> représentent entre 8 et 12% du montant total des travaux selon la complexité du projet. Ce pourcentage inclut : études, démarches administratives, suivi de chantier et réception. Devis gratuit et sans engagement.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-3 text-left">Travaillez-vous avec des artisans locaux de Toulon ?</h3>
+        <p class="text-left">
+          Absolument ! Je collabore exclusivement avec un <strong>réseau d'artisans qualifiés du Var</strong>, notamment à Toulon et ses environs. Cette proximité géographique garantit une meilleure coordination, des délais respectés et un soutien à l'économie locale toulonnaise.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-3 text-left">Comment gérez-vous les contraintes du PLU de Toulon ?</h3>
+        <p class="text-left">
+          Parfaite connaissance du <strong>Plan Local d'Urbanisme de Toulon</strong>. Je vérifie systématiquement les règles de constructibilité, hauteurs autorisées et contraintes patrimoniales avant tout projet. Cela évite les refus et retards administratifs.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-3 text-left">Quelle est la durée moyenne d'un chantier à Toulon ?</h3>
+        <p class="text-left">
+          Cela dépend du projet : 2-4 mois pour une <strong>rénovation d'appartement à Toulon</strong>, 4-6 mois pour une extension, 8-12 mois pour une construction neuve. Je planifie en tenant compte des contraintes locales et météorologiques.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold mb-3 text-left">Proposez-vous des solutions éco-responsables à Toulon ?</h3>
+        <p class="text-left">
+          Oui, parfaitement ! Nous privilégions les <strong>matériaux naturels et éco-responsables</strong> : pierres locales du Var, bois traités écologiquement, isolation thermique adaptée au climat méditerranéen, et solutions d'économie d'énergie.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section dernières réalisations -->
+<LastArchitecture />
+
+<!-- Section Contact finale -->
+<section class="my-10 xl:my-20 bg-accent text-white py-16">
+  <div class="container mx-auto px-8 lg:px-16 text-center">
+    <h2 class="h2 mb-8 text-left">Contactez votre maître d'œuvre à Toulon</h2>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="text-left">
+        <h3 class="text-2xl font-semibold mb-4">Flor'A - Maître d'œuvre</h3>
+        <p class="mb-6 text-xl">
+          Votre projet de <strong>construction ou rénovation à Toulon</strong> mérite un accompagnement personnalisé. Contactez-nous pour une première visite conseil gratuite.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <span class="text-2xl">📍</span>
+            <div>
+              <p class="font-semibold">Agence principale</p>
+              <p>3 Impasse François Marcel, 83000 Toulon</p>
+              <p class="text-sm opacity-90">Intervention locale</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="text-2xl">📞</span>
+            <div>
+              <p class="font-semibold">Téléphone</p>
+              <a href="tel:+33652749331" class="text-xl hover:underline">06 52 74 93 31</a>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <span class="text-2xl">✉️</span>
+            <div>
+              <p class="font-semibold">Email</p>
+              <a href="mailto:contact@flora-architecteinterieur.com" class="hover:underline">contact@flora-architecteinterieur.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
+        <h3 class="text-xl font-semibold mb-6 text-left">Demande de devis gratuit</h3>
+        <div class="space-y-4">
+          <p class="text-left">
+            Décrivez-nous votre projet de <strong>maître d'œuvre à Toulon</strong> et recevez un devis personnalisé sous 48h.
+          </p>
+          <a href="/contact" class="btn btn-sm btn-white">Obtenir mon devis gratuit</a>
+          <p class="text-sm text-left opacity-90">
+            Réponse garantie sous 24h - Visite conseil offerte sur Toulon
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</Layout>
