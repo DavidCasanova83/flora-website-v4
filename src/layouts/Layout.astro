@@ -18,9 +18,10 @@ interface Props {
   keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
+  noindex?: boolean;
 }
 
-const { title, description, keywords = "architecte d'intérieur, décoration, aménagement, rénovation, Toulon, Var", ogImage = "/assets/img/header/logo.png", canonicalUrl = "https://www.flora-architecteinterieur.com" } = Astro.props;
+const { title, description, keywords = "architecte d'intérieur, décoration, aménagement, rénovation, Toulon, Var", ogImage = "/assets/img/header/logo.png", canonicalUrl = "https://www.flora-architecteinterieur.com", noindex = false } = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="fr">
@@ -34,7 +35,7 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
     <meta name="description" content={description}>
     <meta name="keywords" content={keywords}>
     <meta name="author" content="Flor'architecte">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"}>
     
     <!-- Balises Open Graph pour les réseaux sociaux -->
     <meta property="og:title" content={`Flor'architecte - ${title}`}>
