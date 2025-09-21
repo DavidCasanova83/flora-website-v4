@@ -1,0 +1,457 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import "../styles/global.css";
+
+// Import des images (réutilisation d'images existantes adaptées au style côtier)
+import slide01 from '../assets/img/sliderphoto/slide01.jpeg';
+import slide02 from '../assets/img/sliderphoto/slide02.jpeg';
+import slide03 from '../assets/img/sliderphoto/slide03.jpeg';
+import slide04 from '../assets/img/sliderphoto/slide04.jpg';
+import slide05 from '../assets/img/sliderphoto/slide05.jpg';
+
+// Import des images prestations
+import imgConception from '../assets/img/PRESTATIONS/Conception.jpg';
+import imgDemarches from '../assets/img/PRESTATIONS/Démarches-administratives.jpg';
+import imgSuivi from '../assets/img/PRESTATIONS/Suivi-de-chantier.jpg';
+import imgAmenagement from '../assets/img/PRESTATIONS/Aménagement.jpg';
+---
+
+<Layout
+  title="Architecte d'intérieur Hyères | Flora Leicarrague - Flor'A"
+  description="Architecte d'intérieur certifiée CFAI à Hyères. Rénovation, aménagement et décoration sur mesure. De Toulon à Hyères, projets clé en main dans le Var."
+  keywords="architecte d'intérieur Hyères, rénovation Hyères, aménagement Hyères, décoration Hyères, architecte Hyères, maître d'œuvre Hyères"
+  canonicalUrl="https://www.flora-architecteinterieur.com/architecte-interieur-hyeres"
+  noindex={true}
+>
+
+  <!-- Schema.org LocalBusiness markup -->
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Flor'A - Architecte d'intérieur Hyères",
+    "image": "https://www.flora-architecteinterieur.com/_astro/logo-transparent.D0W9nURY_1JNeax.webp",
+    "description": "Architecte d'intérieur certifiée CFAI à Hyères. Rénovation, aménagement et décoration sur mesure.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "3 Impasse François Marcel",
+      "addressLocality": "Toulon",
+      "postalCode": "83000",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.1242,
+      "longitude": 5.928
+    },
+    "telephone": "+33695584639",
+    "email": "leicarragueflora@gmail.com",
+    "url": "https://www.flora-architecteinterieur.com/architecte-interieur-hyeres",
+    "areaServed": {
+      "@type": "Place",
+      "name": "Hyères, Var, France"
+    },
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 43.1192,
+        "longitude": 6.1286
+      },
+      "geoRadius": "15000"
+    },
+    "priceRange": "€€",
+    "openingHours": "Mo-Fr 09:00-19:00"
+  }
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero bg-grey py-12 xl:pt-12 xl:pb-0 overflow-hidden">
+    <div class="container mx-auto h-full xl:px-24">
+      <div class="flex flex-col xl:flex-row items-start justify-between h-full">
+        <div class="hero__text xl:w-3/5 text-left p-12">
+          <div class="flex items-center bg-white py-[10px] px-[20px] w-max gap-x-2 mb-[26px] rounded-full">
+            <div class="uppercase text-base font-medium tracking-[2.24px]">Architecte d'intérieur Hyères</div>
+          </div>
+          <h1 class="text-4xl font-light mb-6">Architecte d'intérieur à Hyères</h1>
+          <h2 class="text-2xl font-light mb-6 text-accent">De Toulon à Hyères, votre projet sur mesure</h2>
+
+          <p class="mb-[16px] md:max-w-xl text-left">
+            <strong>Flor'A</strong>, votre agence d'<strong>architecture d'intérieur à Hyères</strong>, vous accompagne dans tous vos projets de rénovation et d'aménagement. Installée à Toulon et intervenant sur tout le bassin hyérois, nous mettons notre expertise au service de vos envies.
+          </p>
+
+          <p class="mb-[16px] md:max-w-xl text-left">
+            Que vous résidiez au centre-ville d'Hyères, dans les quartiers de Costebelle, ou sur la presqu'île de Giens, nous concevons des espaces uniques qui s'adaptent au <strong>style méditerranéen</strong> et aux contraintes climatiques de la région.
+          </p>
+
+          <p class="mb-[16px] md:max-w-xl text-left">
+            <strong>Architecte d'intérieur certifiée CFAI</strong>, Flora Leicarrague transforme vos espaces de vie en lieux d'exception, en respectant l'architecture provençale et en optimisant la luminosité naturelle si caractéristique de Hyères.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8">
+            <a href="/contact" class="btn btn-sm btn-accent">Devis gratuit à Hyères</a>
+            <a href="tel:+33695584639" class="btn btn-sm btn-outline">06 95 58 46 39</a>
+          </div>
+        </div>
+
+        <div class="hero__img xl:flex flex-col self-start pt-0 xl:w-2/5">
+          <Image
+            src={slide01}
+            alt="Rénovation d'appartement à Hyères par Flor'A architecte d'intérieur"
+            class="w-full h-auto rounded-lg shadow-lg"
+            loading="eager"
+            width={500}
+            height={400}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Pourquoi choisir un architecte à Hyères -->
+  <section class="my-10 xl:my-20">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-8 text-left">Votre architecte d'intérieur de proximité à Hyères</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-2xl font-semibold mb-4 text-left">Spécialiste de l'architecture méditerranéenne</h3>
+          <p class="mb-4 text-left">
+            Située entre mer et montagne, <strong>Hyères</strong> bénéficie d'un cadre exceptionnel qui influence naturellement l'architecture locale. Notre approche respecte ces spécificités : <strong>luminosité intense</strong>, <strong>proximité maritime</strong>, et <strong>style provençal</strong> authentique.
+          </p>
+          <p class="mb-4 text-left">
+            De <strong>Carqueiranne</strong> à <strong>La Crau</strong>, en passant par le <strong>centre historique d'Hyères</strong> et les <strong>îles d'Hyères</strong>, nous adaptons nos créations aux contraintes et atouts de chaque environnement.
+          </p>
+
+          <h3 class="text-2xl font-semibold mb-4 text-left mt-8">Expertise locale reconnue</h3>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li><strong>Rénovation d'appartements</strong> avec vue mer</li>
+            <li><strong>Aménagement de villas</strong> provençales</li>
+            <li><strong>Optimisation de la lumière</strong> naturelle</li>
+            <li><strong>Choix de matériaux</strong> résistants au climat côtier</li>
+            <li><strong>Création d'espaces intérieur/extérieur</strong> harmonieux</li>
+          </ul>
+        </div>
+
+        <div>
+          <Image
+            src={slide02}
+            alt="Villa rénovée à Hyères style méditerranéen par architecte d'intérieur"
+            class="w-full h-auto rounded-lg shadow-lg"
+            loading="lazy"
+            width={500}
+            height={400}
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Nos réalisations à Hyères -->
+  <section class="my-10 xl:my-20 bg-grey py-16">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-12 text-left">Projets d'architecture d'intérieur réalisés à Hyères</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={slide03}
+            alt="Rénovation appartement vue mer Hyères centre-ville"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+            width={400}
+            height={300}
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-left">Appartement centre-ville Hyères</h3>
+            <p class="text-left">Rénovation complète d'un appartement de 80m² avec optimisation de la luminosité et création d'un espace de vie ouvert sur la mer.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={slide04}
+            alt="Villa Costebelle Hyères rénovation architecte intérieur"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+            width={400}
+            height={300}
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-left">Villa Costebelle</h3>
+            <p class="text-left">Aménagement d'une villa provençale de 150m² avec extension de la terrasse et création d'un espace wellness.</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+          <Image
+            src={slide05}
+            alt="Maison presqu'île Giens rénovation style méditerranéen"
+            class="w-full h-48 object-cover"
+            loading="lazy"
+            width={400}
+            height={300}
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold mb-2 text-left">Maison presqu'île de Giens</h3>
+            <p class="text-left">Transformation d'une maison traditionnelle en lieu de vie moderne, préservant l'authenticité tout en intégrant le confort contemporain.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto flex justify-center my-12">
+        <a href="/realisations" class="btn btn-sm btn-accent">Voir toutes nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Services spécialisés -->
+  <section class="my-10 xl:my-20">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-12 text-left">Nos prestations d'architecture d'intérieur à Hyères</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgConception}
+            alt="Conception 3D architecte intérieur Hyères"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Conception & Design</h3>
+          <p class="text-left mb-4">
+            Étude personnalisée de votre projet à Hyères avec <strong>plans 2D et rendus 3D réalistes</strong>. Nous analysons les spécificités de votre logement (exposition, vue mer, style architectural) pour créer un aménagement optimal.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Plans d'aménagement adaptés au climat méditerranéen</li>
+            <li>Rendus 3D avec éclairage naturel de Hyères</li>
+            <li>Sélection de matériaux résistants au sel marin</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgDemarches}
+            alt="Démarches administratives architecte Hyères mairie"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Démarches administratives</h3>
+          <p class="text-left mb-4">
+            Accompagnement complet pour vos <strong>autorisations d'urbanisme à Hyères</strong>. Nous connaissons les spécificités locales et les contraintes du PLU hyérois.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Permis de construire et déclarations préalables</li>
+            <li>Respect du PLU de Hyères</li>
+            <li>Consultation des entreprises locales du Var</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgSuivi}
+            alt="Suivi chantier rénovation Hyères architecte intérieur"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Suivi de chantier</h3>
+          <p class="text-left mb-4">
+            <strong>Coordination complète de vos travaux à Hyères</strong> avec des artisans sélectionnés et expérimentés. Réunions de chantier hebdomadaires et contrôle qualité rigoureux.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Réseau d'artisans qualifiés du bassin hyérois</li>
+            <li>Suivi qualité et respect des délais</li>
+            <li>Réception des travaux et garanties</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <Image
+            src={imgAmenagement}
+            alt="Aménagement mobilier style méditerranéen Hyères"
+            class="w-full h-48 object-cover rounded-lg mb-6"
+            loading="lazy"
+            width={400}
+            height={200}
+          />
+          <h3 class="text-2xl font-semibold mb-4 text-left">Aménagement & Décoration</h3>
+          <p class="text-left mb-4">
+            <strong>Sélection de mobilier et décoration</strong> adaptés au style de vie hyérois. Création de mobilier sur mesure et choix d'éléments décoratifs résistants au climat côtier.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-left">
+            <li>Mobilier adapté au style méditerranéen</li>
+            <li>Textiles résistants aux UV et à l'humidité</li>
+            <li>Création d'espaces extérieurs aménagés</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container mx-auto flex justify-center my-12">
+        <a href="/prestations" class="btn btn-sm btn-accent">Découvrir toutes nos prestations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Zone d'intervention -->
+  <section class="my-10 xl:my-20 bg-accent/10 py-16">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-8 text-left">Intervention sur Hyères et ses environs</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-xl mb-6 text-left">
+            Depuis notre agence de <strong>Toulon</strong>, nous intervenons sur tout le <strong>bassin hyérois</strong> avec un temps de déplacement optimal pour assurer un suivi de proximité.
+          </p>
+
+          <h3 class="text-xl font-semibold mb-4 text-left">Zones d'intervention principales :</h3>
+          <div class="grid grid-cols-2 gap-4">
+            <ul class="space-y-2 text-left">
+              <li><strong>Hyères centre-ville</strong></li>
+              <li><strong>Costebelle</strong></li>
+              <li><strong>Presqu'île de Giens</strong></li>
+              <li><strong>Port-Cros</strong></li>
+            </ul>
+            <ul class="space-y-2 text-left">
+              <li><strong>Carqueiranne</strong></li>
+              <li><strong>La Crau</strong></li>
+              <li><strong>Porquerolles</strong></li>
+              <li><strong>Le Lavandou</strong></li>
+            </ul>
+          </div>
+
+          <div class="mt-8 p-4 bg-white rounded-lg">
+            <p class="text-left"><strong>Temps de trajet :</strong> 20-25 minutes depuis Toulon</p>
+            <p class="text-left"><strong>Rendez-vous :</strong> À domicile ou dans nos locaux</p>
+            <p class="text-left"><strong>Devis :</strong> Gratuit et sans engagement</p>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4 text-left">Contactez-nous pour votre projet à Hyères</h3>
+          <p class="mb-6 text-left">
+            Parlons de votre projet d'<strong>architecture d'intérieur à Hyères</strong>. Nous nous déplaçons gratuitement pour une première visite conseil.
+          </p>
+          <div class="space-y-4">
+            <a href="/contact" class="btn btn-sm btn-accent">Demander un devis gratuit</a>
+            <a href="tel:+33695584639" class="btn btn-sm btn-outline">Appeler maintenant</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section FAQ -->
+  <section class="my-10 xl:my-20">
+    <div class="container mx-auto px-8 lg:px-16">
+      <h2 class="h2 mb-12 text-left">Questions fréquentes - Architecte d'intérieur Hyères</h2>
+
+      <div class="space-y-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Intervenez-vous sur tous les quartiers de Hyères ?</h3>
+          <p class="text-left">
+            Oui, nous intervenons sur l'ensemble de la commune de <strong>Hyères</strong> : centre-ville historique, Costebelle, presqu'île de Giens, ainsi que sur les communes limitrophes comme Carqueiranne et La Crau. Nous nous adaptons aux spécificités de chaque secteur.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Quels sont vos tarifs pour un projet à Hyères ?</h3>
+          <p class="text-left">
+            Nos <strong>tarifs d'architecture d'intérieur à Hyères</strong> varient selon la complexité du projet. Pour une mission complète, comptez entre 8% et 12% du montant des travaux. Le premier rendez-vous et le devis sont gratuits.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Travaillez-vous avec des artisans locaux de Hyères ?</h3>
+          <p class="text-left">
+            Absolument ! Nous avons constité un <strong>réseau d'artisans qualifiés du Var</strong>, notamment à Hyères et ses environs. Cela nous permet de garantir des délais courts et une connaissance parfaite des contraintes locales.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Comment gérez-vous les contraintes du climat méditerranéen ?</h3>
+          <p class="text-left">
+            Le <strong>climat de Hyères</strong> influence nos choix : sélection de matériaux résistants au sel marin, optimisation des protections solaires, choix de couleurs adaptées à la forte luminosité, et création d'espaces de transition intérieur/extérieur.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Quelle est la durée moyenne d'un projet à Hyères ?</h3>
+          <p class="text-left">
+            La durée varie selon l'ampleur des travaux : comptez 2-3 mois pour un <strong>aménagement complet d'appartement à Hyères</strong>, et 4-6 mois pour une rénovation de villa. La phase de conception représente généralement 4-6 semaines.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-3 text-left">Proposez-vous des projets éco-responsables à Hyères ?</h3>
+          <p class="text-left">
+            Oui, nous privilégions les <strong>matériaux naturels et éco-responsables</strong> : pierres locales du Var, bois traités écologiquement, peintures sans COV, et solutions d'isolation performantes adaptées au climat méditerranéen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact finale -->
+  <section class="my-10 xl:my-20 bg-accent text-white py-16">
+    <div class="container mx-auto px-8 lg:px-16 text-center">
+      <h2 class="h2 mb-8 text-left">Contactez votre architecte d'intérieur à Hyères</h2>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="text-left">
+          <h3 class="text-2xl font-semibold mb-4">Flor'A - Architecture d'intérieur</h3>
+          <p class="mb-6 text-xl">
+            Votre projet d'<strong>aménagement à Hyères</strong> mérite un accompagnement personnalisé. Contactez-nous pour une première visite conseil gratuite.
+          </p>
+
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <span class="text-2xl">📍</span>
+              <div>
+                <p class="font-semibold">Agence principale</p>
+                <p>3 Impasse François Marcel, 83000 Toulon</p>
+                <p class="text-sm opacity-90">À 25 minutes de Hyères</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <span class="text-2xl">📞</span>
+              <div>
+                <p class="font-semibold">Téléphone</p>
+                <a href="tel:+33695584639" class="text-xl hover:underline">06 95 58 46 39</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <span class="text-2xl">✉️</span>
+              <div>
+                <p class="font-semibold">Email</p>
+                <a href="mailto:leicarragueflora@gmail.com" class="hover:underline">leicarragueflora@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/10 p-8 rounded-lg backdrop-blur-sm">
+          <h3 class="text-xl font-semibold mb-6 text-left">Demande de devis gratuit</h3>
+          <div class="space-y-4">
+            <p class="text-left">
+              Décrivez-nous votre projet d'<strong>architecture d'intérieur à Hyères</strong> et recevez un devis personnalisé sous 48h.
+            </p>
+            <a href="/contact" class="btn btn-sm btn-white">Obtenir mon devis gratuit</a>
+            <p class="text-sm text-left opacity-90">
+              Réponse garantie sous 24h - Visite conseil offerte sur Hyères
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</Layout>
