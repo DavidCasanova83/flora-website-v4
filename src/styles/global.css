@@ -159,7 +159,36 @@ h6 {
   /* px-4 : Padding horizontal de 4 unités (généralement 16px) */
 }
 
-/* Style général pour les sections du site (classe .section) */
+/* Système d'espacement cohérent pour les sections */
+.section-spacing {
+  @apply py-8 md:py-16 xl:py-24;
+  /* py-8 : Padding vertical de 32px mobile */
+  /* md:py-16 : Padding vertical de 64px tablet */
+  /* xl:py-24 : Padding vertical de 96px desktop */
+}
+
+.section-spacing-lg {
+  @apply py-12 md:py-20 xl:py-32;
+  /* py-12 : Padding vertical de 48px mobile */
+  /* md:py-20 : Padding vertical de 80px tablet */
+  /* xl:py-32 : Padding vertical de 128px desktop */
+}
+
+.section-spacing-xl {
+  @apply py-16 md:py-24 xl:py-40;
+  /* py-16 : Padding vertical de 64px mobile */
+  /* md:py-24 : Padding vertical de 96px tablet */
+  /* xl:py-40 : Padding vertical de 160px desktop */
+}
+
+.section-margin-top {
+  @apply mt-12 md:mt-20 xl:mt-32;
+  /* mt-12 : Marge supérieure de 48px mobile */
+  /* md:mt-20 : Marge supérieure de 80px tablet */
+  /* xl:mt-32 : Marge supérieure de 128px desktop */
+}
+
+/* Style général pour les sections du site (classe .section) - DEPRECATED */
 .section {
   @apply py-12 xl:py-[150px];
   /* py-12 : Padding vertical de 12 unités (environ 48px) */

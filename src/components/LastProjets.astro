@@ -26,9 +26,9 @@ const projects = parsedPages
   .slice(0, 3); // On ne garde que les 3 dernières
 ---
 <!-- Projets -->
-<section class="blog py-12">
+<section class="blog mt-10">
   <div class="container mx-auto">
-    <h2 class="blog__title h2 mb-[50px] text-center font-light xl:text-left">Projets d'études</h2>
+    <h2 class="blog__title h2 mb-[50px] text-left font-light">Projets d'études</h2>
     <!-- blog post -->
     <div class="flex flex-col xl:flex-row gap-8 items-stretch justify-center flex-wrap">
       {projects.map((project) => {
@@ -68,7 +68,7 @@ const projects = parsedPages
         );
       })}
     </div>
-    <div class="container mx-auto flex justify-center my-12">
+    <div class="container mx-auto flex justify-center mt-12">
 		  <a href="/projet" class="btn btn-lg btn-accent">Voir tous les projets</a>
 	  </div>
   </div>
