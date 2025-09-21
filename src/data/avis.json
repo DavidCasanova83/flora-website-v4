@@ -35,6 +35,12 @@
       "nom": "Delphine C.",
       "message": "J'ai fait appel à Flora pour mon aménagement intérieur. Elle a été de très bons conseils et aujourd'hui l'espace est bien agencé et surtout bien mieux rangé ! Une maison organisée, colorée et bien décorée fait vraiment toute la différence pour nous ! On s'y sent encore mieux ! À tel point que j'ai également fait appel à elle pour mon local professionnel. Je recommande Flora à tout le monde dès que j'en ai l'occasion à Toulon.",
       "type": "Cliente"
+    },
+    {
+      "id": 7,
+      "nom": "Camille S.",
+      "message": "J’ai eu le plaisir de faire appel à Flora pour repenser entièrement mon espace de vie, et le résultat a dépassé toutes mes attentes. Elle a su écouter mes envies tout en apportant ses idées créatives et son œil professionnel. Son sens du détail, son goût sûr et sa capacité à optimiser les volumes ont totalement transformé mon intérieur. Elle a géré le projet avec beaucoup de rigueur et de disponibilité, tout en respectant les délais et le budget. Le résultat est à la fois esthétique, fonctionnel et chaleureux. Je recommande les yeux fermés !",
+      "type": "Cliente"
     }
   ]
 }
