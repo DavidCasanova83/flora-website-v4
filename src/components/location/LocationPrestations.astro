@@ -1,0 +1,65 @@
+---
+// src/components/location/LocationPrestations.astro
+import type { PrestationsSection } from '../../types/Location';
+
+interface Props {
+  prestations: PrestationsSection;
+}
+
+const { prestations } = Astro.props;
+---
+
+<section class="my-10 xl:my-20">
+  <div class="container mx-auto px-4">
+    <!-- Title -->
+    <h2 class="h2 text-center mb-12">
+      {prestations.title}
+    </h2>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+      {prestations.services.map(service => (
+        <div class="bg-white p-8 rounded-[10px] shadow-custom2 hover:shadow-lg transition-all duration-300">
+          <!-- Image -->
+          <div class="mb-6">
+            <img
+              src={service.image}
+              alt={service.imageAlt}
+              class="w-full h-[200px] object-cover rounded-lg"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Title -->
+          <h3 class="h3 mb-4">
+            {service.title}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-[17px] leading-8 text-secondary font-light mb-6">
+            {service.description}
+          </p>
+
+          <!-- Points -->
+          <ul class="space-y-3">
+            {service.points.map(point => (
+              <li class="flex items-start gap-3">
+                <span class="text-accent text-xl mt-1">•</span>
+                <span class="text-[15px] leading-7 text-secondary font-light">
+                  {point}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+
+    <!-- CTA -->
+    <div class="flex justify-center">
+      <a href={prestations.ctaUrl} class="btn btn-sm btn-accent">
+        {prestations.ctaText}
+      </a>
+    </div>
+  </div>
+</section>

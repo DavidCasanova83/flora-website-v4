@@ -1,0 +1,102 @@
+---
+// src/components/location/LocationFAQ.astro
+import type { FAQSection } from '../../types/Location';
+
+interface Props {
+  faq: FAQSection;
+}
+
+const { faq } = Astro.props;
+---
+
+<section class="my-10 xl:my-20">
+  <div class="container mx-auto px-4">
+    <!-- Title -->
+    <h2 class="h2 text-center mb-12">
+      {faq.title}
+    </h2>
+
+    <!-- FAQ Items -->
+    <div class="max-w-4xl mx-auto space-y-4">
+      {faq.questions.map((item, index) => (
+        <div class="faq__itm bg-white rounded-lg shadow-custom2 p-6 cursor-pointer hover:shadow-lg transition-all duration-300" data-index={index}>
+          <div class="faq__btn flex justify-between items-center">
+            <h3 class="text-lg font-semibold text-primary pr-4">
+              {item.question}
+            </h3>
+            <i class="ri-add-fill text-2xl text-accent flex-shrink-0"></i>
+          </div>
+          <div class="faq__answer h-0 overflow-hidden transition-all duration-300">
+            <p class="mt-4 text-secondary text-[17px] leading-8 font-light">
+              {item.answer}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (function() {
+    function initFAQ() {
+      const faqItems = document.querySelectorAll('.faq__itm');
+
+      if (faqItems.length === 0) return;
+
+      faqItems.forEach((item) => {
+        // Remove any existing listeners
+        const newItem = item.cloneNode(true);
+        item.parentNode.replaceChild(newItem, item);
+      });
+
+      // Re-select after cloning
+      const freshFaqItems = document.querySelectorAll('.faq__itm');
+
+      freshFaqItems.forEach((item) => {
+        item.addEventListener('click', function() {
+          // Close all other items
+          freshFaqItems.forEach((otherItem) => {
+            if (otherItem !== item && otherItem.classList.contains('open')) {
+              otherItem.classList.remove('open');
+              const otherAnswer = otherItem.querySelector('.faq__answer');
+              if (otherAnswer) {
+                otherAnswer.style.height = '0';
+              }
+              const otherIcon = otherItem.querySelector('.faq__btn i');
+              if (otherIcon) {
+                otherIcon.className = 'ri-add-fill text-2xl text-accent flex-shrink-0';
+              }
+            }
+          });
+
+          // Toggle current item
+          const isOpen = item.classList.toggle('open');
+          const answer = item.querySelector('.faq__answer');
+          const icon = item.querySelector('.faq__btn i');
+
+          if (answer) {
+            if (isOpen) {
+              answer.style.height = answer.scrollHeight + 'px';
+            } else {
+              answer.style.height = '0';
+            }
+          }
+
+          if (icon) {
+            icon.className = isOpen
+              ? 'ri-subtract-fill text-2xl text-accent flex-shrink-0'
+              : 'ri-add-fill text-2xl text-accent flex-shrink-0';
+          }
+        });
+      });
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initFAQ);
+    } else {
+      initFAQ();
+    }
+  })();
+</script>

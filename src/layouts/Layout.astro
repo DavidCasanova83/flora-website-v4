@@ -11,6 +11,12 @@ import logo from '../assets/img/header/logo-transparent.png';
 // Import des icons
 import Icon from "../components/Icon.astro";
 
+// Import des locations pour le footer
+import locationsData from "../data/locations.json";
+
+// Filtrer les locations actives pour le footer
+const activeLocations = locationsData.locations.filter(loc => loc.enabled);
+
 // Définition des props
 interface Props {
   title: string;
@@ -102,6 +108,9 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 				href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
 			/>
 		</noscript>
+
+    <!-- RemixIcon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
 
     <!-- Glide.js CSS non-bloquant -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
@@ -281,6 +290,26 @@ const { title, description, keywords = "architecte d'intérieur, décoration, am
 					<Icon name="facebook" class="w-7 h-7 text-accent-tertiary hover:text-accent transition-all shadow-custom2 cursor-pointer" />
 					<Icon name="linkedin" class="w-7 h-7 text-accent-tertiary hover:text-accent transition-all shadow-custom2 cursor-pointer" />
 				</div>
+
+				<!-- Zones d'Intervention (Pages SEO Locales) -->
+				{activeLocations.length > 0 && (
+					<div class="border-t pt-8 pb-6 mb-6">
+						<div class="text-center mb-6">
+							<h3 class="text-base font-semibold text-primary">Nos Zones d'Intervention</h3>
+						</div>
+						<div class="flex flex-wrap justify-center gap-x-8 gap-y-4 text-left">
+							{activeLocations.map(location => (
+								<a
+									href={`/architecte-interieur-${location.slug}`}
+									class="hover:text-accent transition-all"
+								>
+									{location.cityName}
+								</a>
+							))}
+						</div>
+					</div>
+				)}
+
 				<!-- 1 colonne  -->
 				<div class="flex flex-col xl:flex-row border-t pt-[50px] mt-[30px]">
 					<!-- footer link section -->

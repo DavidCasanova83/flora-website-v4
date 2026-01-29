@@ -1,0 +1,228 @@
+{
+  "locations": [
+    {
+      "id": "toulon",
+      "enabled": true,
+      "slug": "toulon",
+      "cityName": "Toulon",
+      "departmentCode": "83",
+      "region": "Var",
+      "geo": {
+        "lat": 43.1242,
+        "lng": 5.928
+      },
+      "seo": {
+        "title": "Architecte d'intérieur Toulon | Flora Leicarrague - Flor'A",
+        "metaDescription": "Architecte d'intérieur certifiée CFAI à Toulon. Agence locale spécialisée en construction, rénovation, aménagement et décoration sur mesure avec suivi de chantier. Projets clé en main dans le Var.",
+        "keywords": "architecte d'intérieur Toulon, rénovation Toulon, aménagement Toulon, architecte Toulon, maître d'œuvre Toulon, suivi de chantier toulon",
+        "ogImage": "/assets/img/seo-locations/toulon-og.jpg",
+        "canonicalUrl": "https://www.flora-architecteinterieur.com/architecte-interieur-toulon"
+      },
+      "hero": {
+        "badge": "Architecte d'intérieur Toulon",
+        "h1": "Architecte d'intérieur à Toulon",
+        "h2": "Votre cabinet d'architecture d'intérieur",
+        "paragraphs": [
+          "Notre cabinet d'architecture d'intérieur, Flor'A, est installé au cœur de la ville de Toulon. Nous accompagnons des particuliers exigeants dans la construction, la rénovation, l'aménagement et la décoration de leurs espaces de vie, avec une approche globale, élégante et sereine. Un interlocuteur unique. Une vision claire. Un projet maîtrisé de A à Z.",
+          "Que vous habitiez dans le centre-ville de Toulon, au Mourillon, à Sainte-Musse ou dans les hauteurs, nous concevons des espaces uniques qui s'adaptent au style méditerranéen et à l'architecture toulonnaise.",
+          "Architecte d'intérieur certifiée CFAI, Flora Leicarrague transforme vos espaces de vie en lieux d'exception dans le respect du patrimoine architectural toulonnais. Nous optimisons chaque m² en travaillant les volumes, les expositions et en sculptant la lumière naturelle."
+        ],
+        "cta1": {
+          "text": "Contactez-nous",
+          "url": "/contact",
+          "style": "accent"
+        },
+        "cta2": {
+          "text": "06 95 58 46 39",
+          "url": "tel:+33695584639",
+          "style": "outline"
+        },
+        "image": "/assets/img/sliderphoto/slide01.jpeg",
+        "imageAlt": "Rénovation d'appartement à Toulon par Flor'A architecte d'intérieur"
+      },
+      "about": {
+        "title": "Qui suis-je ?",
+        "paragraphs": [
+          "Originaire du Sud Ouest, je m'installe à Toulon pour intégrer la prestigieuse école <strong>Camondo</strong> dont je ressors diplômée avec mention et certifiée au <strong>CFAI</strong> (Conseil Français des Architectes d'intérieur).",
+          "Je tombe amoureuse de la région et de son climat qui permettent de travailler une architecture où l'intérieur et l'extérieur sont confondus, sans limite palpable. Je décide donc de m'ancrer sur Toulon et de créer l'agence <strong>Flor'A</strong>.",
+          "Notre agence adopte une approche <strong>sensible et soignée</strong> pour concevoir vos projets de rénovation et d'aménagement. Nous accordons une attention particulière au respect de l'<strong>architecture existante</strong>, en valorisant ses volumes, son charme et sa lumière."
+        ],
+        "image": "/assets/img/photo-profil-flora.jpg",
+        "imageAlt": "Portrait de Flora Leicarrague, architecte d'intérieur certifiée CFAI à Toulon",
+        "cta": {
+          "text": "Découvrir plus",
+          "url": "/a-propos",
+          "style": "accent"
+        }
+      },
+      "expertise": {
+        "title": "Votre architecte d'intérieur local à Toulon",
+        "subsections": [
+          {
+            "h3": "Expertise de l'architecture toulonnaise",
+            "content": "Patrimoine architectural toulonnais : Architecture provençale, intégration dans le paysage, adaptation aux contraintes locales (soleil, vent, humidité en bord de mer). Spécificités : aménagement intérieurs et extérieurs de maisons & appartements de caractère, villa, appartement type haussmannien, extension, terrasse, piscine. Quartiers mentionnés : centre historique, Faron, Mourillon, Sainte-Musse."
+          },
+          {
+            "h3": "Avantages de notre agence locale",
+            "points": [
+              "Proximité immédiate - Agence au cœur de Toulon",
+              "Un interlocuteur unique de la conception à la livraison",
+              "Connaissance des contraintes urbaines toulonnaises",
+              "Réseau d'artisans locaux de confiance",
+              "Expertise du patrimoine architectural local"
+            ]
+          }
+        ],
+        "image": "/assets/img/sliderphoto/slide02.jpeg",
+        "imageAlt": "Appartement rénové à Toulon vue sur la rade par architecte d'intérieur"
+      },
+      "realisations": {
+        "title": "Projets d'architecture d'intérieur réalisés à Toulon",
+        "projects": [
+          {
+            "image": "/assets/img/sliderphoto/slide03.jpeg",
+            "imageAlt": "Rénovation appartement centre-ville Toulon vue rade",
+            "title": "Appartement centre-ville Toulon",
+            "description": "Rénovation complète d'un appartement haussmannien de 90m² avec optimisation de la vue sur la rade et mise en valeur des éléments d'époque.",
+            "projectSlug": null
+          },
+          {
+            "image": "/assets/img/sliderphoto/slide04.jpg",
+            "imageAlt": "Villa Mourillon Toulon rénovation architecte intérieur",
+            "title": "Villa au Mourillon",
+            "description": "Aménagement d'une villa de 140m² avec création d'un espace de vie ouvert et rénovation complète de la cuisine donnant sur le jardin.",
+            "projectSlug": null
+          },
+          {
+            "image": "/assets/img/sliderphoto/slide05.jpg",
+            "imageAlt": "Maison Sainte-Musse Toulon rénovation style provençal",
+            "title": "Maison à Sainte-Musse",
+            "description": "Transformation d'une maison des années 70 en lieu de vie moderne, préservant le charme provençal tout en intégrant les dernières technologies.",
+            "projectSlug": null
+          }
+        ],
+        "ctaText": "Voir toutes nos réalisations",
+        "ctaUrl": "/realisations"
+      },
+      "prestations": {
+        "title": "Un accompagnement signature",
+        "services": [
+          {
+            "title": "Une conception précise",
+            "image": "/assets/img/PRESTATIONS/Conception.jpg",
+            "imageAlt": "Conception 3D architecte intérieur Toulon",
+            "description": "Étude sur mesure avec plans 2D et rendus 3D, analyse des spécificités (optimisation des volumes, choix de matériaux nobles et durables, études des différentes exposition, respect du style architectural)",
+            "points": [
+              "Plans d'aménagement personnalisés et sur mesure",
+              "Rendus 3D réalistes",
+              "Valorisation du patrimoine et de son implantation dans le paysage",
+              "Recherche de matériaux et de teintes adaptés et de qualité"
+            ]
+          },
+          {
+            "title": "Une gestion globale des démarches administratives",
+            "image": "/assets/img/PRESTATIONS/Démarches-administratives.jpg",
+            "imageAlt": "Démarches administratives architecte Toulon mairie",
+            "description": "Accompagnement administratif, autorisations d'urbanisme à Toulon, connaissance PLU toulonnais, gestion de la comptabilité",
+            "points": [
+              "Expertise du PLU de Toulon",
+              "Déclarations préalables et permis de construire",
+              "Déclaration d'achèvement de travaux",
+              "Gestion et suivi des dépenses"
+            ]
+          },
+          {
+            "title": "Une réalisation sereine grâce au suivi de chantier",
+            "image": "/assets/img/PRESTATIONS/Suivi-de-chantier.jpg",
+            "imageAlt": "Suivi chantier construction et rénovation Toulon architecte intérieur",
+            "description": "Réseau d'artisans locaux de qualité, coordination des différents intervenants, compte rendu hebdomadaire",
+            "points": [
+              "Réseau d'artisans toulonnais sélectionnés",
+              "Suivi de l'avancée des travaux avec compte rendu écrit et illustré hebdomadaire",
+              "Réactivité immédiate en cas de contraintes techniques inattendues",
+              "Respect des délais",
+              "Réception de chantier avec levée de réserves s'il y a"
+            ]
+          },
+          {
+            "title": "Un aménagement personnalisé et une décoration unique",
+            "image": "/assets/img/PRESTATIONS/Aménagement.jpg",
+            "imageAlt": "Aménagement personnalisé de qualité",
+            "description": "Sélection mobilier adapté à vos goûts et selon vos besoins",
+            "points": [
+              "Mobilier sélectionné avec soin",
+              "Dessin de mobilier sur mesure en collaboration avec nos partenaires (menuisiers, ferronniers, tapissiers, …)",
+              "Fournisseurs locaux et éthiques privilégiés",
+              "Livraison, installation et finitions soignées"
+            ]
+          }
+        ],
+        "ctaText": "Découvrir toutes nos prestations",
+        "ctaUrl": "/prestations"
+      },
+      "zonesIntervention": {
+        "title": "Intervention sur Toulon et ses quartiers",
+        "intro": "Notre agence située à Toulon nous permet d'intervenir rapidement sur tous les quartiers de la ville avec un service de proximité exceptionnel.",
+        "quartiers": [
+          "Centre-ville historique",
+          "Le Mourillon",
+          "La Mitre",
+          "CAP brun",
+          "Sainte-Musse",
+          "Saint-Jean du Var",
+          "Hauteurs du Faron",
+          "La Serinette",
+          "Claret/La loubiere",
+          "Petit bois",
+          "Les routes"
+        ],
+        "praticalInfo": {
+          "tempsTrajet": "5-15 minutes selon le quartier",
+          "rdv": "À domicile dans l'heure",
+          "devis": "Une première visite à votre domicile nous permet d'effectuer un devis au plus proche de vos besoins"
+        }
+      },
+      "faq": {
+        "title": "Questions fréquentes - Architecte d'intérieur Toulon",
+        "questions": [
+          {
+            "question": "Pourquoi choisir une agence locale à Toulon ?",
+            "answer": "Notre agence toulonnaise offre une proximité unique : déplacements immédiats, connaissance parfaite des contraintes locales, relations privilégiées avec les artisans et les services municipaux de Toulon."
+          },
+          {
+            "question": "Quels sont vos tarifs pour un projet à Toulon ?",
+            "answer": "Nos tarifs d'architecture d'intérieur à Toulon varient selon la complexité du projet. Une première visite sur site nous permet d'évaluer au plus juste l'étendue de notre intervention et de vous proposer une prestation en adéquation."
+          },
+          {
+            "question": "Travaillez-vous avec des artisans toulonnais ?",
+            "answer": "Exclusivement ! Notre réseau d'artisans toulonnais est constitué de professionnels que nous connaissons personnellement. Cette proximité garantit une qualité constante et des délais respectés."
+          },
+          {
+            "question": "Comment gérez-vous les spécificités du patrimoine toulonnais ?",
+            "answer": "Notre expertise du patrimoine architectural toulonnais nous permet de respecter les contraintes historiques tout en modernisant votre intérieur. Nous maîtrisons les réglementations du centre-ville et des bâtiments classés."
+          },
+          {
+            "question": "Quelle est la durée moyenne d'un projet à Toulon ?",
+            "answer": "La conception d'un projet ainsi que sa réalisation dépend de la surface du bien et de la complexité des travaux à réaliser. Chaque projet est unique ainsi nous vous proposons un premier rendez-vous sur site afin de prévoir une estimation en adéquation avec vos besoins."
+          }
+        ]
+      },
+      "contactFinal": {
+        "title": "Votre architecte d'intérieur à Toulon",
+        "subtitle": "Flor'A - Cabinet d'architecture d'intérieur et de maîtrise d'œuvre toulonnaise",
+        "accroche": "Vous avez un projet de construction, de rénovation, d'aménagement ou de décoration ? Je vous propose un premier échange par téléphone afin d'étudier ensemble la faisabilité et les grandes orientations de votre projet.",
+        "businessInfo": {
+          "label": "Cabinet Toulon",
+          "address": "3 Impasse François Marcel, 83000 Toulon",
+          "phone": "+33695584639",
+          "email": "leicarragueflora@gmail.com"
+        },
+        "cta": {
+          "text": "Contactez-nous",
+          "url": "/contact"
+        },
+        "message": "Nous vous invitons à nous contacter afin de programmer une rencontre directement sur le site de votre futur projet."
+      }
+    }
+  ]
+}
