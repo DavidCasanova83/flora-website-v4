@@ -1,0 +1,90 @@
+---
+// src/components/location/LocationHero.astro
+import type { HeroSection } from '../../types/Location';
+import { Picture } from 'astro:assets';
+
+interface Props {
+  hero: HeroSection;
+  cityName: string;
+}
+
+const { hero, cityName } = Astro.props;
+---
+
+<section class="relative overflow-hidden min-h-[600px] flex items-center bg-mobile">
+  <!-- Background Image -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src={hero.image}
+      alt={hero.imageAlt}
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+  </div>
+
+  <!-- Content Overlay -->
+  <div class="relative z-10 container mx-auto px-4 py-12">
+    <div class="bg-white bg-opacity-90 rounded-md p-6 md:p-12 max-w-[680px] shadow-lg">
+      <!-- Badge -->
+      <div class="mb-6">
+        <span class="inline-block bg-accent-tertiary text-primary text-xs uppercase font-semibold px-4 py-2 rounded-full tracking-wide">
+          {hero.badge}
+        </span>
+      </div>
+
+      <!-- H1 -->
+      <h1 class="text-2xl md:text-3xl xl:text-4xl font-semibold mb-3 text-left text-primary">
+        {hero.h1}
+      </h1>
+
+      <!-- H2 -->
+      <h2 class="text-lg md:text-xl xl:text-2xl mb-4 text-left text-secondary font-light">
+        {hero.h2}
+      </h2>
+
+      <!-- Paragraphs -->
+      <div class="space-y-3 mb-6">
+        {hero.paragraphs.map(paragraph => (
+          <p class="text-sm md:text-base leading-7 text-secondary font-light">
+            {paragraph}
+          </p>
+        ))}
+      </div>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row gap-3">
+        {hero.cta1.style === 'accent' && (
+          <a href={hero.cta1.url} class="btn btn-accent px-6 py-3 text-sm whitespace-nowrap">
+            {hero.cta1.text}
+          </a>
+        )}
+        {hero.cta1.style === 'outline' && (
+          <a href={hero.cta1.url} class="btn btn-outline px-6 py-3 text-sm whitespace-nowrap">
+            {hero.cta1.text}
+          </a>
+        )}
+        {hero.cta1.style === 'white' && (
+          <a href={hero.cta1.url} class="btn btn-white px-6 py-3 text-sm whitespace-nowrap">
+            {hero.cta1.text}
+          </a>
+        )}
+
+        {hero.cta2.style === 'accent' && (
+          <a href={hero.cta2.url} class="btn btn-accent px-6 py-3 text-sm whitespace-nowrap">
+            {hero.cta2.text}
+          </a>
+        )}
+        {hero.cta2.style === 'outline' && (
+          <a href={hero.cta2.url} class="btn btn-outline px-6 py-3 text-sm whitespace-nowrap">
+            {hero.cta2.text}
+          </a>
+        )}
+        {hero.cta2.style === 'white' && (
+          <a href={hero.cta2.url} class="btn btn-white px-6 py-3 text-sm whitespace-nowrap">
+            {hero.cta2.text}
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
+</section>

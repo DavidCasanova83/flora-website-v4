@@ -1,0 +1,84 @@
+---
+// src/pages/architecte-interieur-[city].astro
+// Route dynamique pour les pages SEO géolocalisées
+import Layout from '../layouts/Layout.astro';
+import StructuredData from '../components/StructuredData.astro';
+import LocationHero from '../components/location/LocationHero.astro';
+import AboutSection from '../components/location/AboutSection.astro';
+import ExpertiseSection from '../components/location/ExpertiseSection.astro';
+import LocationRealisations from '../components/location/LocationRealisations.astro';
+import LocationPrestations from '../components/location/LocationPrestations.astro';
+import ZonesIntervention from '../components/location/ZonesIntervention.astro';
+import LocationFAQ from '../components/location/LocationFAQ.astro';
+import ContactFinal from '../components/location/ContactFinal.astro';
+import type { Location } from '../types/Location';
+import locationsData from '../data/locations.json';
+
+// Génération des routes statiques à partir du fichier JSON
+export async function getStaticPaths() {
+  const locations = locationsData.locations.filter(loc => loc.enabled);
+
+  return locations.map(location => ({
+    params: { city: location.slug },
+    props: { location }
+  }));
+}
+
+interface Props {
+  location: Location;
+}
+
+const { location } = Astro.props;
+---
+
+<Layout
+  title={location.seo.title}
+  description={location.seo.metaDescription}
+  keywords={location.seo.keywords}
+  canonicalUrl={location.seo.canonicalUrl}
+>
+  <!-- Structured Data - LocalBusiness Schema -->
+  <StructuredData
+    name={`Flor'A - ${location.cityName}`}
+    url={location.seo.canonicalUrl}
+    logo="https://www.flora-architecteinterieur.com/_astro/logo-transparent.D0W9nURY_1JNeax.webp"
+    telephone={location.contactFinal.businessInfo.phone}
+    email={location.contactFinal.businessInfo.email}
+    address={{
+      street: "3 Impasse François Marcel",
+      city: location.cityName,
+      postalCode: location.departmentCode + "000",
+      country: "FR"
+    }}
+    geo={location.geo}
+    socialLinks={[
+      "https://www.instagram.com/florarchitecte/",
+      "https://www.facebook.com/profile.php?id=100090151565975",
+      "https://www.linkedin.com/in/flora-leicarrague-4a7baa205/"
+    ]}
+  />
+
+  <!-- Hero Section -->
+  <LocationHero hero={location.hero} cityName={location.cityName} />
+
+  <!-- Expertise Locale Section -->
+  <ExpertiseSection expertise={location.expertise} />
+
+  <!-- Réalisations Section -->
+  <LocationRealisations realisations={location.realisations} />
+
+  <!-- About Section -->
+  <AboutSection about={location.about} />
+
+  <!-- Prestations Section -->
+  <LocationPrestations prestations={location.prestations} />
+
+  <!-- Zones d'Intervention Section -->
+  <ZonesIntervention zones={location.zonesIntervention} />
+
+  <!-- FAQ Section -->
+  <LocationFAQ faq={location.faq} />
+
+  <!-- Contact Final Section -->
+  <ContactFinal contact={location.contactFinal} />
+</Layout>

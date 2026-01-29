@@ -1,0 +1,76 @@
+---
+// src/components/location/LocationRealisations.astro
+import type { RealisationsSection } from '../../types/Location';
+
+interface Props {
+  realisations: RealisationsSection;
+}
+
+const { realisations } = Astro.props;
+---
+
+<section class="my-10 xl:my-20 bg-grey py-12 xl:py-20">
+  <div class="container mx-auto px-4">
+    <!-- Title -->
+    <h2 class="h2 text-center mb-12">
+      {realisations.title}
+    </h2>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mb-12">
+      {realisations.projects.map(project => {
+        const hasLink = project.projectSlug !== null;
+        const url = hasLink ? `/architecture-interieur/${project.projectSlug}` : undefined;
+
+        return (
+          <div class={`${hasLink ? 'group cursor-pointer' : ''}`}>
+            {hasLink ? (
+              <a href={url} class="block">
+                <div class="blog__post flex flex-col h-full shadow-custom2 rounded-[10px] overflow-hidden bg-white">
+                  <div class="relative overflow-hidden h-[344px]">
+                    <img
+                      src={project.image}
+                      alt={project.imageAlt}
+                      class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div class="px-6 py-8 flex-1 flex flex-col">
+                    <h4 class="h4 mb-4 line-clamp-1">{project.title}</h4>
+                    <p class="font-light line-clamp-2 flex-1 text-[#4c5354]">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            ) : (
+              <div class="blog__post flex flex-col h-full shadow-custom2 rounded-[10px] overflow-hidden bg-white">
+                <div class="relative overflow-hidden h-[344px]">
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    class="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="px-6 py-8 flex-1 flex flex-col">
+                  <h4 class="h4 mb-4 line-clamp-1">{project.title}</h4>
+                  <p class="font-light line-clamp-2 flex-1 text-[#4c5354]">
+                    {project.description}
+                  </p>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
+    </div>
+
+    <!-- CTA -->
+    <div class="flex justify-center">
+      <a href={realisations.ctaUrl} class="btn btn-sm btn-accent">
+        {realisations.ctaText}
+      </a>
+    </div>
+  </div>
+</section>
